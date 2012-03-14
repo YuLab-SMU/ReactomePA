@@ -1,0 +1,153 @@
+% \VignetteIndexEntry{An introduction to ReactomePA}
+% \VignetteDepends{AnnotationDbi, org.Hs.eg.db, igraph, plyr, methods,
+% qvalue, reactome.db}
+% \VignetteSuggests{GOSemSim, clusterProfiler, DOSE}
+% \VignetteKeywords{reactome, Pathway Analysis}
+% \VignettePackage{rPA}
+
+%\SweaveOpts{prefix.string=images/fig}
+
+\documentclass[a4paper]{article}
+
+\usepackage{Sweave}
+\usepackage{a4wide}
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[authoryear,round]{natbib}
+
+\textwidth=6.2in
+\textheight=8.5in
+%\parskip=.3cm
+\oddsidemargin=.1in
+\evensidemargin=.1in
+\headheight=-.3in
+
+\newcommand{\Rfunction}[1]{{\texttt{#1}}}
+\newcommand{\Robject}[1]{{\texttt{#1}}}
+\newcommand{\Rpackage}[1]{{\textit{#1}}}
+\newcommand{\Rmethod}[1]{{\texttt{#1}}}
+\newcommand{\Rfunarg}[1]{{\texttt{#1}}}
+\newcommand{\Rclass}[1]{{\textit{#1}}}
+\newcommand{\Rcode}[1]{{\texttt{#1}}}
+\newtheorem{theorem}{Theorem}[section]
+
+\newcommand{\R}{\textsf{R}}
+
+\newcommand{\term}[1]{\emph{#1}}
+\newcommand{\mref}[2]{\htmladdnormallinkfoot{#2}{#1}}
+
+
+\bibliographystyle{plainnat}
+
+\title{Reactome Pathway Analysis}
+\author{Guangchuang Yu \\
+\\
+Jinan University, Guangzhou, China}
+
+\begin{document}
+
+\maketitle
+
+<<options,echo=FALSE>>=
+options(width=60)
+require(ReactomePA)
+@
+
+\section{Introduction}
+
+This package is designed for reactome pathway-based analysis. Reactome
+is an open-source, open access, manually curated and peer-reviewed
+pathway database.
+
+In \Rpackage{ReactomePA}, we plan to implement:
+\begin{itemize}
+  \item pathway enrichment analysis
+  \item gene set enrichment analysis
+  \item functional subpathway (active or perturbed subpathway) detection
+  \item methods for visualization.
+\end{itemize}
+
+
+\section{Pathway Enrichment Analysis}
+
+Enrichment analysis is a widely used approach to identify biological
+themes. Here, we implement hypergeometric model to assess whether the
+number of selected genes associated with reactome pathway is larger
+than expected. We also implement a category net model for viusalization.
+
+\begin{itemize}
+  \item Hypergeometric model
+
+    Hypergeometric model was implemented to assess whether the number
+    of selected genes associated with reactome pathway is larger than
+    expected.
+
+  \item Category Net Plot
+
+    Category-gene network model was implemented to extract the complex
+    relationships between genes and pathways. It provides a high-level
+    model to understand the functionalities of genes.
+
+  \item Case Study
+
+    Here, we used a vector of sample entrezgene ID, which was
+    converted from an example list of genes from ProfCom
+    \url{http://webclu.bio.wzw.tum.de/profcom/examples.php}.
+
+<<load sample data>>=
+require(ReactomePA)
+data(sample)
+sample
+x <- enrichPathway(gene=sample,pvalueCutoff=0.05, qvalueCutoff=0.05, readable=T)
+head(summary(x))
+@
+
+<<<category net plot, eval=F>>=
+plot(x, showCategory=5)
+@
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=\linewidth]{cnetplot.pdf}
+    \caption{Visualization of Pathway enrichment analysis}
+    \label{Fig:cnetplot}
+  \end{center}
+\end{figure}
+
+  \item Compatibal with \Rpackage{clusterProfiler}
+    Bioconductor package \Rpackage{clusterProfiler} designed
+    visualization for comparing biological themes among gene clusters
+    \citep{yu2012}. More details and parameters are described in the
+    documentation (Rfunction{?compareCluster}). Figure 2 has been
+    generated using the data, as in \cite{yu2012}.
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=.7\linewidth]{rPAclusterProfiler.pdf}
+    \caption{Example of working with clusterProfiler package}
+    \label{Fig:Pathway Comparison}
+  \end{center}
+\end{figure}
+
+
+\end{itemize}
+
+
+\section{Session Information}
+
+The version number of R and packages loaded for generating the vignette were:
+
+\begin{verbatim}
+<<echo=FALSE,results=tex>>=
+sessionInfo()
+@
+\end{verbatim}
+
+\bibliography{ReactomePA}
+\end{document}
