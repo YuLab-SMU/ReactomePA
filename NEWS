@@ -1,0 +1,53 @@
+CHANGES IN VERSION 0.99.0
+------------------------
+ o change package name to ReactomePA, for there is already an RPA package. <2012-03-02, Fri>
+ o Vignette issues:  <2012-03-02, Fri>
+   	    change image format from .eps to .pdf, make it easier to build.
+	    remove the tolatex tag of sessionInfo(), make the output more readble.
+ o re-implement geneID2Name using select method. <2012-03-02, Fri>
+ o add examples in man pages. <2012-03-02, Fri>
+ o remove man pages of internal functions. <2012-03-02, Fri>
+ o import plot summary from stats4, for BiocGenerics (version 0.1.10) removed them <2012-03-03, Sat> 
+
+CHANGES IN VERSION 0.2.3
+------------------------
+ o @exportMethod plot <2012-02-15 Wed>
+ o fix bug when calling summary method from plot,
+   for summary defined in base is S3 method,
+   instead import summary generic from stats4 <2012-02-15 Wed>
+
+CHANGES IN VERSION 0.2.2
+------------------------
+ o remove generic definition of show, summary and plot, add NAMESPACE import show
+   from methods and plot from graphics. summary need not to import, for is defined
+   in the base package  <2012-02-10 Fri>
+
+CHANGES IN VERSION 0.2.1
+------------------------
+ o update vignette <2012-02-09 Thu>
+ o add sample data (an example list of genes from ProfCom:
+   http://webclu.bio.wzw.tum.de/profcom/gene_Lists/example1.txt
+   the gene symbols were converted to entrezgene) <2012-02-09 Thu>
+
+CHANGES IN VERSION 0.2.0
+------------------------
+ o separate codes of mapping pathway ID to pathway Name to a new function pathID2Name <2012-02-09 Thu>
+ o implement geneID2Name function for mapping gene ID to gene Symbol <2012-02-09 Thu>
+ o add parameter readable in function enrichPathway <2012-02-09 Thu>
+ o implement cnetplot for plotting category net <2012-02-09 Thu>
+ o modify plot function for class enrichPathwayResult to use cnetplot <2012-02-09 Thu>
+
+CHANGES IN VERSION 0.1.1
+------------------------
+ o add vignette <2012-02-08 Wed>
+ o bug fixed for multiple mapping of pathway ID to pathway Name
+   such as pathway 162906 can mapping to 1629061
+   and 1629062 when getting pathway name, remain the first one. <2012-02-08 Wed>
+
+ CHANGES IN VERSION 0.1.0
+------------------------
+ o implement show, summary and plot method for enrichPathwayResult class <2012-02-08 Wed>
+ o define class enrichPathwayResult to store result of enrichPathway <2012-02-08 Wed>
+ o implement enrichPathway function for enrichment analysis.
+   using hypergeometric model <2012-02-08 Wed>
+ o initial package skeleton <2012-02-08 Wed>
