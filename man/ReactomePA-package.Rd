@@ -22,7 +22,7 @@
   \email{guangchuangyu@gmail.com}
 }
 \seealso{
-  \linkS4class{enrichPathwayResult}
+  \linkS4class{enrichResult}
 }
 \keyword{package}
 

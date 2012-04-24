@@ -1,3 +1,11 @@
+CHANGES IN VERSION 1.1.1
+------------------------
+ o remove geneID2Name, instead import EXTID2NAME from DOSE. <2012-03-12, Mon>
+ o remove most of the codes in enrichPathway, instead import enrich.internal in DOSE. 
+   implement some S3 method for mapping. 
+   pathID2Name was rename to TERM2NAME, which will called by enrich.internal. <2012-03-12, Tue>
+ 
+
 CHANGES IN VERSION 0.99.0
 ------------------------
  o change package name to ReactomePA, for there is already an RPA package. <2012-03-02, Fri>
@@ -8,6 +16,7 @@ CHANGES IN VERSION 0.99.0
  o add examples in man pages. <2012-03-02, Fri>
  o remove man pages of internal functions. <2012-03-02, Fri>
  o import plot summary from stats4, for BiocGenerics (version 0.1.10) removed them <2012-03-03, Sat> 
+ o add Methods section in enrichPathwayResult-class man page. <2012-03-05, Mon>
 
 CHANGES IN VERSION 0.2.3
 ------------------------
@@ -44,7 +53,7 @@ CHANGES IN VERSION 0.1.1
    such as pathway 162906 can mapping to 1629061
    and 1629062 when getting pathway name, remain the first one. <2012-02-08 Wed>
 
- CHANGES IN VERSION 0.1.0
+CHANGES IN VERSION 0.1.0
 ------------------------
  o implement show, summary and plot method for enrichPathwayResult class <2012-02-08 Wed>
  o define class enrichPathwayResult to store result of enrichPathway <2012-02-08 Wed>

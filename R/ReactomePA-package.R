@@ -14,7 +14,7 @@
 #' @author Guangchuang Yu \email{guangchuangyu@@gmail.com}
 #'
 #' Maintainer: Guangchuang Yu \email{guangchuangyu@@gmail.com}
-#' @seealso \linkS4class{enrichPathwayResult}
+#' @seealso \linkS4class{enrichResult}
 #' @keywords package
 NULL
 
