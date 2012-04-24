@@ -4,14 +4,11 @@
 Given a vector of genes, this function will return the enriched pathways
 with FDR control.}
 \usage{
-  enrichPathway(gene, organism = "human",
-    pvalueCutoff = 0.05, qvalueCutoff = 0.05,
-    readable = FALSE)
+  enrichPathway(gene, pvalueCutoff = 0.05,
+    qvalueCutoff = 0.05, readable = FALSE)
 }
 \arguments{
   \item{gene}{a vector of entrez gene id.}
-
-  \item{organism}{Currently, only "human" supported.}
 
   \item{pvalueCutoff}{Cutoff value of pvalue.}
 
@@ -21,7 +18,7 @@ with FDR control.}
   mapping to gene symbols.}
 }
 \value{
-  A \code{enrichPathwayResult} instance.
+  A \code{enrichResult} instance.
 }
 \description{
   Pathway Enrichment Analysis of a gene set. Given a vector
@@ -41,7 +38,7 @@ gene <- c("11171", "8243", "112464", "2194",
   Guangchuang Yu \url{http://ygc.name}
 }
 \seealso{
-  \code{\link{enrichPathwayResult-class}}
+  \code{\link{enrichResult-class}}
 }
 \keyword{manip}
 

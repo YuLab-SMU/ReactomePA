@@ -138,6 +138,9 @@ plot(x, showCategory=5)
 
 \end{itemize}
 
+\section{Gene Set Enrichment Analysis}
+
+To be developed.
 
 \section{Session Information}
 
