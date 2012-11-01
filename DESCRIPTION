@@ -7,7 +7,7 @@ Maintainer: Guangchuang Yu <guangchuangyu@gmail.com>
 Description: This package provides functions for pathway analysis based on
     REACTOME pathway database. It will implement enrichment analysis, gene set
     enrichment analysis and functional modules detection.
-Dependes: R (>= 2.10), DOSE
+Depends: R (>= 2.10), DOSE
 Imports: 
 	methods, 
 	AnnotationDbi, 
