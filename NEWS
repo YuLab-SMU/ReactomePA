@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.3.1
+------------------------
+ o bug fixed of ALLEXTID. <2013-03-1, Fri>
+
 CHANGES IN VERSION 1.1.1
 ------------------------
  o remove geneID2Name, instead import EXTID2NAME from DOSE. <2012-03-12, Mon>
@@ -5,7 +9,6 @@ CHANGES IN VERSION 1.1.1
    implement some S3 method for mapping. 
    pathID2Name was rename to TERM2NAME, which will called by enrich.internal. <2012-03-12, Tue>
  
-
 CHANGES IN VERSION 0.99.0
 ------------------------
  o change package name to ReactomePA, for there is already an RPA package. <2012-03-02, Fri>
