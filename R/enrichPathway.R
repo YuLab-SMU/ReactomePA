@@ -69,9 +69,16 @@ TERMID2EXTID.Reactome <- function(term, organism) {
 ##' @importFrom DOSE ALLEXTID
 ##' @importMethodsFrom AnnotationDbi mappedkeys
 ##' @importFrom reactome.db reactomeEXTID2PATHID
+##' @importFrom org.Hs.eg.db org.Hs.egSYMBOL
 ##' @S3method ALLEXTID Reactome
 ALLEXTID.Reactome <- function(organism) {
-    extID <- unique(mappedkeys(reactomeEXTID2PATHID))
+    reactome.eg <- unique(mappedkeys(reactomeEXTID2PATHID))
+    if (organism == "human") {
+        hs.eg <- unique(mappedkeys(org.Hs.egSYMBOL))
+        extID <- intersect(reactome.eg, hs.eg)
+    } else {
+        stop("only human supported...")
+    }
     return(extID)
 }
 

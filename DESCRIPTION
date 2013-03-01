@@ -8,26 +8,25 @@ Description: This package provides functions for pathway analysis based on
     REACTOME pathway database. It will implement enrichment analysis, gene set
     enrichment analysis and functional modules detection.
 Depends: R (>= 2.10), DOSE
-Imports: 
-	methods, 
-	AnnotationDbi, 
-	reactome.db, 
-	stats4, 
-	plyr, 
-	igraph,
-    qvalue, 
+Imports:
+    methods,
+    AnnotationDbi,
+    reactome.db,
+    stats4,
+    plyr,
+    igraph,
+    qvalue,
     graphics
-Suggests: 
-	clusterProfiler,  
-	GOSemSim, 
-	org.Hs.eg.db
+Suggests:
+    clusterProfiler,
+    GOSemSim,
+    org.Hs.eg.db
 License: GPL-2
-biocViews: 
-	Bioinformatics, 
-	Pathways, 
-	Visualization
-Collate: 
-	'enrichPathway.R' 
-	'zzz.R' 
-	'ReactomePA-package.R'
+biocViews: Bioinformatics,
+    Pathways,
+    Visualization
+Collate:
+    'enrichPathway.R'
+    'zzz.R'
+    'ReactomePA-package.R'
 Packaged: 2012-03-05 18:26:53 UTC; mcarlson
