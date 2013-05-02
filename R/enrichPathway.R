@@ -4,6 +4,7 @@
 ##'
 ##'
 ##' @param gene a vector of entrez gene id.
+##' @param organism one of "human", "rat", "mouse", "celegans", "zebrafish", "fly".
 ##' @param pvalueCutoff Cutoff value of pvalue.
 ##' @param qvalueCutoff Cutoff value of qvalue.
 ##' @param readable if readable is TRUE, the gene IDs will mapping to gene
@@ -31,12 +32,13 @@
 ##' 	#plot(yy)
 ##'
 enrichPathway <- function(gene,
+                          organism="human",
                           pvalueCutoff = 0.05,
                           qvalueCutoff = 0.05,
                           readable=FALSE) {
 
     enrich.internal(gene,
-                    organism="human",
+                    organism=organism,
                     pvalueCutoff,
                     qvalueCutoff,
                     ont="Reactome",
@@ -66,16 +68,19 @@ TERMID2EXTID.Reactome <- function(term, organism) {
     return(pathID2ExtID)
 }
 
+
 ##' @importFrom DOSE ALLEXTID
+##' @importFrom DOSE getALLEG
 ##' @importMethodsFrom AnnotationDbi mappedkeys
 ##' @importFrom reactome.db reactomeEXTID2PATHID
 ##' @importFrom org.Hs.eg.db org.Hs.egSYMBOL
 ##' @S3method ALLEXTID Reactome
 ALLEXTID.Reactome <- function(organism) {
     reactome.eg <- unique(mappedkeys(reactomeEXTID2PATHID))
-    if (organism == "human") {
-        hs.eg <- unique(mappedkeys(org.Hs.egSYMBOL))
-        extID <- intersect(reactome.eg, hs.eg)
+    supported_Org <- c("human", "rat", "mouse", "yeast", "zebrafish", "celegans")
+    if (organism %in% supported_Org) {
+        eg <- getALLEG(organism)
+        extID <- intersect(reactome.eg, eg)
     } else {
         stop("only human supported...")
     }
@@ -86,26 +91,46 @@ ALLEXTID.Reactome <- function(organism) {
 ##' @importFrom reactome.db reactomePATHID2NAME
 ##' @importMethodsFrom AnnotationDbi mget
 ##' @S3method TERM2NAME Reactome
-TERM2NAME.Reactome <- function(term) {
+TERM2NAME.Reactome <- function(term, organism) {
     pathID <- as.character(term)
     pathName <- unlist(mget(pathID, reactomePATHID2NAME))
 
-    if (length(pathName) != length(pathID)) {
-	## multiple mapping of pathway ID to pathway Name
-	## such as pathway 162906 can mapping to 1629061
-	## and 1629062 when getting pathway name, remain the first one.
-	dd <- names(pathName)
-	pm.idx <- dd %in% pathID
-	pm <- dd[pm.idx] ##perfect match
+    ##
+    ## multiple mapping exists.
+    ##
 
-	mm <- dd[!pm.idx] ## miss match
-	mm.idx <- as.numeric(mm) %% 10 == 1
-	mm <- mm[mm.idx]
+##     > term
+##     Homo sapiens:  NS1 Mediated Effects on Host Pathways
+##                                             "168276"
+##                 Homo sapiens: 2-LTR circle formation
+##                                             "164843"
+##     > pathName <- unlist(mget(pathID, reactomePATHID2NAME))
+##     > pathName
+##                                                     1682761
+##      "Homo sapiens:  NS1 Mediated Effects on Host Pathways"
+##                                                     1682762
+## "Influenza A virus:  NS1 Mediated Effects on Host Pathways"
+##                                                     1648431
+##                      "Homo sapiens: 2-LTR circle formation"
+##                                                     1648432
+##    "Human immunodeficiency virus 1: 2-LTR circle formation"
+##                                                     1629061
+##             "Human immunodeficiency virus 1: HIV Infection"
+##                                                     1629062
+##                               "Homo sapiens: HIV Infection"
+##                                                     1629063
+##             "Human immunodeficiency virus 2: HIV Infection"
 
-	remainPath <- c(pm, mm)
-	pathName <- pathName[dd %in% remainPath]
-    }
+    org <- switch(organism,
+                  human = "Homo sapiens",
+                  rat = "Rattus norvegicus",
+                  mouse = "Mus musculus",
+                  yeast = "Saccharomyces cerevisiae",
+                  zebrafish = "Danio rerio",
+                  celegans = "Caenorhabditis elegans"
+                  )
 
+    pathName <- pathName[grep(org, pathName)]
     return(pathName)
 }
 
