@@ -6,16 +6,17 @@
 ##' @param gene a vector of entrez gene id.
 ##' @param organism one of "human", "rat", "mouse", "celegans", "zebrafish", "fly".
 ##' @param pvalueCutoff Cutoff value of pvalue.
-##' @param qvalueCutoff Cutoff value of qvalue.
-##' @param readable if readable is TRUE, the gene IDs will mapping to gene
-##'   symbols.
+##' @param pAdjustMethod one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"
+##' @param universe background genes
+##' @param minGSSize minimal size of genes annotated by Ontology term for testing.
+##' @param readable whether mapping gene ID to gene Name
 ##' @return A \code{enrichResult} instance.
 ##' @importFrom DOSE enrich.internal
+##' @importFrom DOSE setReadable
 ##' @importClassesFrom DOSE enrichResult
 ##' @importMethodsFrom DOSE show
 ##' @importMethodsFrom DOSE summary
 ##' @importMethodsFrom DOSE plot
-##' @importMethodsFrom DOSE setReadable
 ##' @importFrom DOSE EXTID2NAME
 ##' @export
 ##' @author Guangchuang Yu \url{http://ygc.name}
@@ -34,15 +35,19 @@
 enrichPathway <- function(gene,
                           organism="human",
                           pvalueCutoff = 0.05,
-                          qvalueCutoff = 0.05,
+                          pAdjustMethod="BH",
+                          universe,
+                          minGSSize=5,
                           readable=FALSE) {
 
     enrich.internal(gene,
-                    organism=organism,
-                    pvalueCutoff,
-                    qvalueCutoff,
-                    ont="Reactome",
-                    readable)
+                    organism = "human",
+                    pvalueCutoff=pvalueCutoff,
+                    pAdjustMethod=pAdjustMethod,
+                    ont = "Reactome",
+                    universe = universe,
+                    minGSSize = minGSSize,
+                    readable = readable)
 }
 
 ##' @importFrom DOSE EXTID2TERMID
@@ -99,27 +104,27 @@ TERM2NAME.Reactome <- function(term, organism) {
     ## multiple mapping exists.
     ##
 
-##     > term
-##     Homo sapiens:  NS1 Mediated Effects on Host Pathways
-##                                             "168276"
-##                 Homo sapiens: 2-LTR circle formation
-##                                             "164843"
-##     > pathName <- unlist(mget(pathID, reactomePATHID2NAME))
-##     > pathName
-##                                                     1682761
-##      "Homo sapiens:  NS1 Mediated Effects on Host Pathways"
-##                                                     1682762
-## "Influenza A virus:  NS1 Mediated Effects on Host Pathways"
-##                                                     1648431
-##                      "Homo sapiens: 2-LTR circle formation"
-##                                                     1648432
-##    "Human immunodeficiency virus 1: 2-LTR circle formation"
-##                                                     1629061
-##             "Human immunodeficiency virus 1: HIV Infection"
-##                                                     1629062
-##                               "Homo sapiens: HIV Infection"
-##                                                     1629063
-##             "Human immunodeficiency virus 2: HIV Infection"
+    ##     > term
+    ##     Homo sapiens:  NS1 Mediated Effects on Host Pathways
+    ##                                             "168276"
+    ##                 Homo sapiens: 2-LTR circle formation
+    ##                                             "164843"
+    ##     > pathName <- unlist(mget(pathID, reactomePATHID2NAME))
+    ##     > pathName
+    ##                                                     1682761
+    ##      "Homo sapiens:  NS1 Mediated Effects on Host Pathways"
+    ##                                                     1682762
+    ## "Influenza A virus:  NS1 Mediated Effects on Host Pathways"
+    ##                                                     1648431
+    ##                      "Homo sapiens: 2-LTR circle formation"
+    ##                                                     1648432
+    ##    "Human immunodeficiency virus 1: 2-LTR circle formation"
+    ##                                                     1629061
+    ##             "Human immunodeficiency virus 1: HIV Infection"
+    ##                                                     1629062
+    ##                               "Homo sapiens: HIV Infection"
+    ##                                                     1629063
+    ##             "Human immunodeficiency virus 2: HIV Infection"
 
     org <- switch(organism,
                   human = "Homo sapiens",

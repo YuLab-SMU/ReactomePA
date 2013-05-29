@@ -4,18 +4,27 @@
 Given a vector of genes, this function will return the enriched pathways
 with FDR control.}
 \usage{
-  enrichPathway(gene, pvalueCutoff = 0.05,
-    qvalueCutoff = 0.05, readable = FALSE)
+  enrichPathway(gene, organism = "human",
+    pvalueCutoff = 0.05, pAdjustMethod = "BH", universe,
+    minGSSize = 5, readable = FALSE)
 }
 \arguments{
   \item{gene}{a vector of entrez gene id.}
 
+  \item{organism}{one of "human", "rat", "mouse",
+  "celegans", "zebrafish", "fly".}
+
   \item{pvalueCutoff}{Cutoff value of pvalue.}
 
-  \item{qvalueCutoff}{Cutoff value of qvalue.}
+  \item{pAdjustMethod}{one of "holm", "hochberg", "hommel",
+  "bonferroni", "BH", "BY", "fdr", "none"}
 
-  \item{readable}{if readable is TRUE, the gene IDs will
-  mapping to gene symbols.}
+  \item{universe}{background genes}
+
+  \item{minGSSize}{minimal size of genes annotated by
+  Ontology term for testing.}
+
+  \item{readable}{whether mapping gene ID to gene Name}
 }
 \value{
   A \code{enrichResult} instance.
