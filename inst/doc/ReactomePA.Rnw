@@ -58,6 +58,7 @@ Jinan University, Guangzhou, China}
 <<options,echo=FALSE>>=
 options(width=60)
 require(ReactomePA)
+require(DOSE)
 @
 
 \section{Introduction}
@@ -102,10 +103,10 @@ than expected. We also implement a category net model for viusalization.
     \url{http://webclu.bio.wzw.tum.de/profcom/examples.php}.
 
 <<load sample data>>=
-require(ReactomePA)
-data(sample)
-sample
-x <- enrichPathway(gene=sample,pvalueCutoff=0.05, qvalueCutoff=0.05, readable=T)
+data(geneList)
+de <- names(geneList)[abs(geneList) > 1]
+de
+x <- enrichPathway(gene=de,pvalueCutoff=0.05, readable=T)
 head(summary(x))
 @
 

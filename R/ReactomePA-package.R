@@ -24,7 +24,6 @@ NULL
 #'
 #'
 #' @name DataSet
-#' @aliases sample
 #' @docType data
 #' @keywords datasets
 NULL
