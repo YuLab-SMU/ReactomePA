@@ -7,6 +7,7 @@
 ##' @param organism one of "human", "rat", "mouse", "celegans", "zebrafish", "fly".
 ##' @param pvalueCutoff Cutoff value of pvalue.
 ##' @param pAdjustMethod one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"
+##' @param qvalueCutoff Cutoff value of qvalue
 ##' @param universe background genes
 ##' @param minGSSize minimal size of genes annotated by Ontology term for testing.
 ##' @param readable whether mapping gene ID to gene Name
@@ -36,6 +37,7 @@ enrichPathway <- function(gene,
                           organism="human",
                           pvalueCutoff = 0.05,
                           pAdjustMethod="BH",
+                          qvalueCutoff = 0.2,
                           universe,
                           minGSSize=5,
                           readable=FALSE) {
@@ -44,11 +46,13 @@ enrichPathway <- function(gene,
                     organism = "human",
                     pvalueCutoff=pvalueCutoff,
                     pAdjustMethod=pAdjustMethod,
+                    qvalueCutoff=qvalueCutoff,
                     ont = "Reactome",
                     universe = universe,
                     minGSSize = minGSSize,
                     readable = readable)
 }
+
 
 ##' @importFrom DOSE EXTID2TERMID
 ##' @importMethodsFrom AnnotationDbi mget
@@ -136,6 +140,7 @@ TERM2NAME.Reactome <- function(term, organism) {
                   )
 
     pathName <- pathName[grep(org, pathName)]
-    return(pathName)
+    res <- sapply(pathName, function(i) unlist(strsplit(i, split=": "))[2])
+    return(res)
 }
 

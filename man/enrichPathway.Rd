@@ -5,8 +5,9 @@ Given a vector of genes, this function will return the enriched pathways
 with FDR control.}
 \usage{
   enrichPathway(gene, organism = "human",
-    pvalueCutoff = 0.05, pAdjustMethod = "BH", universe,
-    minGSSize = 5, readable = FALSE)
+    pvalueCutoff = 0.05, pAdjustMethod = "BH",
+    qvalueCutoff = 0.2, universe, minGSSize = 5,
+    readable = FALSE)
 }
 \arguments{
   \item{gene}{a vector of entrez gene id.}
@@ -18,6 +19,8 @@ with FDR control.}
 
   \item{pAdjustMethod}{one of "holm", "hochberg", "hommel",
   "bonferroni", "BH", "BY", "fdr", "none"}
+
+  \item{qvalueCutoff}{Cutoff value of qvalue}
 
   \item{universe}{background genes}
 
