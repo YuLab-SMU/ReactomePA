@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.5.3
+------------------------
+ o bug fixed in TERMID2EXTID <2013-09-18, Wed>
+
 CHANGES IN VERSION 1.5.2
 ------------------------
  o implement gseAnalyzer for GSEA analysis <2013-07-10, Wed>
