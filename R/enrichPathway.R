@@ -130,17 +130,21 @@ TERM2NAME.Reactome <- function(term, organism) {
     ##                                                     1629063
     ##             "Human immunodeficiency virus 2: HIV Infection"
 
+    ## The following description contain "Homo sapiens", and report a bug. 
+    ## "Mycobacterium tuberculosis: Latent infection of Homo sapiens with Mycobacterium tuberculosis"
+    ## To fix it, the ":" should presented in grep.
     org <- switch(organism,
-                  human = "Homo sapiens",
-                  rat = "Rattus norvegicus",
-                  mouse = "Mus musculus",
-                  yeast = "Saccharomyces cerevisiae",
-                  zebrafish = "Danio rerio",
-                  celegans = "Caenorhabditis elegans"
+                  human = "Homo sapiens:",
+                  rat = "Rattus norvegicus:",
+                  mouse = "Mus musculus:",
+                  yeast = "Saccharomyces cerevisiae:",
+                  zebrafish = "Danio rerio:",
+                  celegans = "Caenorhabditis elegans:"
                   )
 
     pathName <- pathName[grep(org, pathName)]
     res <- sapply(pathName, function(i) unlist(strsplit(i, split=": "))[2])
+
     return(res)
 }
 
