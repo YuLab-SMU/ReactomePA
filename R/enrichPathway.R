@@ -43,7 +43,7 @@ enrichPathway <- function(gene,
                           readable=FALSE) {
 
     enrich.internal(gene,
-                    organism = "human",
+                    organism = organism,
                     pvalueCutoff=pvalueCutoff,
                     pAdjustMethod=pAdjustMethod,
                     qvalueCutoff=qvalueCutoff,
