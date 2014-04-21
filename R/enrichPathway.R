@@ -102,7 +102,7 @@ ALLEXTID.Reactome <- function(organism) {
 ##' @S3method TERM2NAME Reactome
 TERM2NAME.Reactome <- function(term, organism) {
     pathID <- as.character(term)
-    pathName <- unlist(mget(pathID, reactomePATHID2NAME))
+    pathName <- mget(pathID, reactomePATHID2NAME)
 
     ##
     ## multiple mapping exists.
@@ -142,9 +142,25 @@ TERM2NAME.Reactome <- function(term, organism) {
                   celegans = "Caenorhabditis elegans:"
                   )
 
-    pathName <- pathName[grep(org, pathName)]
-    res <- sapply(pathName, function(i) unlist(strsplit(i, split=": "))[2])
+    pathName <- sapply(pathName, function(p) p[grep(org, p)])
+    pathName <- unlist(pathName)
+    pathName <- sapply(pathName, function(i) unlist(strsplit(i, split=": "))[2])
 
+    ##
+    ## BUG was reported by Jean-Christophe Aude (Jean-Christophe.AUDE@cea.fr)
+    ##
+    ## > get("174495", reactomePATHID2NAME)
+    ## [1] "Human immunodeficiency virus 1: Synthesis And Processing Of GAG, GAGPOL Polyproteins"
+    ## human genes involves, but pathway name was not labelled by "Homo sapiens".
+    
+    ## get first term of missing ID
+    missID <- pathID[ ! pathID %in% names(pathName) ]
+    missPathName <- unlist(sapply(mget(missID, reactomePATHID2NAME), "[[", 1))
+    names(missPathName) <- missID
+
+    ## merge and keep input order
+    res <- c(pathName, missPathName)
+    res <- res[pathID]
     return(res)
 }
 

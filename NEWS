@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.9.1
+------------------------
+ o bug fixed of TERM2NAME.Reactome <2014-04-21, Mon>
+
 CHANGES IN VERSION 1.7.2
 ------------------------
  o bug fixed for multi-organisms support <2013-12-09, Mon>
