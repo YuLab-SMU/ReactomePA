@@ -4,7 +4,7 @@
 \title{Datasets
 sample contains a sample of gene IDs.}
 \description{
-  Datasets sample contains a sample of gene IDs.
+Datasets sample contains a sample of gene IDs.
 }
 \keyword{datasets}
 
