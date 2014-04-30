@@ -2,8 +2,8 @@
 \alias{viewPathway}
 \title{viewPathway}
 \usage{
-  viewPathway(pathName, organism = "human",
-    readable = TRUE, foldChange = NULL, ...)
+viewPathway(pathName, organism = "human", readable = TRUE,
+  foldChange = NULL, ...)
 }
 \arguments{
   \item{pathName}{pathway Name}
@@ -17,15 +17,15 @@
   \item{...}{additional parameter}
 }
 \value{
-  plot
+plot
 }
 \description{
-  view reactome pathway
+view reactome pathway
 }
 \details{
-  plotting reactome pathway
+plotting reactome pathway
 }
 \author{
-  Yu Guangchuang
+Yu Guangchuang
 }
 

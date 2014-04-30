@@ -155,12 +155,19 @@ TERM2NAME.Reactome <- function(term, organism) {
     
     ## get first term of missing ID
     missID <- pathID[ ! pathID %in% names(pathName) ]
-    missPathName <- unlist(sapply(mget(missID, reactomePATHID2NAME), "[[", 1))
-    names(missPathName) <- missID
-
-    ## merge and keep input order
-    res <- c(pathName, missPathName)
-    res <- res[pathID]
+    if (length(missID) > 0 ) {
+        missPathName <- unlist(sapply(mget(missID, reactomePATHID2NAME), "[[", 1))
+        names(missPathName) <- missID
+    } else {
+        missPathName <- NA
+    }
+    if (is.na(missPathName)) {
+        res <- pathName
+    } else {
+        ## merge and keep input order
+        res <- c(pathName, missPathName)
+        res <- res[pathID]
+    }
     return(res)
 }
 

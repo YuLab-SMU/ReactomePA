@@ -2,9 +2,9 @@
 \alias{gseAnalyzer}
 \title{gseAnalyzer}
 \usage{
-  gseAnalyzer(geneList, organism = "human", exponent = 1,
-    nPerm = 1000, minGSSize = 10, pvalueCutoff = 0.05,
-    pAdjustMethod = "BH", verbose = TRUE)
+gseAnalyzer(geneList, organism = "human", exponent = 1, nPerm = 1000,
+  minGSSize = 10, pvalueCutoff = 0.05, pAdjustMethod = "BH",
+  verbose = TRUE)
 }
 \arguments{
   \item{geneList}{order ranked geneList}
@@ -25,12 +25,12 @@
   \item{verbose}{print message or not}
 }
 \value{
-  gseaResult object
+gseaResult object
 }
 \description{
-  Gene Set Enrichment Analysis of Reactome Pathway
+Gene Set Enrichment Analysis of Reactome Pathway
 }
 \author{
-  Yu Guangchuang
+Yu Guangchuang
 }
 

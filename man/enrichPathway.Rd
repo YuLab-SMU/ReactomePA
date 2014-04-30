@@ -4,10 +4,9 @@
 Given a vector of genes, this function will return the enriched pathways
 with FDR control.}
 \usage{
-  enrichPathway(gene, organism = "human",
-    pvalueCutoff = 0.05, pAdjustMethod = "BH",
-    qvalueCutoff = 0.2, universe, minGSSize = 5,
-    readable = FALSE)
+enrichPathway(gene, organism = "human", pvalueCutoff = 0.05,
+  pAdjustMethod = "BH", qvalueCutoff = 0.2, universe, minGSSize = 5,
+  readable = FALSE)
 }
 \arguments{
   \item{gene}{a vector of entrez gene id.}
@@ -30,12 +29,12 @@ with FDR control.}
   \item{readable}{whether mapping gene ID to gene Name}
 }
 \value{
-  A \code{enrichResult} instance.
+A \code{enrichResult} instance.
 }
 \description{
-  Pathway Enrichment Analysis of a gene set. Given a vector
-  of genes, this function will return the enriched pathways
-  with FDR control.
+Pathway Enrichment Analysis of a gene set. Given a vector
+of genes, this function will return the enriched pathways
+with FDR control.
 }
 \examples{
 gene <- c("11171", "8243", "112464", "2194",
@@ -47,10 +46,10 @@ gene <- c("11171", "8243", "112464", "2194",
 	#plot(yy)
 }
 \author{
-  Guangchuang Yu \url{http://ygc.name}
+Guangchuang Yu \url{http://ygc.name}
 }
 \seealso{
-  \code{\link{enrichResult-class}}
+\code{\link{enrichResult-class}}
 }
 \keyword{manip}
 
