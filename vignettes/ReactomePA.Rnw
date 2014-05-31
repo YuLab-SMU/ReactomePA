@@ -1,0 +1,169 @@
+% \VignetteEngine{knitr}
+% \VignetteIndexEntry{ReactomePA - an R package for Reactome Pathway Analysis}
+% \VignettePackage{ReactomePA}
+
+% To compile this document, run the commands within R
+% require(knitr); knit2pdf("ReactomePA.Rnw")
+
+\documentclass[12pt]{article}
+\usepackage[a4paper,left=3cm,top=2cm,bottom=3cm,right=3cm,ignoreheadfoot]{geometry}
+\pagestyle{empty}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{helvet}
+\usepackage[titletoc]{appendix}
+\usepackage{tocloft}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{.5em}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\Rcode}[1]{{\texttt{#1}}}
+\newcommand{\Robject}[1]{{\small\texttt{#1}}}
+\newcommand{\Rfunction}[1]{\Robject{#1}}
+\newcommand{\Rpackage}[1]{\textit{#1}}
+\newcommand{\Rparameter}[1]{\textit{#1}}
+\newcommand{\Rclass}[1]{\textit{#1}}
+\newcommand{\R}{\textsf{R}}
+
+\usepackage[
+  bookmarks,%
+  colorlinks,%
+  linktoc=section,%
+  linkcolor=RedViolet,%
+  citecolor=RedViolet,%
+  urlcolor=RedViolet,%
+  linkbordercolor={1 1 1},%
+  citebordercolor={1 1 1},%
+  urlbordercolor={1 1 1},%
+  raiselinks,%
+  plainpages,%
+  pdftex
+  ]{hyperref}
+
+
+\usepackage{cite}
+\renewcommand{\floatpagefraction}{0.9}
+
+\usepackage{sectsty}
+\sectionfont{\sffamily\bfseries\color{RoyalBlue}\sectionrule{0pt}{0pt}{-1ex}{1pt}}
+\subsectionfont{\sffamily\bfseries\color{RoyalBlue}}
+\subsubsectionfont{\sffamily\bfseries\color{RoyalBlue}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\lfoot{}\cfoot{}\rfoot{}
+\renewcommand{\headrule}{}
+
+\usepackage{graphicx}
+%\usepackage{xstring}
+
+
+
+<<include=FALSE>>=
+library(DOSE)
+library(ReactomePA)
+library(clusterProfiler)
+library(knitr)
+opts_chunk$set(tidy=TRUE,tidy.opts=list(keep.blank.line=FALSE, width.cutoff=50),out.truncate=80,out.lines=6,cache=TRUE,dev='pdf',include=TRUE,fig.width=6,fig.height=6,resolution=150)
+@
+
+\newcommand{\fixme}[1]{{\textbf{Fixme:} \textit{\textcolor{blue}{#1}}}}
+
+
+\title{\textsf{\textbf{Reactome Pathway Analysis}}}
+\author{Guangchuang Yu}
+
+\begin{document}
+\maketitle
+
+<<options,results='hide',echo=FALSE>>=
+options(digits=3, width=80, prompt=" ", continue=" ")
+@
+
+\tableofcontents
+
+
+\section{Introduction}
+
+This package is designed for reactome pathway-based analysis. Reactome
+is an open-source, open access, manually curated and peer-reviewed
+pathway database.
+
+\section{Pathway Enrichment Analysis}
+
+Enrichment analysis is a widely used approach to identify biological
+themes. Here, we implement hypergeometric model to assess whether the
+number of selected genes associated with reactome pathway is larger
+than expected. The p values were calculated based the hypergeometric model \cite{boyle2004},
+
+<<load sample data>>=
+require(DOSE)
+data(geneList)
+de <- names(geneList)[abs(geneList) > 1]
+head(de)
+require(ReactomePA)
+x <- enrichPathway(gene=de,pvalueCutoff=0.05, readable=T)
+head(summary(x))
+@
+
+\subsection{Visualize enrichment result}
+We also implement a bar plot and category-gene-network for visualization. It is very common to visualize the enrichment result in bar or pie chart. We believe the pie chart is misleading and only provide bar chart.
+<<barplot, fig.cap="barplot of Reactome Pathway enrichment result.", fig.align="center", fig.height=5, fig.width=8, out.width="0.8\\textwidth", fig.pos="h">>=
+barplot(x, showCategory=8)
+@
+
+In order to consider the potentially biological complexities in which a gene may belong to multiple annotation categories, we developed \Rfunction{cnetplot} function to extract the complex association between genes and diseases.
+<<cnetplot, fig.cap="cnetplot of Reactome Pathway enrichment result.", fig.align="center", fig.height=16, fig.width=16, out.width="0.9\\textwidth", fig.pos="h">>=
+cnetplot(x, categorySize="pvalue", foldChange=geneList)
+@
+
+\subsection{Comparing enriched reactome pathways among gene clusters with clusterProfiler}
+We have developed an \textsf{R} package \Rpackage{clusterProfiler} \cite{yu_clusterprofiler:_2012} for comparing biological themes among gene clusters. \Rpackage{ReactomePA} works fine with \Rpackage{clusterProfiler} and can compare biological themes at reactome pathway perspective.
+ 
+<<clusterProfiler, fig.cap="ReactomePA with clusterProfiler.", fig.align="center", fig.height=6, fig.width=11, out.width="0.9\\textwidth", fig.pos="h">>= 
+require(clusterProfiler)
+data(gcSample)
+res <- compareCluster(gcSample, fun="enrichPathway")
+plot(res)
+@
+
+\section{Gene Set Enrichment Analysis}
+A common approach in analyzing gene expression profiles was identifying differential expressed genes that are deemed interesting. The \Rfunction{enrichPathway} function we demonstrated previously were based on these differential expressed genes. This approach will find genes where the difference is large, but it will not detect a situation where the difference is small, but evidenced in coordinated way in a set of related genes. Gene Set Enrichment Analysis (GSEA) directly addressed this limitation. All genes can be used in GSEA; GSEA aggregates the per gene statistics across genes within a gene set, therefore making it possible to detect situations where all genes in a predefined set change in a small but coordinated way. 
+
+<<GSEA analysis>>=
+y <- gseAnalyzer(geneList, nPerm=100, 
+                  minGSSize=120, pvalueCutoff=0.05, 
+                  pAdjustMethod="BH", verbose=FALSE)
+res <- summary(y)
+head(res)
+@
+
+\subsection{Visualize GSEA result}
+<<gseaplot, fig.cap="plotting gsea result", fig.align="center", fig.height=6, fig.width=6, out.width="0.6\\textwidth", fig.pos="h">>=  
+topID <- res[1,1]
+topID
+plot(y, geneSetID = topID)
+@
+
+\section{Pathway Visualization}
+
+In \Rpackage{ReactomePA}, we also implemented \Rfunction{viewPathway} to visualized the pathway.
+<<viewPathway, fig.cap="Reactome Pathway visualization.", fig.align="center", fig.height=16, fig.width=16, out.width="0.9\\textwidth", fig.pos="h">>=
+viewPathway("E2F mediated regulation of DNA replication", readable=TRUE, foldChange=geneList)
+@
+
+
+\section{Session Information}
+
+The version number of R and packages loaded for generating the vignette were:
+
+<<sessInfo, results='asis', echo=FALSE>>=
+toLatex(sessionInfo())
+@
+
+\bibliographystyle{unsrt}
+\bibliography{ReactomePA}
+\end{document}
+
