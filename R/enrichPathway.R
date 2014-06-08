@@ -53,11 +53,14 @@ enrichPathway <- function(gene,
                     readable = readable)
 }
 
-
+##' @title EXTID2TERMID.Reactome
+##' @param gene gene
+##' @param organism organism
 ##' @importFrom DOSE EXTID2TERMID
 ##' @importMethodsFrom AnnotationDbi mget
 ##' @importFrom reactome.db reactomeEXTID2PATHID
-##' @S3method EXTID2TERMID Reactome
+##' @method EXTID2TERMID Reactome
+##' @export
 EXTID2TERMID.Reactome <- function(gene, organism) {
     gene <- as.character(gene)
     ## query external ID to pathway ID
@@ -68,22 +71,29 @@ EXTID2TERMID.Reactome <- function(gene, organism) {
     return(qExtID2PathID)
 }
 
+##' @title TERMID2EXTID.Reactome
+##' @param term reactome pathway term
+##' @param organism organism
 ##' @importFrom DOSE TERMID2EXTID
 ##' @importMethodsFrom AnnotationDbi mget
 ##' @importFrom reactome.db reactomePATHID2EXTID
-##' @S3method TERMID2EXTID Reactome
+##' @method TERMID2EXTID Reactome
+##' @export
 TERMID2EXTID.Reactome <- function(term, organism) {
     pathID2ExtID <- mget(unique(term), reactomePATHID2EXTID)
     return(pathID2ExtID)
 }
 
 
+##' @title ALLEXTID.Reactome
+##' @param organism organism
 ##' @importFrom DOSE ALLEXTID
 ##' @importFrom DOSE getALLEG
 ##' @importMethodsFrom AnnotationDbi mappedkeys
 ##' @importFrom reactome.db reactomeEXTID2PATHID
 ##' @importFrom org.Hs.eg.db org.Hs.egSYMBOL
-##' @S3method ALLEXTID Reactome
+##' @method ALLEXTID Reactome
+##' @export
 ALLEXTID.Reactome <- function(organism) {
     reactome.eg <- unique(mappedkeys(reactomeEXTID2PATHID))
     supported_Org <- c("human", "rat", "mouse", "yeast", "zebrafish", "celegans")
@@ -96,10 +106,14 @@ ALLEXTID.Reactome <- function(organism) {
     return(extID)
 }
 
+##' @title TERM2NAME.Reactome
+##' @param term reactome pathway term
+##' @param organism organism
 ##' @importFrom DOSE TERM2NAME
 ##' @importFrom reactome.db reactomePATHID2NAME
 ##' @importMethodsFrom AnnotationDbi mget
-##' @S3method TERM2NAME Reactome
+##' @method TERM2NAME Reactome
+##' @export
 TERM2NAME.Reactome <- function(term, organism) {
     pathID <- as.character(term)
     pathName <- mget(pathID, reactomePATHID2NAME)
