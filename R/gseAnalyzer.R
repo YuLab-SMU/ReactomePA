@@ -1,7 +1,7 @@
 ##' Gene Set Enrichment Analysis of Reactome Pathway
 ##'
 ##'
-##' @title gseAnalyzer
+##' @title gsePathway
 ##' @param geneList order ranked geneList
 ##' @param organism organism
 ##' @param exponent weight of each step
@@ -18,15 +18,15 @@
 ##' @export
 ##' @return gseaResult object
 ##' @author Yu Guangchuang
-gseAnalyzer <- function(geneList,
-                        organism      = "human",
-                        exponent      = 1,
-                        nPerm         = 1000,
-                        minGSSize     = 10,
-                        pvalueCutoff  = 0.05,
-                        pAdjustMethod = "BH",
-                        verbose       = TRUE) {
-
+gsePathway <- function(geneList,
+                       organism      = "human",
+                       exponent      = 1,
+                       nPerm         = 1000,
+                       minGSSize     = 10,
+                       pvalueCutoff  = 0.05,
+                       pAdjustMethod = "BH",
+                       verbose       = TRUE) {
+    
     setType <- "Reactome"
     if (verbose)
         sprintf("preparing geneSet collections of setType '%s'...", setType)
@@ -46,11 +46,14 @@ gseAnalyzer <- function(geneList,
          verbose       = verbose)
 }
 
-
+##' @title getGeneSet.Reactome
+##' @param setType gene set type
+##' @param organism organism
 ##' @importFrom DOSE getGeneSet
 ##' @importFrom reactome.db reactomePATHID2EXTID
 ##' @importFrom AnnotationDbi as.list
-##' @S3method getGeneSet Reactome
+##' @method getGeneSet Reactome
+##' @export
 getGeneSet.Reactome <- function(setType="Reactome", organism) {
     if (setType != "Reactome")
         stop("setType should be 'Reactome'... ")

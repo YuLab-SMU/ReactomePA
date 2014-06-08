@@ -10,6 +10,7 @@
 ##' @importFrom graphite convertIdentifiers
 ##' @importFrom graphite pathwayGraph
 ##' @importFrom igraph igraph.from.graphNEL
+##' @importFrom igraph as.undirected
 ##' @importFrom DOSE scaleNodeColor
 ##' @importFrom DOSE netplot
 ##' @importFrom DOSE EXTID2NAME
@@ -44,6 +45,7 @@ viewPathway <- function(pathName,
 
     g <- pathwayGraph(p)
     gg <- igraph.from.graphNEL(g)
+    gg <- as.undirected(gg)
     gg <- setting.graph.attributes(gg)
     if (!is.null(foldChange)) {
         gg <- scaleNodeColor(gg, foldChange)
