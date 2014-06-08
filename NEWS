@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.9.2
+------------------------
+ o update roxygen to version 4 <2014-06-09, Mon>
+
 CHANGES IN VERSION 1.9.1
 ------------------------
  o bug fixed of TERM2NAME.Reactome <2014-04-21, Mon>
