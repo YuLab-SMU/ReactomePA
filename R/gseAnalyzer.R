@@ -10,7 +10,7 @@
 ##' @param pvalueCutoff pvalue Cutoff
 ##' @param pAdjustMethod pvalue adjustment method
 ##' @param verbose print message or not
-##' @importFrom DOSE gsea
+##' @importFrom DOSE gseAnalyzer
 ##' @importClassesFrom DOSE gseaResult
 ##' @importMethodsFrom DOSE show
 ##' @importMethodsFrom DOSE summary
@@ -27,24 +27,16 @@ gsePathway <- function(geneList,
                        pAdjustMethod = "BH",
                        verbose       = TRUE) {
 
-
-    setType <- "Reactome"
-    if (verbose)
-        sprintf("preparing geneSet collections of setType '%s'...", setType)
+    gseAnalyzer(geneList      = geneList,
+                setType       = "Reactome",
+                organism      = organism,
+                exponent      = exponent,
+                nPerm         = nPerm,
+                minGSSize     = minGSSize,
+                pvalueCutoff  = pvalueCutoff,
+                pAdjustMethod = pAdjustMethod,
+                verbose       = verbose)
     
-    class(setType) <- setType
-    geneSets <- getGeneSet(setType, organism)
-    
-    gsea(geneList      = geneList,
-         geneSets      = geneSets,
-         setType       = setType,
-         organism      = organism,
-         exponent      = exponent,
-         nPerm         = nPerm,
-         minGSSize     = minGSSize,
-         pvalueCutoff  = pvalueCutoff,
-         pAdjustMethod = pAdjustMethod,
-         verbose       = verbose)
 }
 
 
