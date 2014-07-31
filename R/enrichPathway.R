@@ -53,6 +53,33 @@ enrichPathway <- function(gene,
                     readable = readable)
 }
 
+##' enrichment map
+##'
+##' enrichMap
+##' @title enrichMap
+##' @param x enrichResult or gseaResult
+##' @param ... additional parameter
+##' @return figure
+##' @export
+##' @author ygc
+enrichMap <- function(x, ...) {
+    ## DOSE::enrichMap(...)
+    plot(x, type="enrichMap", ...)
+}
+
+##' category-gene-net plot
+##'
+##' category gene association
+##' @title cnetplot
+##' @param x enrichResult object
+##' @param ... additional parameter
+##' @return figure
+##' @export
+##' @author ygc
+cnetplot <- function(x, ...) {
+    plot(x, type="cnet", ...)
+}
+
 ##' @title EXTID2TERMID.Reactome
 ##' @param gene gene
 ##' @param organism organism

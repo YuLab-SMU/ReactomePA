@@ -1,18 +1,18 @@
 Package: ReactomePA
 Type: Package
 Title: Reactome Pathway Analysis
-Version: 1.9.2
+Version: 1.9.3
 Author: Guangchuang Yu <guangchuangyu@gmail.com>
 Maintainer: Guangchuang Yu <guangchuangyu@gmail.com>
 Description: This package provides functions for pathway analysis based on
     REACTOME pathway database. It implements enrichment analysis, gene set
-    enrichment analysis and several functions for visualization
+    enrichment analysis and several functions for visualization.
 Dependes: R (>= 3.0.0)
 Imports:
+    DOSE,
     AnnotationDbi,
     reactome.db,
     org.Hs.eg.db,
-    DOSE,
     igraph,
     graphite
 Suggests:
