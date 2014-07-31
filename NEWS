@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.9.4
+------------------------
+ o add gseaplot function <2014-07-31, Thu>
+
 CHANGES IN VERSION 1.9.3
 ------------------------
  o import enrichMap from DOSE <2014-07-31, Thu>

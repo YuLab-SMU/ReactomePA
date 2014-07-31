@@ -47,6 +47,21 @@ gsePathway <- function(geneList,
          verbose       = verbose)
 }
 
+
+##' visualize analyzing result of GSEA
+##'
+##' plotting function for gseaResult
+##' @title gseaplot
+##' @param x gseaResult object
+##' @param ... additional parameters
+##' @return figure
+##' @export
+##' @author ygc
+gseaplot <- function(x, ...) {
+    plot(x, type="gseaplot", ...)
+}
+
+
 ##' @title getGeneSet.Reactome
 ##' @param setType gene set type
 ##' @param organism organism
