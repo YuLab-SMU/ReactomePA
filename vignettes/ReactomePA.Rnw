@@ -115,7 +115,7 @@ barplot(x, showCategory=8)
 @
 
 Enrichment map can be viusalized by \Rfunction{enrichMap} :
-<<enrichMap, fig.cap="enrichment map of gsea result", fig.align="center", fig.height=16, fig.width=16, out.width="0.9\\textwidth", fig.pos="h">>=  
+<<enrichMap, fig.cap="enrichment map of enrichment result", fig.align="center", fig.height=16, fig.width=16, out.width="0.9\\textwidth", fig.pos="h">>=  
 enrichMap(x)
 @ 
 
