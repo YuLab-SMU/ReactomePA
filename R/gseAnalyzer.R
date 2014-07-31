@@ -26,14 +26,15 @@ gsePathway <- function(geneList,
                        pvalueCutoff  = 0.05,
                        pAdjustMethod = "BH",
                        verbose       = TRUE) {
-    
+
+
     setType <- "Reactome"
     if (verbose)
         sprintf("preparing geneSet collections of setType '%s'...", setType)
-
+    
     class(setType) <- setType
     geneSets <- getGeneSet(setType, organism)
-
+    
     gsea(geneList      = geneList,
          geneSets      = geneSets,
          setType       = setType,
