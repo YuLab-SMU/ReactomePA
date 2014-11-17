@@ -1,3 +1,12 @@
+CHANGES IN VERSION 1.11.1
+------------------------
+ o fix some pathways don't have a name <2014-11-17, Mon>
+    ## > get("5493857", reactomePATHID2EXTID)
+    ##  [1] "510850" "523328" "282187" "282188" ...
+    ## > get("5493857", reactomePATHID2NAME)
+    ## Error in .checkKeys(value, Lkeys(x), x@ifnotfound) : 
+    ##   value for "5493857" not found
+ 
 CHANGES IN VERSION 1.9.4
 ------------------------
  o add gseaplot function <2014-07-31, Thu>
