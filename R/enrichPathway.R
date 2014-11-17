@@ -95,6 +95,15 @@ EXTID2TERMID.Reactome <- function(gene, organism) {
 
     notNA.idx <- unlist(lapply(qExtID2PathID, function(i) !all(is.na(i))))
     qExtID2PathID <- qExtID2PathID[notNA.idx]
+
+    ## "5493857" is a valid path ID in reactomeEXTID2PATHID,
+    ## but can not mapped to DESCRIPTION by reactomePATHID2NAME
+    pathID <- unlist(qExtID2PathID)
+    pathName <- mget(pathID, reactomePATHID2NAME, ifnotfound=NA)
+    pathName <- unlist(pathName)
+    pathID <- pathID[ !is.na(pathName) ]
+
+    qExtID2PathID <- lapply(qExtID2PathID, function(x) x[x%in% pathID])
     return(qExtID2PathID)
 }
 
