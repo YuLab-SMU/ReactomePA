@@ -127,7 +127,7 @@ TERMID2EXTID.Reactome <- function(term, organism) {
 ##' @importFrom DOSE getALLEG
 ##' @importMethodsFrom AnnotationDbi mappedkeys
 ##' @importFrom reactome.db reactomeEXTID2PATHID
-##' @importFrom org.Hs.eg.db org.Hs.egSYMBOL
+## @importFrom org.Hs.eg.db org.Hs.egSYMBOL
 ##' @method ALLEXTID Reactome
 ##' @export
 ALLEXTID.Reactome <- function(organism) {
