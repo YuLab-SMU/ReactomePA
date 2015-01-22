@@ -1,7 +1,7 @@
 Package: ReactomePA
 Type: Package
 Title: Reactome Pathway Analysis
-Version: 1.11.1
+Version: 1.11.2
 Author: Guangchuang Yu <guangchuangyu@gmail.com>
 Maintainer: Guangchuang Yu <guangchuangyu@gmail.com>
 Description: This package provides functions for pathway analysis based on
@@ -12,13 +12,10 @@ Imports:
     DOSE,
     AnnotationDbi,
     reactome.db,
-    org.Hs.eg.db,
     igraph,
     graphite
 Suggests:
     clusterProfiler,
-    GOSemSim,
-    ChIPseeker,
     knitr
 VignetteBuilder: knitr
 License: GPL-2
