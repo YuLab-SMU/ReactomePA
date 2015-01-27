@@ -1,79 +1,47 @@
-% \VignetteEngine{knitr}
 % \VignetteIndexEntry{ReactomePA - an R package for Reactome Pathway Analysis}
 % \VignettePackage{ReactomePA}
+% \VignetteEngine{knitr::knitr}
 
 % To compile this document, run the commands within R
 % require(knitr); knit2pdf("ReactomePA.Rnw")
 
 \documentclass[12pt]{article}
-\usepackage[a4paper,left=3cm,top=2cm,bottom=3cm,right=3cm,ignoreheadfoot]{geometry}
-\pagestyle{empty}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{helvet}
-\usepackage[titletoc]{appendix}
-\usepackage{tocloft}
-
-\setlength{\parindent}{0em}
-\setlength{\parskip}{.5em}
-
-\renewcommand{\familydefault}{\sfdefault}
-
-\newcommand{\Rcode}[1]{{\texttt{#1}}}
-\newcommand{\Robject}[1]{{\small\texttt{#1}}}
-\newcommand{\Rfunction}[1]{\Robject{#1}}
-\newcommand{\Rpackage}[1]{\textit{#1}}
-\newcommand{\Rparameter}[1]{\textit{#1}}
-\newcommand{\Rclass}[1]{\textit{#1}}
-\newcommand{\R}{\textsf{R}}
-
-\usepackage[
-  bookmarks,%
-  colorlinks,%
-  linktoc=section,%
-  linkcolor=RedViolet,%
-  citecolor=RedViolet,%
-  urlcolor=RedViolet,%
-  linkbordercolor={1 1 1},%
-  citebordercolor={1 1 1},%
-  urlbordercolor={1 1 1},%
-  raiselinks,%
-  plainpages,%
-  pdftex
-  ]{hyperref}
 
 
-\usepackage{cite}
-\renewcommand{\floatpagefraction}{0.9}
+<<knitr, echo=FALSE, results="hide">>=
+knitr::opts_chunk$set(tidy         = FALSE,
+               out.truncate = 80,
+               out.lines    = 6,
+               dev          = 'pdf',
+               include      = TRUE,
+               fig.width    = 6,
+               fig.height   = 6,
+               resolution   = 100,
+               message      = FALSE)
+@ 
 
-\usepackage{sectsty}
-\sectionfont{\sffamily\bfseries\color{RoyalBlue}\sectionrule{0pt}{0pt}{-1ex}{1pt}}
-\subsectionfont{\sffamily\bfseries\color{RoyalBlue}}
-\subsubsectionfont{\sffamily\bfseries\color{RoyalBlue}}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
-\lfoot{}\cfoot{}\rfoot{}
-\renewcommand{\headrule}{}
-
-\usepackage{graphicx}
-%\usepackage{xstring}
-
+<<style-Sweave, eval=TRUE, echo=FALSE, results="asis">>=
+BiocStyle::latex()
+@ 
 
 
-<<include=FALSE>>=
+<<loadPKG, echo=FALSE>>=
 library(DOSE)
 library(ReactomePA)
 library(clusterProfiler)
-library(knitr)
-opts_chunk$set(tidy=TRUE,tidy.opts=list(keep.blank.line=FALSE, width.cutoff=50),out.truncate=80,out.lines=6,cache=TRUE,dev='pdf',include=TRUE,fig.width=6,fig.height=6,resolution=150)
 @
 
-\newcommand{\fixme}[1]{{\textbf{Fixme:} \textit{\textcolor{blue}{#1}}}}
 
 
-\title{\textsf{\textbf{Reactome Pathway Analysis}}}
-\author{Guangchuang Yu}
+
+\author{Guangchuang Yu \\[1em]
+  \small{School of Public Health} \\
+  \small{The University of Hong Kong} \\
+  \small{\email{guangchuangyu@gmail.com}}
+}
+
+
+\title{Reactome Pathway Analysis}
 
 \begin{document}
 \maketitle
@@ -82,8 +50,9 @@ opts_chunk$set(tidy=TRUE,tidy.opts=list(keep.blank.line=FALSE, width.cutoff=50),
 options(digits=3, width=80, prompt=" ", continue=" ")
 @
 
+\newpage
 \tableofcontents
-
+\newpage
 
 \section{Introduction}
 
@@ -125,7 +94,7 @@ cnetplot(x, categorySize="pvalue", foldChange=geneList)
 @
 
 \subsection{Comparing enriched reactome pathways among gene clusters with clusterProfiler}
-We have developed an \textsf{R} package \Rpackage{clusterProfiler} \cite{yu_clusterprofiler:_2012} for comparing biological themes among gene clusters. \Rpackage{ReactomePA} works fine with \Rpackage{clusterProfiler} and can compare biological themes at reactome pathway perspective.
+We have developed an \textsf{R} package \Biocpkg{clusterProfiler} \cite{yu_clusterprofiler:_2012} for comparing biological themes among gene clusters. \Biocpkg{ReactomePA} works fine with \Biocpkg{clusterProfiler} and can compare biological themes at reactome pathway perspective.
  
 <<clusterProfiler, fig.cap="ReactomePA with clusterProfiler.", fig.align="center", fig.height=6, fig.width=11, out.width="0.9\\textwidth", fig.pos="h">>= 
 require(clusterProfiler)
@@ -139,8 +108,8 @@ A common approach in analyzing gene expression profiles was identifying differen
 
 <<GSEA analysis>>=
 y <- gsePathway(geneList, nPerm=100, 
-                  minGSSize=120, pvalueCutoff=0.05, 
-                  pAdjustMethod="BH", verbose=FALSE)
+                minGSSize=120, pvalueCutoff=0.05, 
+                pAdjustMethod="BH", verbose=FALSE)
 res <- summary(y)
 head(res)
 @
@@ -156,7 +125,7 @@ gseaplot(y, geneSetID = "1280215")
 
 \section{Pathway Visualization}
 
-In \Rpackage{ReactomePA}, we also implemented \Rfunction{viewPathway} to visualized the pathway.
+In \Biocpkg{ReactomePA}, we also implemented \Rfunction{viewPathway} to visualized the pathway.
 <<viewPathway, fig.cap="Reactome Pathway visualization.", fig.align="center", fig.height=16, fig.width=16, out.width="0.9\\textwidth", fig.pos="h">>=
 viewPathway("E2F mediated regulation of DNA replication", readable=TRUE, foldChange=geneList)
 @
@@ -164,13 +133,13 @@ viewPathway("E2F mediated regulation of DNA replication", readable=TRUE, foldCha
 
 \section{Session Information}
 
-The version number of R and packages loaded for generating the vignette were:
+Here is the output of \Rcode{sessionInfo()} on the system on which this document was compiled:
 
 <<sessInfo, results='asis', echo=FALSE>>=
 toLatex(sessionInfo())
 @
 
-\bibliographystyle{unsrt}
+
 \bibliography{ReactomePA}
 \end{document}
 
