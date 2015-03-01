@@ -57,12 +57,13 @@ gseaplot <- function(x, ...) {
 ##' @title getGeneSet.Reactome
 ##' @param setType gene set type
 ##' @param organism organism
+##' @param use_internal_data logical 
 ##' @importFrom DOSE getGeneSet
 ##' @importFrom reactome.db reactomePATHID2EXTID
 ##' @importFrom AnnotationDbi as.list
 ##' @method getGeneSet Reactome
 ##' @export
-getGeneSet.Reactome <- function(setType="Reactome", organism) {
+getGeneSet.Reactome <- function(setType="Reactome", organism, use_internal_data=TRUE) {
     if (setType != "Reactome")
         stop("setType should be 'Reactome'... ")
     gs <- as.list(reactomePATHID2EXTID)

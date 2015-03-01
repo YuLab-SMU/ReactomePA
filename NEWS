@@ -1,3 +1,8 @@
+CHANGES IN VERSION 1.11.5
+------------------------
+ o update according to DOSE <2015-03-01, Sun>
+   add use_internal_data parameter in getGeneSet.
+ 
 CHANGES IN VERSION 1.11.2
 ------------------------
  o remove import org.Hs.eg.db <2015-01-22, Thu>
