@@ -4,12 +4,15 @@
 \alias{getGeneSet.Reactome}
 \title{getGeneSet.Reactome}
 \usage{
-\method{getGeneSet}{Reactome}(setType = "Reactome", organism)
+\method{getGeneSet}{Reactome}(setType = "Reactome", organism,
+  use_internal_data = TRUE)
 }
 \arguments{
 \item{setType}{gene set type}
 
 \item{organism}{organism}
+
+\item{use_internal_data}{logical}
 }
 \description{
 getGeneSet.Reactome
