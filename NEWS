@@ -15,7 +15,11 @@ CHANGES IN VERSION 1.11.1
     ## > get("5493857", reactomePATHID2NAME)
     ## Error in .checkKeys(value, Lkeys(x), x@ifnotfound) : 
     ##   value for "5493857" not found
- 
+
+--> This is not a bug in ReactomePA, but an issue of reactome.db, refer to:
+--> https://support.bioconductor.org/p/63024/
+
+
 CHANGES IN VERSION 1.9.4
 ------------------------
  o add gseaplot function <2014-07-31, Thu>
