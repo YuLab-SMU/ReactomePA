@@ -80,15 +80,12 @@ cnetplot <- function(x, ...) {
     plot(x, type="cnet", ...)
 }
 
-##' @title EXTID2TERMID.Reactome
-##' @param gene gene
-##' @param organism organism
 ##' @importFrom DOSE EXTID2TERMID
 ##' @importMethodsFrom AnnotationDbi mget
 ##' @importFrom reactome.db reactomeEXTID2PATHID
 ##' @method EXTID2TERMID Reactome
 ##' @export
-EXTID2TERMID.Reactome <- function(gene, organism) {
+EXTID2TERMID.Reactome <- function(gene, organism, use_internal_data=TRUE) {
     gene <- as.character(gene)
     ## query external ID to pathway ID
     qExtID2PathID <- mget(gene, reactomeEXTID2PATHID, ifnotfound=NA)
@@ -107,22 +104,17 @@ EXTID2TERMID.Reactome <- function(gene, organism) {
     return(qExtID2PathID)
 }
 
-##' @title TERMID2EXTID.Reactome
-##' @param term reactome pathway term
-##' @param organism organism
 ##' @importFrom DOSE TERMID2EXTID
 ##' @importMethodsFrom AnnotationDbi mget
 ##' @importFrom reactome.db reactomePATHID2EXTID
 ##' @method TERMID2EXTID Reactome
 ##' @export
-TERMID2EXTID.Reactome <- function(term, organism) {
+TERMID2EXTID.Reactome <- function(term, organism, use_internal_data=TRUE) {
     pathID2ExtID <- mget(unique(term), reactomePATHID2EXTID)
     return(pathID2ExtID)
 }
 
 
-##' @title ALLEXTID.Reactome
-##' @param organism organism
 ##' @importFrom DOSE ALLEXTID
 ##' @importFrom DOSE getALLEG
 ##' @importMethodsFrom AnnotationDbi mappedkeys
@@ -130,7 +122,7 @@ TERMID2EXTID.Reactome <- function(term, organism) {
 ## @importFrom org.Hs.eg.db org.Hs.egSYMBOL
 ##' @method ALLEXTID Reactome
 ##' @export
-ALLEXTID.Reactome <- function(organism) {
+ALLEXTID.Reactome <- function(organism, use_internal_data=TRUE) {
     reactome.eg <- unique(mappedkeys(reactomeEXTID2PATHID))
     supported_Org <- c("human", "rat", "mouse", "yeast", "zebrafish", "celegans")
     if (organism %in% supported_Org) {
@@ -142,15 +134,12 @@ ALLEXTID.Reactome <- function(organism) {
     return(extID)
 }
 
-##' @title TERM2NAME.Reactome
-##' @param term reactome pathway term
-##' @param organism organism
 ##' @importFrom DOSE TERM2NAME
 ##' @importFrom reactome.db reactomePATHID2NAME
 ##' @importMethodsFrom AnnotationDbi mget
 ##' @method TERM2NAME Reactome
 ##' @export
-TERM2NAME.Reactome <- function(term, organism) {
+TERM2NAME.Reactome <- function(term, organism, use_internal_data=TRUE) {
     pathID <- as.character(term)
     pathName <- mget(pathID, reactomePATHID2NAME)
 
