@@ -1,3 +1,8 @@
+CHANGES IN VERSION 1.11.6
+------------------------
+ o update according to DOSE <2015-03-31, Tue>
+   add use_internal_data parameter in internal functional of enrichPathway.
+ 
 CHANGES IN VERSION 1.11.5
 ------------------------
  o update according to DOSE <2015-03-01, Sun>
