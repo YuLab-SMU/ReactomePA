@@ -44,26 +44,21 @@ gsePathway <- function(geneList,
 ##'
 ##' plotting function for gseaResult
 ##' @title gseaplot
-##' @param x gseaResult object
-##' @param ... additional parameters
+##' @param gseaResult gseaResult object
+##' @param geneSetID geneSet ID
+##' @param by one of "runningScore" or "position"
 ##' @return figure
 ##' @export
 ##' @author ygc
-gseaplot <- function(x, ...) {
-    plot(x, type="gseaplot", ...)
-}
+gseaplot <- DOSE::gseaplot
 
 
-##' @title getGeneSet.Reactome
-##' @param setType gene set type
-##' @param organism organism
-##' @param use_internal_data logical 
 ##' @importFrom DOSE getGeneSet
 ##' @importFrom reactome.db reactomePATHID2EXTID
 ##' @importFrom AnnotationDbi as.list
 ##' @method getGeneSet Reactome
 ##' @export
-getGeneSet.Reactome <- function(setType="Reactome", organism, use_internal_data=TRUE) {
+getGeneSet.Reactome <- function(setType="Reactome", organism, ...) {
     if (setType != "Reactome")
         stop("setType should be 'Reactome'... ")
     gs <- as.list(reactomePATHID2EXTID)
