@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.11.7
+------------------------
+ o update use_internal_data parameter to ... according to the change of DOSE <2015-04-01, Wed>
+
 CHANGES IN VERSION 1.11.6
 ------------------------
  o update according to DOSE <2015-03-31, Tue>
