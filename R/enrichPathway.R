@@ -85,7 +85,7 @@ cnetplot <- function(x, ...) {
 ##' @importFrom reactome.db reactomeEXTID2PATHID
 ##' @method EXTID2TERMID Reactome
 ##' @export
-EXTID2TERMID.Reactome <- function(gene, organism, use_internal_data=TRUE) {
+EXTID2TERMID.Reactome <- function(gene, organism, ...) {
     gene <- as.character(gene)
     ## query external ID to pathway ID
     qExtID2PathID <- mget(gene, reactomeEXTID2PATHID, ifnotfound=NA)
@@ -109,7 +109,7 @@ EXTID2TERMID.Reactome <- function(gene, organism, use_internal_data=TRUE) {
 ##' @importFrom reactome.db reactomePATHID2EXTID
 ##' @method TERMID2EXTID Reactome
 ##' @export
-TERMID2EXTID.Reactome <- function(term, organism, use_internal_data=TRUE) {
+TERMID2EXTID.Reactome <- function(term, organism, ...) {
     pathID2ExtID <- mget(unique(term), reactomePATHID2EXTID)
     return(pathID2ExtID)
 }
@@ -122,7 +122,7 @@ TERMID2EXTID.Reactome <- function(term, organism, use_internal_data=TRUE) {
 ## @importFrom org.Hs.eg.db org.Hs.egSYMBOL
 ##' @method ALLEXTID Reactome
 ##' @export
-ALLEXTID.Reactome <- function(organism, use_internal_data=TRUE) {
+ALLEXTID.Reactome <- function(organism, ...) {
     reactome.eg <- unique(mappedkeys(reactomeEXTID2PATHID))
     supported_Org <- c("human", "rat", "mouse", "yeast", "zebrafish", "celegans")
     if (organism %in% supported_Org) {
@@ -139,7 +139,7 @@ ALLEXTID.Reactome <- function(organism, use_internal_data=TRUE) {
 ##' @importMethodsFrom AnnotationDbi mget
 ##' @method TERM2NAME Reactome
 ##' @export
-TERM2NAME.Reactome <- function(term, organism, use_internal_data=TRUE) {
+TERM2NAME.Reactome <- function(term, organism, ...) {
     pathID <- as.character(term)
     pathName <- mget(pathID, reactomePATHID2NAME)
 
