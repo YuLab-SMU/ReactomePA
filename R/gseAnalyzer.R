@@ -55,13 +55,17 @@ gseaplot <- DOSE::gseaplot
 
 ##' @importFrom DOSE getGeneSet
 ##' @importFrom reactome.db reactomePATHID2EXTID
+##' @importFrom reactome.db reactomePATHID2NAME
 ##' @importFrom AnnotationDbi as.list
 ##' @method getGeneSet Reactome
 ##' @export
 getGeneSet.Reactome <- function(setType="Reactome", organism, ...) {
     if (setType != "Reactome")
         stop("setType should be 'Reactome'... ")
-    gs <- as.list(reactomePATHID2EXTID)
+    gs <- as.list(reactomePATHID2EXTID) ## also contains reactions
+
+    paths <- names(as.list(reactomePATHID2NAME))
+    gs <- gs[names(gs) %in% paths]
     return(gs)
 }
 
