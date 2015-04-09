@@ -83,6 +83,7 @@ cnetplot <- function(x, ...) {
 ##' @importFrom DOSE EXTID2TERMID
 ##' @importMethodsFrom AnnotationDbi mget
 ##' @importFrom reactome.db reactomeEXTID2PATHID
+##' @importFrom reactome.db reactomePATHID2NAME
 ##' @method EXTID2TERMID Reactome
 ##' @export
 EXTID2TERMID.Reactome <- function(gene, organism, ...) {
@@ -95,6 +96,10 @@ EXTID2TERMID.Reactome <- function(gene, organism, ...) {
 
     ## "5493857" is a valid path ID in reactomeEXTID2PATHID,
     ## but can not mapped to DESCRIPTION by reactomePATHID2NAME
+    ##
+    ## since PATHID2NAME only contains pathways,
+    ## but others also contains reactions.
+    ##
     pathID <- unlist(qExtID2PathID)
     pathName <- mget(pathID, reactomePATHID2NAME, ifnotfound=NA)
     pathName <- unlist(pathName)
@@ -110,7 +115,8 @@ EXTID2TERMID.Reactome <- function(gene, organism, ...) {
 ##' @method TERMID2EXTID Reactome
 ##' @export
 TERMID2EXTID.Reactome <- function(term, organism, ...) {
-    pathID2ExtID <- mget(unique(term), reactomePATHID2EXTID)
+    term <- unique(term)
+    pathID2ExtID <- mget(term, reactomePATHID2EXTID)    
     return(pathID2ExtID)
 }
 
