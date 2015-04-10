@@ -90,22 +90,23 @@ EXTID2TERMID.Reactome <- function(gene, organism, ...) {
     gene <- as.character(gene)
     ## query external ID to pathway ID
     qExtID2PathID <- mget(gene, reactomeEXTID2PATHID, ifnotfound=NA)
-
     notNA.idx <- unlist(lapply(qExtID2PathID, function(i) !all(is.na(i))))
     qExtID2PathID <- qExtID2PathID[notNA.idx]
-
+        
     ## "5493857" is a valid path ID in reactomeEXTID2PATHID,
     ## but can not mapped to DESCRIPTION by reactomePATHID2NAME
     ##
     ## since PATHID2NAME only contains pathways,
     ## but others also contains reactions.
     ##
-    pathID <- unlist(qExtID2PathID)
-    pathName <- mget(pathID, reactomePATHID2NAME, ifnotfound=NA)
-    pathName <- unlist(pathName)
-    pathID <- pathID[ !is.na(pathName) ]
-
+    ## pathID <- unlist(qExtID2PathID)
+    ## pathName <- mget(pathID, reactomePATHID2NAME, ifnotfound=NA)
+    ## pathName <- unlist(pathName)
+    ## pathID <- pathID[ !is.na(pathName) ]
+    pathID <- keys(reactomePATHID2NAME)
+    
     qExtID2PathID <- lapply(qExtID2PathID, function(x) x[x%in% pathID])
+
     return(qExtID2PathID)
 }
 
@@ -142,15 +143,21 @@ ALLEXTID.Reactome <- function(organism, ...) {
 
 ##' @importFrom DOSE TERM2NAME
 ##' @importFrom reactome.db reactomePATHID2NAME
+##' @importFrom reactome.db reactome.db
 ##' @importMethodsFrom AnnotationDbi mget
+##' @importMethodsFrom AnnotationDbi mapIds
 ##' @method TERM2NAME Reactome
 ##' @export
 TERM2NAME.Reactome <- function(term, organism, ...) {
     pathID <- as.character(term)
-    pathName <- mget(pathID, reactomePATHID2NAME)
-
+    ## pathName <- mget(pathID, reactomePATHID2NAME)
+    pathName <- mapIds(reactome.db, pathID, 'PATHNAME', 'PATHID')
+    
+    ##
+    ## this issue had been solve since reactome 52
     ##
     ## multiple mapping exists.
+    ## 
     ##
 
     ##     > term
