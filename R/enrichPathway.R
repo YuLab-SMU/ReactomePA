@@ -152,6 +152,7 @@ TERM2NAME.Reactome <- function(term, organism, ...) {
     pathID <- as.character(term)
     ## pathName <- mget(pathID, reactomePATHID2NAME)
     pathName <- mapIds(reactome.db, pathID, 'PATHNAME', 'PATHID')
+    pathName <- pathName[!is.na(pathName)]
     
     ##
     ## this issue had been solve since reactome 52
