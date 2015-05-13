@@ -57,28 +57,30 @@ enrichPathway <- function(gene,
 ##'
 ##' enrichMap
 ##' @title enrichMap
-##' @param x enrichResult or gseaResult
+##' @param x gseaResult or enrichResult object
+##' @param n maximum number of category to shown
+##' @param fixed if set to FALSE, will invoke tkplot
+##' @param vertex.label.font font size of vertex label
 ##' @param ... additional parameter
 ##' @return figure
 ##' @export
 ##' @author ygc
-enrichMap <- function(x, ...) {
-    ## DOSE::enrichMap(...)
-    plot(x, type="enrichMap", ...)
-}
+enrichMap <- DOSE::enrichMap
 
 ##' category-gene-net plot
 ##'
 ##' category gene association
 ##' @title cnetplot
 ##' @param x enrichResult object
+##' @param showCategory number of category plotted
+##' @param categorySize one of geneNum or pvalue
+##' @param foldChange fold change of expression value
+##' @param fixed logical
 ##' @param ... additional parameter
-##' @return figure
+##' @return plot
 ##' @export
 ##' @author ygc
-cnetplot <- function(x, ...) {
-    plot(x, type="cnet", ...)
-}
+cnetplot <- DOSE:::cnetplot.enrichResult
 
 ##' @importFrom DOSE EXTID2TERMID
 ##' @importMethodsFrom AnnotationDbi mget

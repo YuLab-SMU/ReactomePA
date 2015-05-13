@@ -1,7 +1,7 @@
 Package: ReactomePA
 Type: Package
 Title: Reactome Pathway Analysis
-Version: 1.13.0
+Version: 1.13.1
 Author: Guangchuang Yu <guangchuangyu@gmail.com>
 Maintainer: Guangchuang Yu <guangchuangyu@gmail.com>
 Description: This package provides functions for pathway analysis based on
@@ -15,9 +15,9 @@ Imports:
     igraph,
     graphite
 Suggests:
+    BiocStyle,
     clusterProfiler,
-    knitr,
-    BiocStyle
+    knitr
 VignetteBuilder: knitr
 License: GPL-2
 Packaged: 2012-03-05 18:26:53 UTC; mcarlson
