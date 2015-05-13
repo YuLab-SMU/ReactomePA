@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.13.1
+------------------------
+ o update enrichMap and viewPathway <2015-05-13, Wed>
+ 
 CHANGES IN VERSION 1.11.9
 ------------------------
  o use mapIds instead of mget in TERM2NAME. mapIds will not throw error when pathID is old/deprecated. <2015-04-10, Fri>
