@@ -7,6 +7,7 @@
 ##' @param readable logical
 ##' @param foldChange fold change
 ##' @param ... additional parameter
+## @importFrom graphite pathways
 ##' @importFrom graphite convertIdentifiers
 ##' @importFrom graphite pathwayGraph
 ##' @importFrom igraph igraph.from.graphNEL
@@ -23,14 +24,29 @@ viewPathway <- function(pathName,
                         readable=TRUE,
                         foldChange=NULL, ...){
 
+    ## call pathways via imported from graphite has the following issue:
+    ##
+    ## Error: processing vignette 'ReactomePA.Rnw' failed with diagnostics:
+    ## no item called "package:graphite" on the search list
+    ## Execution halted
+    ##
+    
     pkg <- "graphite"
     require(pkg, character.only=TRUE)
-    reactome <- eval(parse(text="reactome"))
-    p <- reactome[[pathName]]
-    if (organism != "human") {
-        stop("the specific organism is not supported yet...")
+    pathways <- eval(parse(text="pathways"))
+    ## convertIdentifiers <- eval(parse(text="convertIdentifiers"))
+    ## pathwayGraph <- eval(parse(text="pathwayGraph"))
+    
+    
+    if (organism == "human") {
+        p <- pathways("hsapiens", "reactome")[[pathName]]
         ## p@species
+    } else {
+        stop("the specific organism is not supported yet...")
     }
+
+    
+
     if (readable) {
         p <- convertIdentifiers(p, "symbol")
         if (!is.null(foldChange)){
