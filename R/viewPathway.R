@@ -6,7 +6,7 @@
 ##' @param organism supported organism
 ##' @param readable logical
 ##' @param foldChange fold change
-##' @param ... additional parameter
+##' @param ... additional parameters passed to \code{\link[DOSE]{netplot}}
 ## @importFrom graphite pathways
 ##' @importFrom graphite convertIdentifiers
 ##' @importFrom graphite pathwayGraph
@@ -33,25 +33,19 @@ viewPathway <- function(pathName,
     
     pkg <- "graphite"
     require(pkg, character.only=TRUE)
-    pathways <- eval(parse(text="pathways"))
-    ## convertIdentifiers <- eval(parse(text="convertIdentifiers"))
-    ## pathwayGraph <- eval(parse(text="pathwayGraph"))
-    
-    
-    if (organism == "human") {
-        p <- pathways("hsapiens", "reactome")[[pathName]]
-        ## p@species
-    } else {
-        stop("the specific organism is not supported yet...")
-    }
-
-    
+    p <- pathways(organism, 'reactome')[[pathName]]
 
     if (readable) {
         p <- convertIdentifiers(p, "symbol")
-        if (!is.null(foldChange)){
-            gn <- EXTID2NAME(names(foldChange),organism)
-            names(foldChange) <- gn
+        if (!is.null(foldChange)) {
+            org.X.eg.db <- GoSemSim::getDb(organism) # GOSemSim imported through DOSE
+            org.X.egSYMBOL <- sub('.db', 'SYMBOL', org.X.eg.db)
+            symbol <- loadNamespace(org.X.eg.db)[[org.X.egSYMBOL]]
+            map <- as.list(symbol[names(geneList)])
+            stopifnot(all(sapply(map, length) == 1))
+            map <- unlist(map)
+            stopifnot(identical(names(map), names(foldChange)))
+            names(foldChange) <- map
         }
     } else {
         if (!is.null(foldChange)) {
