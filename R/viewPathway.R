@@ -33,7 +33,28 @@ viewPathway <- function(pathName,
     
     pkg <- "graphite"
     require(pkg, character.only=TRUE)
-    p <- pathways(organism, 'reactome')[[pathName]]
+    
+    # convertion to the names that graphite::pathways understands
+    org2org <- list(arabidopsis="athaliana",
+                        bovine="btaurus",
+                        canine="cfamiliaris",
+                        chicken="ggallus",
+                        ecolik12="ecoli",
+                        fly="dmelanogaster",
+                        human="hsapiens",
+                        mouse="mmusculus",
+                        pig="sscrofa",
+                        rat="rnorvegicus",
+                        celegans="celegans",
+                        xenopus="xlaevis",
+                        yeast="scerevisiae",
+                        zebrafish="drerio")
+    if(organism %in% names(org2org)){
+        cat(paste(c("the list of supported organisms:",names(org2org),'\n'), collapse='\n'))
+        stop(sprintf("organism %s is not supported", organism))
+    }
+    
+    p <- pathways(org2org[[organism]], 'reactome')[[pathName]]
 
     if (readable) {
         p <- convertIdentifiers(p, "symbol")
