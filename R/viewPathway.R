@@ -6,7 +6,7 @@
 ##' @param organism supported organism
 ##' @param readable logical
 ##' @param foldChange fold change
-##' @param ... additional parameter
+##' @param ... additional parameters passed to \code{\link[DOSE]{netplot}}
 ## @importFrom graphite pathways
 ##' @importFrom graphite convertIdentifiers
 ##' @importFrom graphite pathwayGraph
@@ -33,25 +33,35 @@ viewPathway <- function(pathName,
     
     pkg <- "graphite"
     require(pkg, character.only=TRUE)
-    pathways <- eval(parse(text="pathways"))
-    ## convertIdentifiers <- eval(parse(text="convertIdentifiers"))
-    ## pathwayGraph <- eval(parse(text="pathwayGraph"))
     
-    
-    if (organism == "human") {
-        p <- pathways("hsapiens", "reactome")[[pathName]]
-        ## p@species
-    } else {
-        stop("the specific organism is not supported yet...")
+    # convertion to the names that graphite::pathways understands
+    org2org <- list(arabidopsis="athaliana",
+                        bovine="btaurus",
+                        canine="cfamiliaris",
+                        chicken="ggallus",
+                        ecolik12="ecoli",
+                        fly="dmelanogaster",
+                        human="hsapiens",
+                        mouse="mmusculus",
+                        pig="sscrofa",
+                        rat="rnorvegicus",
+                        celegans="celegans",
+                        xenopus="xlaevis",
+                        yeast="scerevisiae",
+                        zebrafish="drerio")
+    if(!(organism %in% names(org2org))){
+        cat(paste(c("the list of supported organisms:",names(org2org)), collapse='\n'))
+        stop(sprintf("organism %s is not supported", organism))
     }
-
     
+    p <- pathways(org2org[[organism]], 'reactome')[[pathName]]
 
     if (readable) {
         p <- convertIdentifiers(p, "symbol")
-        if (!is.null(foldChange)){
-            gn <- EXTID2NAME(names(foldChange),organism)
-            names(foldChange) <- gn
+        if (!is.null(foldChange)) {
+            stopifnot(!any(duplicated(names(foldChange)))) # can't have two value for one gene
+            names(foldChange) <- EXTID2NAME(names(foldChange), organism)
+
         }
     } else {
         if (!is.null(foldChange)) {
