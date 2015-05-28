@@ -1,8 +1,15 @@
 Package: ReactomePA
 Type: Package
 Title: Reactome Pathway Analysis
-Version: 1.13.1
-Author: Guangchuang Yu <guangchuangyu@gmail.com>
+Version: 1.13.2
+Authors@R: c(person(given = "Guangchuang", family = "Yu",
+	   	    email = "guangchuangyu@gmail.com",
+		    role  = c("aut", "cre")),
+	     person(given = "Vladislav", family = "Petyuk",
+	     	    email = "petyuk@gmail.com",
+		    role  = "ctb"))
+Author: Guangchuang Yu <guangchuangyu@gmail.com> with contributions from
+	Vladislav Petyuk
 Maintainer: Guangchuang Yu <guangchuangyu@gmail.com>
 Description: This package provides functions for pathway analysis based on
     REACTOME pathway database. It implements enrichment analysis, gene set
