@@ -59,14 +59,9 @@ viewPathway <- function(pathName,
     if (readable) {
         p <- convertIdentifiers(p, "symbol")
         if (!is.null(foldChange)) {
-            org.X.eg.db <- GOSemSim::getDb(organism) # GOSemSim imported through DOSE
-            org.X.egSYMBOL <- sub('.db', 'SYMBOL', org.X.eg.db)
-            symbol <- loadNamespace(org.X.eg.db)[[org.X.egSYMBOL]]
-            map <- as.list(symbol[names(geneList)])
-            stopifnot(all(sapply(map, length) == 1))
-            map <- unlist(map)
-            stopifnot(identical(names(map), names(foldChange)))
-            names(foldChange) <- map
+            stopifnot(!any(duplicated(names(foldChange)))) # can't have two value for one gene
+            names(foldChange) <- EXTID2NAME(names(foldChange), organism)
+
         }
     } else {
         if (!is.null(foldChange)) {
