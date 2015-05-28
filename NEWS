@@ -1,3 +1,8 @@
+CHANGES IN VERSION 1.13.2
+------------------------
+ o enable other organisms for viewPathway by Vladislav Petyuk <2015-05-28, Thu>
+   see https://github.com/GuangchuangYu/ReactomePA/pull/1
+ 
 CHANGES IN VERSION 1.13.1
 ------------------------
  o update enrichMap and viewPathway <2015-05-13, Wed>
