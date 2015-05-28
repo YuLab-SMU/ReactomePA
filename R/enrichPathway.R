@@ -61,7 +61,7 @@ enrichPathway <- function(gene,
 ##' @param n maximum number of category to shown
 ##' @param fixed if set to FALSE, will invoke tkplot
 ##' @param vertex.label.font font size of vertex label
-##' @param ... additional parameter
+##' @param ... additional parameters passed to \code{\link[DOSE]{netplot}}
 ##' @return figure
 ##' @export
 ##' @author ygc
