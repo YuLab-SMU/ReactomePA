@@ -199,7 +199,8 @@ TERM2NAME.Reactome <- function(term, organism, ...) {
 
     pathName <- sapply(pathName, function(p) p[grep(org, p)])
     pathName <- unlist(pathName)
-    pathName <- sapply(pathName, function(i) unlist(strsplit(i, split=": "))[2])
+    pathName <- sapply(pathName, function(i) unlist(strsplit(i, split=org))[2]) # splitting by ":" is risky
+    pathName <- sub("^\\s+", "", pathName)  # remove leading spaces
 
     ##
     ## BUG was reported by Jean-Christophe Aude (Jean-Christophe.AUDE@cea.fr)
