@@ -49,7 +49,7 @@ viewPathway <- function(pathName,
                         xenopus="xlaevis",
                         yeast="scerevisiae",
                         zebrafish="drerio")
-    if(organism %in% names(org2org)){
+    if(!(organism %in% names(org2org))){
         cat(paste(c("the list of supported organisms:",names(org2org),'\n'), collapse='\n'))
         stop(sprintf("organism %s is not supported", organism))
     }
