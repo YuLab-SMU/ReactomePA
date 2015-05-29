@@ -15,7 +15,7 @@ enrichMap(x, n = 50, fixed = TRUE, vertex.label.font = 1, ...)
 
 \item{vertex.label.font}{font size of vertex label}
 
-\item{...}{additional parameter}
+\item{...}{additional parameters passed to \code{\link[DOSE]{netplot}}}
 }
 \value{
 figure
