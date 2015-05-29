@@ -16,7 +16,7 @@ viewPathway(pathName, organism = "human", readable = TRUE,
 
 \item{foldChange}{fold change}
 
-\item{...}{additional parameter}
+\item{...}{additional parameters passed to \code{\link[DOSE]{netplot}}}
 }
 \value{
 plot
