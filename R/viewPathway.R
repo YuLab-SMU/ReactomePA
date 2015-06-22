@@ -53,7 +53,7 @@ viewPathway <- function(pathName,
         cat(paste(c("the list of supported organisms:",names(org2org)), collapse='\n'))
         stop(sprintf("organism %s is not supported", organism))
     }
-    
+    pathways <- eval(parse(text="pathways"))
     p <- pathways(org2org[[organism]], 'reactome')[[pathName]]
 
     if (readable) {
