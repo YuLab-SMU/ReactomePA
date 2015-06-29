@@ -129,7 +129,7 @@ viewPathway("E2F mediated regulation of DNA replication", readable=TRUE, foldCha
 
 ## Bugs/Feature requests ##
 
-If you have any, [let me know](https://github.com/GuangchuangYu/clusterProfiler/issues).
+If you have any, [let me know](https://github.com/GuangchuangYu/ReactomePA/issues).
 
 
 # Session Information
