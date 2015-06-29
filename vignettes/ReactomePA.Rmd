@@ -1,0 +1,143 @@
+---
+title: "An R package for Reactome Pathway Analysis"
+author: "\\
+
+	Guangchuang Yu (<guangchuangyu@gmail.com>)\\
+
+        School of Public Health, The University of Hong Kong"
+date: "`r Sys.Date()`"
+bibliography: ReactomePA.bib
+csl: nature.csl
+output: 
+  BiocStyle::html_document:
+    toc: true
+  BiocStyle::pdf_document:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{An R package for Reactome Pathway Analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+---
+
+```{r style, echo=FALSE, results="asis", message=FALSE}
+BiocStyle::markdown()
+knitr::opts_chunk$set(tidy = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(org.Hs.eg.db)
+library(DOSE)
+library(clusterProfiler)
+library(ReactomePA)
+```
+
+
+
+# Introduction
+
+This package is designed for reactome pathway-based analysis. Reactome
+is an open-source, open access, manually curated and peer-reviewed
+pathway database.
+
+# Pathway Enrichment Analysis
+
+Enrichment analysis is a widely used approach to identify biological
+themes. Here, we implement hypergeometric model to assess whether the
+number of selected genes associated with reactome pathway is larger
+than expected. The p values were calculated based the hypergeometric model[@boyle2004],
+
+```{r}
+require(DOSE)
+data(geneList)
+de <- names(geneList)[abs(geneList) > 1.5]
+head(de)
+require(ReactomePA)
+x <- enrichPathway(gene=de,pvalueCutoff=0.05, readable=T)
+head(summary(x))
+```
+
+## Pathway analysis of NGS data
+
+Pathway analysis using NGS data (eg, RNA-Seq and ChIP-Seq) can be performed by linking coding and non-coding regions to coding genes via `r Biocpkg("ChIPseeker")` package, which can annotates genomic regions to their nearest genes, host genes, and flanking genes respectivly. In addtion, it provides a function, __*seq2gene*__, that simultaneously considering host genes, promoter region and flanking gene from intergenic region that may under control via cis-regulation. This function maps genomic regions to genes in a many-to-many manner and facilitate functional analysis. For more details, please refer to `r Biocpkg("ChIPseeker")`.
+
+
+## Visualize enrichment result
+We implement barplot, dotplot enrichment map and category-gene-network for visualization. It is very common to visualize the enrichment result in bar or pie chart. We believe the pie chart is misleading and only provide bar chart.
+```{r fig.height=5, fig.width=8}
+barplot(x, showCategory=8)
+```
+```{r fig.height=8, fig.width=8}
+dotplot(x, showCategory=15)
+```
+
+Enrichment map can be viusalized by __*enrichMap*__:
+```{r fig.height=16, fig.width=20}
+enrichMap(x)
+```
+
+In order to consider the potentially biological complexities in which a gene may belong to multiple annotation categories, we developed __*cnetplot*__ function to extract the complex association between genes and diseases.
+```{r fig.height=18, fig.width=20}
+cnetplot(x, categorySize="pvalue", foldChange=geneList)
+```
+
+
+## Comparing enriched reactome pathways among gene clusters with clusterProfiler
+We have developed an `R` package `r Biocpkg("clusterProfiler")`[@yu_clusterprofiler:_2012] for comparing biological themes among gene clusters. `r Biocpkg("ReactomePA")` works fine with `r Biocpkg("clusterProfiler")` and can compare biological themes at reactome pathway perspective.
+
+```{r fig.height=8, fig.width=11}
+require(clusterProfiler)
+data(gcSample)
+res <- compareCluster(gcSample, fun="enrichPathway")
+plot(res)
+```
+
+# Gene Set Enrichment Analysis
+A common approach in analyzing gene expression profiles was identifying differential expressed genes that are deemed interesting. The __*enrichPathway*__ function we demonstrated previously were based on these differential expressed genes. This approach will find genes where the difference is large, but it will not detect a situation where the difference is small, but evidenced in coordinated way in a set of related genes. Gene Set Enrichment Analysis (GSEA)[@subramanian_gene_2005] directly addressed this limitation. All genes can be used in GSEA; GSEA aggregates the per gene statistics across genes within a gene set, therefore making it possible to detect situations where all genes in a predefined set change in a small but coordinated way. For algorithm details, please refer to the vignette of `r Biocpkg("DOSE")`[@yu_dose_2015].
+
+```{r}
+y <- gsePathway(geneList, nPerm=100, 
+                minGSSize=120, pvalueCutoff=0.05, 
+                pAdjustMethod="BH", verbose=FALSE)
+res <- summary(y)
+head(res)
+```
+
+## Visualize GSEA result
+```{r fig.height=16, fig.width=16}
+enrichMap(y)
+```
+
+```{r fig.height=16, fig.width=8}
+gseaplot(y, geneSetID = "1280215")
+```
+
+# Pathway Visualization
+
+In `r Biocpkg("ReactomePA")`, we also implemented __*viewPathway*__ to visualized the pathway.
+```{r fig.height=16, fig.width=16}
+viewPathway("E2F mediated regulation of DNA replication", readable=TRUE, foldChange=geneList)
+```
+
+
+# External documents
++ [Why clusterProfiler fails](http://ygc.name/2014/08/07/why-clusterprofiler-fails/)
++ [use clusterProfiler as an universal enrichment analysis tool](http://ygc.name/2015/05/11/use-clusterprofiler-as-an-universal-enrichment-analysis-tool/)
++ [Enrichment map](http://ygc.name/2014/08/03/enrichment-map/)
++ [dotplot for enrichment result](http://ygc.name/2015/06/23/dotplot-for-enrichment-result/)
+
+## Bugs/Feature requests ##
+
+If you have any, [let me know](https://github.com/GuangchuangYu/clusterProfiler/issues).
+
+
+# Session Information
+
+Here is the output of `sessionInfo()` on the system on which this document was compiled:
+
+```{r echo=FALSE}
+sessionInfo()
+```
+
+# References

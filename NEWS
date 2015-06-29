@@ -1,3 +1,8 @@
+CHANGES IN VERSION 1.13.3
+------------------------
+ o add 'Pathway analysis of NGS data' section in vignette <2015-06-29, Mon>
+ o convert vignette from Rnw to Rmd <2015-06-29, Mon>
+ 
 CHANGES IN VERSION 1.13.2
 ------------------------
  o enable other organisms for viewPathway by Vladislav Petyuk <2015-05-28, Thu>
