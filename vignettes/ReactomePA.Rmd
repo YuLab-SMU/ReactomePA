@@ -109,7 +109,7 @@ head(res)
 enrichMap(y)
 ```
 
-```{r fig.height=16, fig.width=8}
+```{r fig.height=8, fig.width=10}
 gseaplot(y, geneSetID = "1280215")
 ```
 
