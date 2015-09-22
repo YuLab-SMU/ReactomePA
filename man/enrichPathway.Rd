@@ -13,7 +13,7 @@ enrichPathway(gene, organism = "human", pvalueCutoff = 0.05,
 \arguments{
 \item{gene}{a vector of entrez gene id.}
 
-\item{organism}{one of "human", "rat", "mouse", "celegans", "zebrafish", "fly".}
+\item{organism}{one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".}
 
 \item{pvalueCutoff}{Cutoff value of pvalue.}
 

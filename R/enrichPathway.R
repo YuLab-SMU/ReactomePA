@@ -4,7 +4,7 @@
 ##'
 ##'
 ##' @param gene a vector of entrez gene id.
-##' @param organism one of "human", "rat", "mouse", "celegans", "zebrafish", "fly".
+##' @param organism one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".
 ##' @param pvalueCutoff Cutoff value of pvalue.
 ##' @param pAdjustMethod one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"
 ##' @param qvalueCutoff Cutoff value of qvalue
@@ -106,12 +106,12 @@ TERMID2EXTID.Reactome <- function(term, organism, ...) {
 ##' @export
 ALLEXTID.Reactome <- function(organism, ...) {
     reactome.eg <- unique(mappedkeys(reactomeEXTID2PATHID))
-    supported_Org <- c("human", "rat", "mouse", "yeast", "zebrafish", "celegans")
+    supported_Org <- c("human", "rat", "mouse", "yeast", "zebrafish", "celegans", "fly")
     if (organism %in% supported_Org) {
         eg <- getALLEG(organism)
         extID <- intersect(reactome.eg, eg)
     } else {
-        stop("only human supported...")
+        stop("only celegans, fly, human, mouse, rat, yeast and zebrafish are supported...")
     }
     return(extID)
 }
@@ -167,7 +167,8 @@ TERM2NAME.Reactome <- function(term, organism, ...) {
                   mouse = "Mus musculus:",
                   yeast = "Saccharomyces cerevisiae:",
                   zebrafish = "Danio rerio:",
-                  celegans = "Caenorhabditis elegans:"
+                  celegans = "Caenorhabditis elegans:",
+                  fly = "Drosophila melanogaster:"
                   )
 
     pathName <- sapply(pathName, function(p) p[grep(org, p)])
