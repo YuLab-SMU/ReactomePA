@@ -98,7 +98,7 @@ A common approach in analyzing gene expression profiles was identifying differen
 
 ```{r}
 y <- gsePathway(geneList, nPerm=100, 
-                minGSSize=120, pvalueCutoff=0.05, 
+                minGSSize=120, pvalueCutoff=0.2, 
                 pAdjustMethod="BH", verbose=FALSE)
 res <- summary(y)
 head(res)
