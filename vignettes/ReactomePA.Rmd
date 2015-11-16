@@ -41,6 +41,39 @@ This package is designed for reactome pathway-based analysis. Reactome
 is an open-source, open access, manually curated and peer-reviewed
 pathway database.
 
+# Citation
+
+If you use `r Biocpkg("Reactome")` in published research, please cite G. Yu (2015). In addition, please cite G. Yu (2012) when using `compareCluster` in `r Biocpkg("clusterProfiler")`, G Yu (2015) when applying enrichment analysis to NGS data using `r Biocpkg("ChIPseeker")`.
+
+```
+G Yu, QY He.
+ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization
+Molecular BioSystems 2015, submitted.
+```
+
+```
+G Yu, LG Wang, Y Han, QY He.
+clusterProfiler: an R package for comparing biological themes among gene clusters.
+OMICS: A Journal of Integrative Biology 2012, 16(5):284-287.
+```
+
+URL: [http://dx.doi.org/10.1089/omi.2011.0118](http://dx.doi.org/10.1089/omi.2011.0118)
+
+
+```
+G Yu, LG Wang, QY He.
+ChIPseeker: an R/Bioconductor package for ChIP peak annotation, comparison and visualization.
+Bioinformatics 2015, 31(14):2382-2383.
+```
+
+URL: [http://dx.doi.org/10.1093/bioinformatics/btv145](http://dx.doi.org/10.1093/bioinformatics/btv145)
+
+
+# Supported organisms
+
+Currently `r Biocpkg("ReactomePA")` supports several model organisms, including 'celegans', 'fly', 'human', 'mouse', 'rat', 'yeast' and 'zebrafish'. The input gene ID should be Entrez gene ID. We recommend using `clusterProfiler::bitr` to convert biological IDs. For more detail, please refer to [bitr: Biological Id TranslatoR](http://www.bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html#bitr-biological-id-translator).
+
+
 # Pathway Enrichment Analysis
 
 Enrichment analysis is a widely used approach to identify biological
@@ -57,6 +90,8 @@ require(ReactomePA)
 x <- enrichPathway(gene=de,pvalueCutoff=0.05, readable=T)
 head(summary(x))
 ```
+
+For calculation/parameter details, please refer to the [vignette](http://www.bioconductor.org/packages/release/bioc/vignettes/DOSE/inst/doc/DOSE.html) of `r Biocpkg("DOSE")`.
 
 ## Pathway analysis of NGS data
 

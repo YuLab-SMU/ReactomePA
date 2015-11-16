@@ -1,0 +1,20 @@
+citHeader("Please cite G. Yu (2015) for using ReactomePA. In addition, please cite G. Yu (2012) when using compareCluster in clusterProfiler package, G. Yu (2015) when applying enrichment analysis to NGS data by using ChIPseeker")
+
+citEntry(entry  = "ARTICLE",
+         title  = "ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization",
+         author = personList(
+             as.person("Guangchuang Yu"),
+             as.person("Qing-Yu He")
+             ),
+         journal = "Molecular BioSystems",
+         year    = "2015",
+         volume  = "",
+         number  = "",
+         pages   = "submitted",
+         PMID    = "",
+         url     = "",
+         doi     = "",
+         textVersion = paste("Guangchuang Yu, Qing-Yu He.",
+             "ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization.",
+             "Molecular BioSystems 2015 submitted")
+         )
