@@ -48,8 +48,11 @@ If you use `r Biocpkg("Reactome")` in published research, please cite G. Yu (201
 ```
 G Yu, QY He.
 ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization
-Molecular BioSystems 2015, submitted.
+Molecular BioSystems 2015, Accepted.
 ```
+
+URL: [http://dx.doi.org/10.1039/C5MB00663E](http://dx.doi.org/10.1039/C5MB00663E)
+
 
 ```
 G Yu, LG Wang, Y Han, QY He.
