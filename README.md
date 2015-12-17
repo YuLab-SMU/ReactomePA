@@ -25,7 +25,7 @@ To install:
  * the latest released version:
    `biocLite("ReactomePA")`
  * the latest development version:
-   `install_github(c("GuangchuangYu/DOSE", "GuangchuangYu/ReactomePA"))`
+   `devtools::install_github(c("GuangchuangYu/DOSE", "GuangchuangYu/ReactomePA"))`
 
 
 
