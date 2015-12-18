@@ -7,7 +7,7 @@ citEntry(entry  = "ARTICLE",
              as.person("Qing-Yu He")
              ),
          journal = "Molecular BioSystems",
-         year    = "2015",
+         year    = "2016",
          volume  = "",
          number  = "",
          pages   = "accepted",
@@ -16,5 +16,5 @@ citEntry(entry  = "ARTICLE",
          doi     = "10.1039/C5MB00663E",
          textVersion = paste("Guangchuang Yu, Qing-Yu He.",
              "ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization.",
-             "Molecular BioSystems 2015 submitted")
+             "Molecular BioSystems 2016 Accepted")
          )

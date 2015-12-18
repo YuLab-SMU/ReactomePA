@@ -25,19 +25,19 @@ To install:
  * the latest released version:
    `biocLite("ReactomePA")`
  * the latest development version:
-   `install_github(c("GuangchuangYu/DOSE", "GuangchuangYu/ReactomePA"))`
+   `devtools::install_github(c("GuangchuangYu/DOSE", "GuangchuangYu/ReactomePA"))`
 
 
 
 ## Documentation ##
 
-+ [Why clusterProfiler fails](http://ygc.name/2014/08/07/why-clusterprofiler-fails/)
-+ [use clusterProfiler as an universal enrichment analysis tool](http://ygc.name/2015/05/11/use-clusterprofiler-as-an-universal-enrichment-analysis-tool/)
-+ [Enrichment map](http://ygc.name/2014/08/03/enrichment-map/)
-+ [dotplot for enrichment result](http://ygc.name/2015/06/23/dotplot-for-enrichment-result/)
-+ [functional enrichment for GTEx paper](http://ygc.name/2015/08/13/functional-enrichment-for-gtex-paper/)
-+ [functional enrichment analysis with NGS data](http://ygc.name/2015/08/21/functional-enrichment-analysis-with-ngs-data/)
-
++ [Why clusterProfiler fails](http://guangchuangyu.github.io/2014/08/why-clusterprofiler-fails/)
++ [Enrichment Map](http://guangchuangyu.github.io/2014/08/enrichment-map/)
++ [dotplot for enrichment result](http://guangchuangyu.github.io/2015/06/dotplot-for-enrichment-result/)
++ [functional enrichment for GTEx paper](http://guangchuangyu.github.io/2015/08/functional-enrichment-for-gtex-paper/)
++ [functional enrichment analysis with NGS data](http://guangchuangyu.github.io/2015/08/functional-enrichment-analysis-with-ngs-data/)
++ [use clusterProfiler as an universal enrichment analysis tool](http://guangchuangyu.github.io/2015/05/use-clusterprofiler-as-an-universal-enrichment-analysis-tool/)
++ [Comparison of clusterProfiler and GSEA-P](http://guangchuangyu.github.io/2015/11/comparison-of-clusterprofiler-and-gsea-p/)
 
 To view the vignette of `ReactomePA` installed in your system, start `R` and enter:
 ```r
