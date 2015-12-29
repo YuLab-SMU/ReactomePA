@@ -48,7 +48,8 @@ viewPathway <- function(pathName,
                         celegans="celegans",
                         xenopus="xlaevis",
                         yeast="scerevisiae",
-                        zebrafish="drerio")
+                    zebrafish="drerio")
+    
     if(!(organism %in% names(org2org))){
         cat(paste(c("the list of supported organisms:",names(org2org)), collapse='\n'))
         stop(sprintf("organism %s is not supported", organism))
@@ -60,7 +61,8 @@ viewPathway <- function(pathName,
         p <- convertIdentifiers(p, "symbol")
         if (!is.null(foldChange)) {
             stopifnot(!any(duplicated(names(foldChange)))) # can't have two value for one gene
-            names(foldChange) <- EXTID2NAME(names(foldChange), organism)
+            OrgDb <- getDb(organism)
+            names(foldChange) <- EXTID2NAME(OrgDb, names(foldChange), "ENTREZID")
 
         }
     } else {

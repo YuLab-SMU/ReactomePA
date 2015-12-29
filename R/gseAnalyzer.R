@@ -10,11 +10,12 @@
 ##' @param pvalueCutoff pvalue Cutoff
 ##' @param pAdjustMethod pvalue adjustment method
 ##' @param verbose print message or not
-##' @importFrom DOSE gseAnalyzer
+##' @param seed logical
 ##' @importClassesFrom DOSE gseaResult
 ##' @importMethodsFrom DOSE show
 ##' @importMethodsFrom DOSE summary
 ##' @importMethodsFrom DOSE plot
+##' @importFrom DOSE GSEA_internal
 ##' @export
 ##' @return gseaResult object
 ##' @author Yu Guangchuang
@@ -25,49 +26,94 @@ gsePathway <- function(geneList,
                        minGSSize     = 10,
                        pvalueCutoff  = 0.05,
                        pAdjustMethod = "BH",
-                       verbose       = TRUE) {
+                       verbose       = TRUE,
+                       seed          = FALSE) {
 
-    gseAnalyzer(geneList      = geneList,
-                setType       = "Reactome",
-                organism      = organism,
-                exponent      = exponent,
-                nPerm         = nPerm,
-                minGSSize     = minGSSize,
-                pvalueCutoff  = pvalueCutoff,
-                pAdjustMethod = pAdjustMethod,
-                verbose       = verbose)
+    Reactome_DATA <- get_Reactome_DATA(organism)
     
+    res <- GSEA_internal(geneList      = geneList,
+                         exponent      = exponent,
+                         nPerm         = nPerm,
+                         minGSSize     = minGSSize,
+                         pvalueCutoff  = pvalueCutoff,
+                         pAdjustMethod = pAdjustMethod,
+                         verbose       = verbose,
+                         USER_DATA     = Reactome_DATA,
+                         seed          = seed)
+
+    res@organism <- organism
+    res@setType <- "Reactome"
+    res@keytype <- "ENTREZID"
+    
+    return(res)
 }
 
 
-##' visualize analyzing result of GSEA
-##'
-##' plotting function for gseaResult
-##' @title gseaplot
-##' @param gseaResult gseaResult object
-##' @param geneSetID geneSet ID
-##' @param by one of "runningScore" or "position"
-##' @return figure
-##' @export
-##' @author ygc
-gseaplot <- DOSE::gseaplot
+get_Reactome_Env <- function() {
+    if (!exists("ReactomePA_Env", envir = .GlobalEnv)) {
+        assign("ReactomePA_Env", new.env(), .GlobalEnv)
+    }    
+    get("ReactomePA_Env", envir= .GlobalEnv)
+}
 
-
-##' @importFrom DOSE getGeneSet
+##' @importMethodsFrom AnnotationDbi as.list
+##' @importFrom reactome.db reactomeEXTID2PATHID
 ##' @importFrom reactome.db reactomePATHID2EXTID
 ##' @importFrom reactome.db reactomePATHID2NAME
-##' @importFrom AnnotationDbi as.list
-##' @importFrom AnnotationDbi keys
-##' @method getGeneSet Reactome
-##' @export
-getGeneSet.Reactome <- function(setType="Reactome", organism, ...) {
-    if (setType != "Reactome")
-        stop("setType should be 'Reactome'... ")
-    gs <- as.list(reactomePATHID2EXTID) ## also contains reactions
+get_Reactome_DATA <- function(organism = "human") {
+    ReactomePA_Env <- get_Reactome_Env()
+    
+    if (exists("organism", envir=ReactomePA_Env, inherits = FALSE)) {
+        org <- get("organism", envir=ReactomePA_Env)
+        if (org == organism &&
+            exists("PATHID2EXTID", envir = ReactomePA_Env) &&
+            exists("EXTID2PATHID", envir = ReactomePA_Env) &&
+            exists("PATHID2NAME",  envir = ReactomePA_Env)) {
+            
+            ## use_cached
+            return(ReactomePA_Env)
+        }
+    }
 
-    paths <- keys(reactomePATHID2NAME)
-    gs <- gs[names(gs) %in% paths]
-    return(gs)
+    ALLEG <- getALLEG(organism)
+    
+    EXTID2PATHID <- as.list(reactomeEXTID2PATHID)
+    EXTID2PATHID <- EXTID2PATHID[names(EXTID2PATHID) %in% ALLEG]
+    
+    PATHID2EXTID <- as.list(reactomePATHID2EXTID) ## also contains reactions
+    
+    PATHID2NAME <- as.list(reactomePATHID2NAME)
+    
+    PATHID2EXTID <- PATHID2EXTID[names(PATHID2EXTID) %in% names(PATHID2NAME)]
+    PATHID2EXTID <- PATHID2EXTID[names(PATHID2EXTID) %in% unique(unlist(EXTID2PATHID))]
+    PATHID2EXTID <- lapply(PATHID2EXTID, function(x) intersect(x, ALLEG))
+    
+    PATHID2NAME <- PATHID2NAME[names(PATHID2NAME) %in% names(PATHID2EXTID)]
+
+    PATHID2NAME <- unlist(PATHID2NAME)
+    PATHID2NAME <- gsub("^\\w+\\s\\w+:\\s", "", PATHID2NAME) # remove leading spaces
+    
+    assign("PATHID2EXTID", PATHID2EXTID, envir=ReactomePA_Env)
+    assign("EXTID2PATHID", EXTID2PATHID, envir=ReactomePA_Env)
+    assign("PATHID2NAME", PATHID2NAME, envir=ReactomePA_Env)
+    return(ReactomePA_Env)
 }
 
+
+##' get all entrezgene ID of a specific organism
+##'
+##'
+##' @title getALLEG
+##' @param organism species
+##' @return entrez gene ID vector
+##' @importFrom GOSemSim getDb
+##' @importMethodsFrom AnnotationDbi keys
+##' @author Yu Guangchuang
+getALLEG <- function(organism) {
+    annoDb <- getDb(organism)
+    require(annoDb, character.only = TRUE)
+    annoDb <- eval(parse(text=annoDb))
+    eg=keys(annoDb, keytype="ENTREZID")
+    return(eg)
+}
 

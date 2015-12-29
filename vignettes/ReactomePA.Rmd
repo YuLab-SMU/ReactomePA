@@ -16,6 +16,7 @@ output:
 vignette: >
   %\VignetteIndexEntry{An R package for Reactome Pathway Analysis}
   %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteDepends{org.Hs.eg.db}
   %\usepackage[utf8]{inputenc}
 ---
 
@@ -85,11 +86,10 @@ number of selected genes associated with reactome pathway is larger
 than expected. The p values were calculated based the hypergeometric model[@boyle2004],
 
 ```{r}
-require(DOSE)
+library(ReactomePA)
 data(geneList)
 de <- names(geneList)[abs(geneList) > 1.5]
 head(de)
-require(ReactomePA)
 x <- enrichPathway(gene=de,pvalueCutoff=0.05, readable=T)
 head(summary(x))
 ```
