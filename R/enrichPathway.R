@@ -52,6 +52,9 @@ enrichPathway <- function(gene,
                            minGSSize = minGSSize,
                            USER_DATA = Reactome_DATA)
 
+    if (is.null(res))
+        return(res)
+
     res@keytype <- "ENTREZID"
     res@organism <- organism
     OrgDb <- getDb(organism)

@@ -41,6 +41,9 @@ gsePathway <- function(geneList,
                          USER_DATA     = Reactome_DATA,
                          seed          = seed)
 
+    if (is.null(res))
+        return(res)
+    
     res@organism <- organism
     res@setType <- "Reactome"
     res@keytype <- "ENTREZID"
