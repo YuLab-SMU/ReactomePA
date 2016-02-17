@@ -44,12 +44,12 @@ pathway database.
 
 # Citation
 
-If you use `r Biocpkg("Reactome")` in published research, please cite G. Yu (2015). In addition, please cite G. Yu (2012) when using `compareCluster` in `r Biocpkg("clusterProfiler")`, G Yu (2015) when applying enrichment analysis to NGS data using `r Biocpkg("ChIPseeker")`.
+If you use `r Biocpkg("Reactome")`[@yu_reactomepa_2016] in published research, please cite G. Yu (2015). In addition, please cite G. Yu (2012) when using `compareCluster` in `r Biocpkg("clusterProfiler")`, G Yu (2015) when applying enrichment analysis to NGS data using `r Biocpkg("ChIPseeker")`.
 
 ```
-G Yu, QY He.
-ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization
-Molecular BioSystems 2015, Accepted.
+G Yu, QY He,
+ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization.
+Molecular BioSystems 2016, 12(2):477-479.
 ```
 
 URL: [http://dx.doi.org/10.1039/C5MB00663E](http://dx.doi.org/10.1039/C5MB00663E)
@@ -161,15 +161,7 @@ viewPathway("E2F mediated regulation of DNA replication", readable=TRUE, foldCha
 
 # External documents
 
-
-+ [Why clusterProfiler fails](http://guangchuangyu.github.io/2014/08/why-clusterprofiler-fails/)
-+ [Enrichment Map](http://guangchuangyu.github.io/2014/08/enrichment-map/)
-+ [dotplot for enrichment result](http://guangchuangyu.github.io/2015/06/dotplot-for-enrichment-result/)
-+ [functional enrichment for GTEx paper](http://guangchuangyu.github.io/2015/08/functional-enrichment-for-gtex-paper/)
-+ [functional enrichment analysis with NGS data](http://guangchuangyu.github.io/2015/08/functional-enrichment-analysis-with-ngs-data/)
-+ [use clusterProfiler as an universal enrichment analysis tool](http://guangchuangyu.github.io/2015/05/use-clusterprofiler-as-an-universal-enrichment-analysis-tool/)
-+ [Comparison of clusterProfiler and GSEA-P](http://guangchuangyu.github.io/2015/11/comparison-of-clusterprofiler-and-gsea-p/)
-
+More documents can be found in <http://guangchuangyu.github.io/categories/reactomepa>.
 
 ## Bugs/Feature requests ##
 
