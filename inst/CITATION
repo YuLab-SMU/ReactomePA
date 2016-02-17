@@ -8,13 +8,13 @@ citEntry(entry  = "ARTICLE",
              ),
          journal = "Molecular BioSystems",
          year    = "2016",
-         volume  = "",
-         number  = "",
-         pages   = "accepted",
-         PMID    = "",
+         volume  = "12",
+         number  = "12",
+         pages   = "477-479",
+         PMID    = "26661513",
          url     = "http://pubs.rsc.org/en/Content/ArticleLanding/2015/MB/C5MB00663E",
          doi     = "10.1039/C5MB00663E",
          textVersion = paste("Guangchuang Yu, Qing-Yu He.",
              "ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization.",
-             "Molecular BioSystems 2016 Accepted")
+             "Molecular BioSystems 2016, 12(2):477-479")
          )
