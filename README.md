@@ -36,7 +36,8 @@ To view the vignette of `ReactomePA` installed in your system, start `R` and ent
 vignette("ReactomePA", package="ReactomePA")
 ```
 
-More documents can be found in <http://guangchuangyu.github.io/categories/reactomepa>.
+More documents can be found in <http://www.bioconductor.org/packages/DOSE>, <http://www.bioconductor.org/packages/clusterProfiler> and  <http://guangchuangyu.github.io/tags/reactomepa>.
+
 
 
 ## Bugs/Feature requests ##
