@@ -7,6 +7,7 @@
 ##' @param exponent weight of each step
 ##' @param nPerm permutation numbers
 ##' @param minGSSize minimal size of each geneSet for analyzing
+##' @param maxGSSize maximal size of each geneSet for analyzing
 ##' @param pvalueCutoff pvalue Cutoff
 ##' @param pAdjustMethod pvalue adjustment method
 ##' @param verbose print message or not
@@ -24,6 +25,7 @@ gsePathway <- function(geneList,
                        exponent      = 1,
                        nPerm         = 1000,
                        minGSSize     = 10,
+                       maxGSSize     = 500,
                        pvalueCutoff  = 0.05,
                        pAdjustMethod = "BH",
                        verbose       = TRUE,
@@ -35,6 +37,7 @@ gsePathway <- function(geneList,
                          exponent      = exponent,
                          nPerm         = nPerm,
                          minGSSize     = minGSSize,
+                         maxGSSize     = maxGSSize,
                          pvalueCutoff  = pvalueCutoff,
                          pAdjustMethod = pAdjustMethod,
                          verbose       = verbose,

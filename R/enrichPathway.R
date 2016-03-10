@@ -10,6 +10,7 @@
 ##' @param qvalueCutoff Cutoff value of qvalue
 ##' @param universe background genes
 ##' @param minGSSize minimal size of genes annotated by Ontology term for testing.
+##' @param maxGSSize maximal size of each geneSet for analyzing
 ##' @param readable whether mapping gene ID to gene Name
 ##' @return A \code{enrichResult} instance.
 ##' @importFrom DOSE enricher_internal
@@ -39,7 +40,8 @@ enrichPathway <- function(gene,
                           pAdjustMethod="BH",
                           qvalueCutoff = 0.2,
                           universe,
-                          minGSSize=5,
+                          minGSSize=10,
+                          maxGSSize=500,
                           readable=FALSE) {
 
     Reactome_DATA <- get_Reactome_DATA(organism)
@@ -50,6 +52,7 @@ enrichPathway <- function(gene,
                            qvalueCutoff=qvalueCutoff,
                            universe = universe,
                            minGSSize = minGSSize,
+                           maxGSSize = maxGSSize,
                            USER_DATA = Reactome_DATA)
 
     if (is.null(res))
