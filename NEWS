@@ -1,5 +1,6 @@
 CHANGES IN VERSION 1.15.5
 ------------------------
+ o add maxGSSize parameter <2016-03-10, Thu>
  o update ReactomePA citation info <2016-02-17, Wed>
 
 CHANGES IN VERSION 1.15.4

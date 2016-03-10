@@ -7,8 +7,8 @@ Given a vector of genes, this function will return the enriched pathways
 with FDR control.}
 \usage{
 enrichPathway(gene, organism = "human", pvalueCutoff = 0.05,
-  pAdjustMethod = "BH", qvalueCutoff = 0.2, universe, minGSSize = 5,
-  readable = FALSE)
+  pAdjustMethod = "BH", qvalueCutoff = 0.2, universe, minGSSize = 10,
+  maxGSSize = 500, readable = FALSE)
 }
 \arguments{
 \item{gene}{a vector of entrez gene id.}
@@ -24,6 +24,8 @@ enrichPathway(gene, organism = "human", pvalueCutoff = 0.05,
 \item{universe}{background genes}
 
 \item{minGSSize}{minimal size of genes annotated by Ontology term for testing.}
+
+\item{maxGSSize}{maximal size of each geneSet for analyzing}
 
 \item{readable}{whether mapping gene ID to gene Name}
 }
