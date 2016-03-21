@@ -12,7 +12,7 @@ This package provides functions for pathway analysis based on REACTOME pathway d
 
 ## Authors ##
 
-Guangchuang YU, School of Public Health, The University of Hong Kong [http://ygc.name](http://ygc.name)
+Guangchuang YU, School of Public Health, The University of Hong Kong <http://guangchuangyu.github.io>
 
 ## License ##
 
