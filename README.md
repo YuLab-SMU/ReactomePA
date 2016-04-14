@@ -10,6 +10,9 @@
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
 
+A discussion forum can be found at <https://groups.google.com/forum/#!forum/clusterprofiler>.
+
+
 ## Authors ##
 
 Guangchuang YU, School of Public Health, The University of Hong Kong <http://guangchuangyu.github.io>
