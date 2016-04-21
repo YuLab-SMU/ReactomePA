@@ -56,10 +56,10 @@ gsePathway <- function(geneList,
 
 
 get_Reactome_Env <- function() {
-    if (!exists("ReactomePA_Env", envir = .GlobalEnv)) {
-        assign("ReactomePA_Env", new.env(), .GlobalEnv)
+    if (!exists(".ReactomePA_Env", envir = .GlobalEnv)) {
+        assign(".ReactomePA_Env", new.env(), .GlobalEnv)
     }    
-    get("ReactomePA_Env", envir= .GlobalEnv)
+    get(".ReactomePA_Env", envir= .GlobalEnv)
 }
 
 ##' @importMethodsFrom AnnotationDbi as.list
@@ -89,6 +89,11 @@ get_Reactome_DATA <- function(organism = "human") {
     PATHID2EXTID <- as.list(reactomePATHID2EXTID) ## also contains reactions
     
     PATHID2NAME <- as.list(reactomePATHID2NAME)
+    PI <- names(PATHID2NAME)
+    ## > PATHID2NAME[['68877']]
+    ## [1] "Homo sapiens: Mitotic Prometaphase" "Homo sapiens: Mitotic Prometaphase"
+    PATHID2NAME <- lapply(PATHID2NAME, function(x) x[1])
+    names(PATHID2NAME) <- PI
     
     PATHID2EXTID <- PATHID2EXTID[names(PATHID2EXTID) %in% names(PATHID2NAME)]
     PATHID2EXTID <- PATHID2EXTID[names(PATHID2EXTID) %in% unique(unlist(EXTID2PATHID))]
@@ -97,7 +102,7 @@ get_Reactome_DATA <- function(organism = "human") {
     PATHID2NAME <- PATHID2NAME[names(PATHID2NAME) %in% names(PATHID2EXTID)]
 
     PATHID2NAME <- unlist(PATHID2NAME)
-    PATHID2NAME <- gsub("^\\w+\\s\\w+:\\s", "", PATHID2NAME) # remove leading spaces
+    PATHID2NAME <- gsub("^\\w+\\s\\w+:\\s+", "", PATHID2NAME) # remove leading spaces
     
     assign("PATHID2EXTID", PATHID2EXTID, envir=ReactomePA_Env)
     assign("EXTID2PATHID", EXTID2PATHID, envir=ReactomePA_Env)
