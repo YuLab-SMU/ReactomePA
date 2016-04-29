@@ -30,6 +30,8 @@ Suggests:
     org.Hs.eg.db
 VignetteBuilder: knitr
 License: GPL-2
+URL: http://guangchuangyu.github.io/ReactomePA
+BugReports: https://github.com/GuangchuangYu/ReactomePA/issues
 Packaged: 2012-03-05 18:26:53 UTC; mcarlson
 biocViews: Pathways, Visualization, Annotation, MultipleComparison,
     GeneSetEnrichment, Reactome
