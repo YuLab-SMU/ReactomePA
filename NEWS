@@ -1,3 +1,15 @@
+CHANGES IN VERSION 1.17.2
+------------------------
+ o https://github.com/Bioconductor-mirror/ReactomePA/commit/6ce32c8e03e1b252662a07901cce022fab038086
+
+CHANGES IN VERSION 1.17.1
+------------------------
+ o https://github.com/Bioconductor-mirror/ReactomePA/commit/5d150f5fe545cfa3983872bf5485af1b9ba3129d
+
+CHANGES IN VERSION 1.16.0
+------------------------
+ o BioC 3.3 released <2016-05-05, Thu>
+
 CHANGES IN VERSION 1.15.6
 ------------------------
  o fixed issue of duplicated name in PATHID2NAME <2016-04-21, Thu>
