@@ -29,6 +29,7 @@ Suggests:
     knitr,
     org.Hs.eg.db
 VignetteBuilder: knitr
+ByteCompile: true
 License: GPL-2
 URL: http://guangchuangyu.github.io/ReactomePA
 BugReports: https://github.com/GuangchuangYu/ReactomePA/issues
