@@ -12,6 +12,7 @@
 ##' @param pAdjustMethod pvalue adjustment method
 ##' @param verbose print message or not
 ##' @param seed logical
+##' @param by one of 'fgsea' or 'DOSE'
 ##' @importClassesFrom DOSE gseaResult
 ##' @importMethodsFrom DOSE show
 ##' @importMethodsFrom DOSE summary
@@ -29,7 +30,8 @@ gsePathway <- function(geneList,
                        pvalueCutoff  = 0.05,
                        pAdjustMethod = "BH",
                        verbose       = TRUE,
-                       seed          = FALSE) {
+                       seed          = FALSE,
+                       by = 'fgsea') {
 
     Reactome_DATA <- get_Reactome_DATA(organism)
     
@@ -42,7 +44,8 @@ gsePathway <- function(geneList,
                          pAdjustMethod = pAdjustMethod,
                          verbose       = verbose,
                          USER_DATA     = Reactome_DATA,
-                         seed          = seed)
+                         seed          = seed,
+                         by = by)
 
     if (is.null(res))
         return(res)
