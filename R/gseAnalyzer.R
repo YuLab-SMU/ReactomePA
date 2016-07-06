@@ -120,7 +120,6 @@ get_Reactome_DATA <- function(organism = "human") {
 ##' @title getALLEG
 ##' @param organism species
 ##' @return entrez gene ID vector
-##' @importFrom GOSemSim getDb
 ##' @importMethodsFrom AnnotationDbi keys
 ##' @author Yu Guangchuang
 getALLEG <- function(organism) {
