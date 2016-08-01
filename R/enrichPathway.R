@@ -13,7 +13,6 @@
 ##' @param maxGSSize maximal size of each geneSet for analyzing
 ##' @param readable whether mapping gene ID to gene Name
 ##' @return A \code{enrichResult} instance.
-##' @importFrom DOSE enricher_internal
 ##' @importFrom DOSE setReadable
 ##' @importClassesFrom DOSE enrichResult
 ##' @importMethodsFrom DOSE show
