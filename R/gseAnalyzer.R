@@ -17,7 +17,6 @@
 ##' @importMethodsFrom DOSE show
 ##' @importMethodsFrom DOSE summary
 ##' @importMethodsFrom DOSE plot
-##' @importFrom DOSE GSEA_internal
 ##' @export
 ##' @return gseaResult object
 ##' @author Yu Guangchuang

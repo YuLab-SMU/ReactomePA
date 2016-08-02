@@ -37,3 +37,5 @@ getDb <- function(organism) {
     return(annoDb)
 }
 
+enricher_internal <- DOSE:::enricher_internal
+GSEA_internal <- DOSE:::GSEA_internal
