@@ -1,5 +1,6 @@
 CHANGES IN VERSION 1.17.3
 ------------------------
+ o move getDb from GOSemSim (no longer need this function) to ReactomePA and remove dependency of GOSemSim <2016-07-06, Wed>
  o 'by' parameter for GSEA analysis <2016-07-04, Mon>
 
 CHANGES IN VERSION 1.17.2
