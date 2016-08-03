@@ -1,6 +1,9 @@
-CHANGES IN VERSION 1.17.2
+CHANGES IN VERSION 1.17.3
 ------------------------
  o 'by' parameter for GSEA analysis <2016-07-04, Mon>
+
+CHANGES IN VERSION 1.17.2
+------------------------
  o use byte compiler <2016-05-18, Wed>
  o https://github.com/Bioconductor-mirror/ReactomePA/commit/6ce32c8e03e1b252662a07901cce022fab038086
 
