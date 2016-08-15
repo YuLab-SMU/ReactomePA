@@ -17,7 +17,7 @@ Please cite the following article when using `ReactomePA`:
 
 ***G Yu***, QY He<sup>\*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. ***Molecular BioSystems*** 2016, 12(2):477-479.
 
-[![doi](https://img.shields.io/badge/doi-1039/c5mb00663e-green.svg?style=flat)](http://dx.doi.org/1039/c5mb00663e) [![citation](https://img.shields.io/badge/cited%20by-5-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=16627502277303919270,2188293597650690793,16774578204592269646,17800543858983923015)
+[![doi](https://img.shields.io/badge/doi-1039/c5mb00663e-green.svg?style=flat)](http://dx.doi.org/1039/c5mb00663e) [![citation](https://img.shields.io/badge/cited%20by-5-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 ------------------------------------------------------------------------
 
