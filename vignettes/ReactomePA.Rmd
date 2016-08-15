@@ -30,7 +30,6 @@ knitr::opts_chunk$set(tidy = FALSE,
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(org.Hs.eg.db)
 library(DOSE)
-library(clusterProfiler)
 library(ReactomePA)
 ```
 
@@ -44,33 +43,9 @@ pathway database.
 
 # Citation
 
-If you use `r Biocpkg("Reactome")`[@yu_reactomepa_2016] in published research, please cite G. Yu (2015). In addition, please cite G. Yu (2012) when using `compareCluster` in `r Biocpkg("clusterProfiler")`, G Yu (2015) when applying enrichment analysis to NGS data using `r Biocpkg("ChIPseeker")`.
+If you use `r Biocpkg("Reactome")`[@yu_reactomepa_2016] in published research, please cite:
 
-```
-G Yu, QY He,
-ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization.
-Molecular BioSystems 2016, 12(2):477-479.
-```
-
-URL: [http://dx.doi.org/10.1039/C5MB00663E](http://dx.doi.org/10.1039/C5MB00663E)
-
-
-```
-G Yu, LG Wang, Y Han, QY He.
-clusterProfiler: an R package for comparing biological themes among gene clusters.
-OMICS: A Journal of Integrative Biology 2012, 16(5):284-287.
-```
-
-URL: [http://dx.doi.org/10.1089/omi.2011.0118](http://dx.doi.org/10.1089/omi.2011.0118)
-
-
-```
-G Yu, LG Wang, QY He.
-ChIPseeker: an R/Bioconductor package for ChIP peak annotation, comparison and visualization.
-Bioinformatics 2015, 31(14):2382-2383.
-```
-
-URL: [http://dx.doi.org/10.1093/bioinformatics/btv145](http://dx.doi.org/10.1093/bioinformatics/btv145)
+__*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__ 2016, 12(2):477-479. doi:[10.1039/C5MB00663E](http://dx.doi.org/10.1039/C5MB00663E)
 
 
 # Supported organisms
@@ -83,7 +58,8 @@ Currently `r Biocpkg("ReactomePA")` supports several model organisms, including 
 Enrichment analysis is a widely used approach to identify biological
 themes. Here, we implement hypergeometric model to assess whether the
 number of selected genes associated with reactome pathway is larger
-than expected. The p values were calculated based the hypergeometric model[@boyle2004],
+than expected. The _p_ values were calculated based the hypergeometric model[@boyle2004]. 
+
 
 ```{r}
 library(ReactomePA)
@@ -94,7 +70,7 @@ x <- enrichPathway(gene=de,pvalueCutoff=0.05, readable=T)
 head(summary(x))
 ```
 
-For calculation/parameter details, please refer to the [vignette](http://www.bioconductor.org/packages/release/bioc/vignettes/DOSE/inst/doc/DOSE.html) of `r Biocpkg("DOSE")`.
+For calculation/parameter details, please refer to the vignette of `r Biocpkg("DOSE")`[@yu_dose_2015]..
 
 ## Pathway analysis of NGS data
 
@@ -103,39 +79,47 @@ Pathway analysis using NGS data (eg, RNA-Seq and ChIP-Seq) can be performed by l
 
 ## Visualize enrichment result
 We implement barplot, dotplot enrichment map and category-gene-network for visualization. It is very common to visualize the enrichment result in bar or pie chart. We believe the pie chart is misleading and only provide bar chart.
-```{r fig.height=5, fig.width=8}
+```{r fig.height=4, fig.width=7}
 barplot(x, showCategory=8)
 ```
-```{r fig.height=8, fig.width=8}
+```{r fig.height=6, fig.width=8}
 dotplot(x, showCategory=15)
 ```
 
 Enrichment map can be viusalized by __*enrichMap*__:
-```{r fig.height=16, fig.width=20}
+```{r fig.height=16, fig.width=20, eval=FALSE}
 enrichMap(x, layout=igraph::layout.kamada.kawai, vertex.label.cex = 1)
 ```
 
+![](figures/enrichMap.png)
+
 In order to consider the potentially biological complexities in which a gene may belong to multiple annotation categories, we developed __*cnetplot*__ function to extract the complex association between genes and diseases.
-```{r fig.height=12, fig.width=12}
+```{r fig.height=12, fig.width=12, eval=FALSE}
 cnetplot(x, categorySize="pvalue", foldChange=geneList)
 ```
 
+![](figures/cnetplot.png)
 
 ## Comparing enriched reactome pathways among gene clusters with clusterProfiler
+
 We have developed an `R` package `r Biocpkg("clusterProfiler")`[@yu_clusterprofiler:_2012] for comparing biological themes among gene clusters. `r Biocpkg("ReactomePA")` works fine with `r Biocpkg("clusterProfiler")` and can compare biological themes at reactome pathway perspective.
 
-```{r fig.height=8, fig.width=13}
+```{r fig.height=8, fig.width=13, eval=FALSE}
 require(clusterProfiler)
 data(gcSample)
 res <- compareCluster(gcSample, fun="enrichPathway")
 plot(res)
 ```
 
+![](figures/clusterProfiler.png)
+
+
 # Gene Set Enrichment Analysis
+
 A common approach in analyzing gene expression profiles was identifying differential expressed genes that are deemed interesting. The __*enrichPathway*__ function we demonstrated previously were based on these differential expressed genes. This approach will find genes where the difference is large, but it will not detect a situation where the difference is small, but evidenced in coordinated way in a set of related genes. Gene Set Enrichment Analysis (GSEA)[@subramanian_gene_2005] directly addressed this limitation. All genes can be used in GSEA; GSEA aggregates the per gene statistics across genes within a gene set, therefore making it possible to detect situations where all genes in a predefined set change in a small but coordinated way. For algorithm details, please refer to the vignette of `r Biocpkg("DOSE")`[@yu_dose_2015].
 
 ```{r}
-y <- gsePathway(geneList, nPerm=100, 
+y <- gsePathway(geneList, nPerm=1000, 
                 minGSSize=120, pvalueCutoff=0.2, 
                 pAdjustMethod="BH", verbose=FALSE)
 res <- summary(y)
@@ -143,29 +127,28 @@ head(res)
 ```
 
 ## Visualize GSEA result
-```{r fig.height=16, fig.width=16}
+```{r fig.height=16, fig.width=16, eval=FALSE}
 enrichMap(y)
 ```
 
-```{r fig.height=8, fig.width=10}
+![](figures/enrichMap_gsea.png)
+
+
+```{r fig.height=7, fig.width=10}
 gseaplot(y, geneSetID = "1280215")
 ```
 
 # Pathway Visualization
 
 In `r Biocpkg("ReactomePA")`, we also implemented __*viewPathway*__ to visualized the pathway.
-```{r fig.height=16, fig.width=16}
+```{r fig.height=16, fig.width=16, eval=FALSE}
 viewPathway("E2F mediated regulation of DNA replication", readable=TRUE, foldChange=geneList)
 ```
 
+![](figures/E2F.png)
 
-# External documents
 
-More documents can be found in <http://www.bioconductor.org/packages/DOSE>, <http://www.bioconductor.org/packages/clusterProfiler> and  <http://guangchuangyu.github.io/tags/reactomepa>.
-
-## Bugs/Feature requests ##
-
-If you have any, [let me know](https://github.com/GuangchuangYu/ReactomePA/issues).
+More documents can be found on the project website, <https://guangchuangyu.github.io/ReactomePA>.
 
 
 # Session Information
