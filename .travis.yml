@@ -28,6 +28,7 @@ bioc_packages:
     - org.Hs.eg.db
     - DOSE
     - reactome.db
+    - graphite
     
 after_failure:
   - ./travis-tool.sh dump_logs

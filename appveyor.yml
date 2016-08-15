@@ -19,7 +19,7 @@ install:
 # Adapt as necessary starting from here
 
 build_script:
-  - travis-tool.sh install_bioc BiocStyle AnnotationDbi DO.db org.Hs.eg.db reactome.db
+  - travis-tool.sh install_bioc BiocStyle AnnotationDbi DO.db org.Hs.eg.db reactome.db graphite
   - travis-tool.sh install_deps
 
 test_script:
