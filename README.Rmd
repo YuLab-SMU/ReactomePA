@@ -21,8 +21,8 @@ html_preview: false
 [![GitHub stars](https://img.shields.io/github/stars/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/stargazers) 
 
 
-[![releaseVersion](https://img.shields.io/badge/release%20version-`r url="https://bioconductor.org/packages/release/bioc/html/ReactomePA.html"; x=readLines(url); gsub("\\D+(\\d+\\.\\d+\\.\\d+)\\D+", "\\1", x[grep("Version", x) +1])`-green.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
-[![develVersion](https://img.shields.io/badge/devel%20version-`r x=readLines("DESCRIPTION"); y=x[grep("^Version", x)]; sub("Version: ", "", y)`-green.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
+[![releaseVersion](https://img.shields.io/badge/release%20version-`r rvcheck::check_bioc("ReactomePA")$latest_version`-green.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
+[![develVersion](https://img.shields.io/badge/devel%20version-`r rvcheck:::get_devel_version("GuangchuangYu/ReactomePA")`-green.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#since)
 [![post](http://www.bioconductor.org/shields/posts/ReactomePA.svg)](https://support.bioconductor.org/t/ReactomePA/)
 [![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
