@@ -49,7 +49,7 @@ For details, please visit our project website, <https://guangchuangyu.github.io/
 
 ### Download stats
 
-[![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/) [![total](https://img.shields.io/badge/downloads-21897/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/) [![month](https://img.shields.io/badge/downloads-539/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
+[![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/) [![total](https://img.shields.io/badge/downloads-21947/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/) [![month](https://img.shields.io/badge/downloads-539/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
 
         +------------------+-------------------+------------------+-------------------+----------------+
         |                                                                                     *        |

@@ -5,6 +5,16 @@ output:
 html_preview: false
 ---
 
+
+```{r echo=FALSE, results="hide", message=FALSE}
+library("ggtree") 
+library("txtplot")
+library("scholar")
+library("dlstats")
+library("rvcheck") 
+get_devel_version <- rvcheck:::get_devel_version
+```
+
 # ReactomePA: Reactome Pathway Analysis
 
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
@@ -21,8 +31,8 @@ html_preview: false
 [![GitHub stars](https://img.shields.io/github/stars/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/stargazers) 
 
 
-[![releaseVersion](https://img.shields.io/badge/release%20version-`r rvcheck::check_bioc("ReactomePA")$latest_version`-green.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
-[![develVersion](https://img.shields.io/badge/devel%20version-`r rvcheck:::get_devel_version("GuangchuangYu/ReactomePA")`-green.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
+[![releaseVersion](https://img.shields.io/badge/release%20version-`r check_bioc("ReactomePA")$latest_version`-green.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
+[![develVersion](https://img.shields.io/badge/devel%20version-`r get_devel_version("GuangchuangYu/ReactomePA")`-green.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#since)
 [![post](http://www.bioconductor.org/shields/posts/ReactomePA.svg)](https://support.bioconductor.org/t/ReactomePA/)
 [![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
@@ -39,7 +49,7 @@ Please cite the following article when using `ReactomePA`:
 __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__ 2016, 12(2):477-479.
 
 [![doi](https://img.shields.io/badge/doi-1039/c5mb00663e-green.svg?style=flat)](http://dx.doi.org/1039/c5mb00663e)
-[![citation](https://img.shields.io/badge/cited%20by-`r library(scholar); sum(get_article_cite_history('DO5oG40AAAAJ', '8d8msizDQcsC')$cites)`-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-`r sum(get_article_cite_history('DO5oG40AAAAJ', '8d8msizDQcsC')$cites)`-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 ------------------------------------------------------------------------
 
@@ -51,24 +61,24 @@ For details, please visit our project website, <https://guangchuangyu.github.io/
 
 ### Citation 
 
-[![citation](https://img.shields.io/badge/cited%20by-`r library(scholar); sum(get_article_cite_history('DO5oG40AAAAJ', '8d8msizDQcsC')$cites)`-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-`r sum(get_article_cite_history('DO5oG40AAAAJ', '8d8msizDQcsC')$cites)`-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 
 ```{r echo=F, comment=NA}
-d <- scholar::get_article_cite_history('DO5oG40AAAAJ', '8d8msizDQcsC')
-txtplot::txtplot(d$year, d$cites)
+d <- get_article_cite_history('DO5oG40AAAAJ', '8d8msizDQcsC')
+txtplot(d$year, d$cites)
 ```
 
 ### Download stats
 
 [![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
-[![total](https://img.shields.io/badge/downloads-`r sum(dlstats::bioc_stats("ReactomePA")$Nb_of_downloads)`/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
-[![month](https://img.shields.io/badge/downloads-`r x <- dlstats::bioc_stats("ReactomePA"); x$Nb_of_downloads[nrow(x)-1]`/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
+[![total](https://img.shields.io/badge/downloads-`r sum(bioc_stats("ReactomePA")$Nb_of_downloads)`/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
+[![month](https://img.shields.io/badge/downloads-`r x <- bioc_stats("ReactomePA"); x$Nb_of_downloads[nrow(x)-1]`/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
 
 ```{r echo=F, comment=NA}
-x <- dlstats::bioc_stats("ReactomePA")
+x <- bioc_stats("ReactomePA")
 x <- x[-nrow(x), ] # last month data is not complete
-txtplot::txtplot(ggtree::Date2decimal(x$end), x$Nb_of_downloads, width=100, height=25)
+txtplot(Date2decimal(x$end), x$Nb_of_downloads, width=100, height=25)
 ```
 
 
