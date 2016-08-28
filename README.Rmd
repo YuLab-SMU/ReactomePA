@@ -40,7 +40,7 @@ get_devel_version <- rvcheck:::get_devel_version
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
 
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/GuangchuangYu/ReactomePA.svg?style=social)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=https://guangchuangyu.github.io/ReactomePA)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/GuangchuangYu/ReactomePA.svg?style=social)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract)
 
 ------------------------------------------------------------------------
 
