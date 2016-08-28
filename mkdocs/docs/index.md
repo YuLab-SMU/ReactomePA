@@ -31,10 +31,7 @@ Guangchuang Yu, School of Public Health, The University of Hong Kong.
 
 Please cite the following article when using `ReactomePA`:
 
-__Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9. doi:[10.1039/c5mb00663e](http://dx.doi.org/10.1039/c5mb00663e)
-
-<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-<div data-badge-popover="right" data-badge-type="donut" data-doi="10.1039/c5mb00663e" class="altmetric-embed"></div>
+__Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9. 
 
 ## <i class="fa fa-pencil"></i> Featured Articles
 
