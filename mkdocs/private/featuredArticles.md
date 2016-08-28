@@ -9,7 +9,7 @@ Let us know if you have published using `ReactomePA` and your publication will b
 <!-- article_citation:=8d8msizDQcsC -->
 
 
-Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3311691878690959578,6738461774991615090).
+Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3311691878690959578).
 
 
 ## 2016
