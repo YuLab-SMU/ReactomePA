@@ -4,16 +4,20 @@
 <a class="a2a_button_facebook"></a>
 <a class="a2a_button_twitter"></a>
 <a class="a2a_button_google_plus"></a>
+<a class="a2a_button_pinterest"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_button_wechat"></a>
+<a class="a2a_button_douban"></a>
 </div>
 <script async src="//static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END -->
-
 
 <link rel="stylesheet" href="https://guangchuangyu.github.io/css/academicons.min.css">
 <br>
 Let us know if you have published using `ReactomePA` and your publication will be featured here.
 
-[![citation](https://img.shields.io/badge/cited%20by-7-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-8-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 <link rel='stylesheet' href=https://guangchuangyu.github.io/resume/css/morris.css>
 <script src='https://guangchuangyu.github.io/resume/css/jquery.min.js' type='text/javascript'></script>
@@ -31,10 +35,10 @@ Let us know if you have published using `ReactomePA` and your publication will b
   }  
   </style>
 
-<div id = 'chart328c348fb754' class = 'rChart morris'></div>
+<div id = 'chart212e3e540bef' class = 'rChart morris'></div>
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart328c348fb754",
+ "element": "chart212e3e540bef",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -49,11 +53,11 @@ Let us know if you have published using `ReactomePA` and your publication will b
 },
 {
  "year": 2016,
-"cites":              6,
+"cites":              7,
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart328c348fb754",
+"id": "chart212e3e540bef",
 "labels": "cites" 
 },
       chartType = "Bar"
@@ -61,7 +65,7 @@ Let us know if you have published using `ReactomePA` and your publication will b
 </script>
 
 
-Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3311691878690959578,6738461774991615090).
+Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3311691878690959578).
 
 
 ## 2016

@@ -4,15 +4,19 @@
 <a class="a2a_button_facebook"></a>
 <a class="a2a_button_twitter"></a>
 <a class="a2a_button_google_plus"></a>
+<a class="a2a_button_pinterest"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_button_wechat"></a>
+<a class="a2a_button_douban"></a>
 </div>
 <script async src="//static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END -->
 
-
 [![releaseVersion](https://img.shields.io/badge/release%20version-1.16.2-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
 [![develVersion](https://img.shields.io/badge/devel%20version-1.17.4-blue.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
-[![total](https://img.shields.io/badge/downloads-22210/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
-[![month](https://img.shields.io/badge/downloads-539/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![total](https://img.shields.io/badge/downloads-22434/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![month](https://img.shields.io/badge/downloads-696/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
 
@@ -26,7 +30,7 @@ Guangchuang Yu, School of Public Health, The University of Hong Kong.
 ## <i class="fa fa-book"></i> Citation
 
 [![doi](https://img.shields.io/badge/doi-10.1039/c5mb00663e-blue.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e)
-[![citation](https://img.shields.io/badge/cited%20by-7-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-8-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 [![Altmetric](https://img.shields.io/badge/Altmetric-15-blue.svg?style=flat)](https://www.altmetric.com/details/4796667)
 
 Please cite the following article when using `ReactomePA`:
@@ -77,6 +81,8 @@ biocLite("ReactomePA")
 
 + [bioCancer](https://www.bioconductor.org/packages/bioCancer/): Interactive Multi-Omics Cancers Data Visualization and Analysis
 + [debrowser](https://www.bioconductor.org/packages/debrowser/): Interactive Differential Expresion Analysis Browser
++ [CINdex](https://www.bioconductor.org/packages/CINdex): Chromosome Instability Index
+
 
 <!--
 <i class="fa fa-hand-o-right"></i> Find out more on <i class="fa fa-github-alt"></i> [github](http://scisoft-net-map.isri.cmu.edu/application/ReactomePA/gitprojects).

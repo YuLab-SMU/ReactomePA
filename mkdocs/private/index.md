@@ -68,6 +68,8 @@ biocLite("ReactomePA")
 
 + [bioCancer](https://www.bioconductor.org/packages/bioCancer/): Interactive Multi-Omics Cancers Data Visualization and Analysis
 + [debrowser](https://www.bioconductor.org/packages/debrowser/): Interactive Differential Expresion Analysis Browser
++ [CINdex](https://www.bioconductor.org/packages/CINdex): Chromosome Instability Index
+
 
 <!--
 <i class="fa fa-hand-o-right"></i> Find out more on <i class="fa fa-github-alt"></i> [github](http://scisoft-net-map.isri.cmu.edu/application/ReactomePA/gitprojects).
