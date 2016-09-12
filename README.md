@@ -3,7 +3,7 @@ ReactomePA: Reactome Pathway Analysis
 
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives) [![Build Status](http://www.bioconductor.org/shields/build/devel/bioc/ReactomePA.svg)](https://bioconductor.org/checkResults/devel/bioc-LATEST/ReactomePA/) [![Linux/Mac Travis Build Status](https://img.shields.io/travis/GuangchuangYu/ReactomePA/master.svg?label=Mac%20OSX%20%26%20Linux)](https://travis-ci.org/GuangchuangYu/ReactomePA) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/Guangchuangyu/ReactomePA/master.svg?label=Windows)](https://ci.appveyor.com/project/GuangchuangYu/ReactomePA) [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-green.svg?style=flat)](http://bioconda.github.io/recipes/bioconductor-reactomepa/README.html)
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/) [![Last-changedate](https://img.shields.io/badge/last%20change-2016--08--29-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master) [![commit](http://www.bioconductor.org/shields/commits/bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#svn_source) [![GitHub forks](https://img.shields.io/github/forks/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/network) [![GitHub stars](https://img.shields.io/github/stars/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/stargazers)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/) [![Last-changedate](https://img.shields.io/badge/last%20change-2016--09--12-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master) [![commit](http://www.bioconductor.org/shields/commits/bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#svn_source) [![GitHub forks](https://img.shields.io/github/forks/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/network) [![GitHub stars](https://img.shields.io/github/stars/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/stargazers)
 
 [![releaseVersion](https://img.shields.io/badge/release%20version-1.16.2-green.svg?style=flat)](https://bioconductor.org/packages/ReactomePA) [![develVersion](https://img.shields.io/badge/devel%20version-1.17.4-green.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA) [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#since) [![post](http://www.bioconductor.org/shields/posts/ReactomePA.svg)](https://support.bioconductor.org/t/ReactomePA/) [![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
 
@@ -17,7 +17,7 @@ Please cite the following article when using `ReactomePA`:
 
 ***G Yu***, QY He<sup>\*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. ***Molecular BioSystems*** 2016, 12(2):477-479.
 
-[![doi](https://img.shields.io/badge/doi-10.1039/c5mb00663e-green.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e) [![citation](https://img.shields.io/badge/cited%20by-7-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![doi](https://img.shields.io/badge/doi-10.1039/c5mb00663e-green.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e) [![citation](https://img.shields.io/badge/cited%20by-8-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 ------------------------------------------------------------------------
 
@@ -29,16 +29,16 @@ For details, please visit our project website, <https://guangchuangyu.github.io/
 
 ### Citation
 
-[![citation](https://img.shields.io/badge/cited%20by-7-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-8-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
       +--+---------+---------+---------+---------+---------+---+
-    6 +                                                    *   +
+    7 +                                                    *   +
+      |                                                        |
+    6 +                                                        +
       |                                                        |
     5 +                                                        +
       |                                                        |
     4 +                                                        +
-      |                                                        |
-      |                                                        |
     3 +                                                        +
       |                                                        |
     2 +                                                        +
@@ -49,30 +49,30 @@ For details, please visit our project website, <https://guangchuangyu.github.io/
 
 ### Download stats
 
-[![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/) [![total](https://img.shields.io/badge/downloads-22210/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/) [![month](https://img.shields.io/badge/downloads-539/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
+[![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/) [![total](https://img.shields.io/badge/downloads-22499/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/) [![month](https://img.shields.io/badge/downloads-696/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
 
-        +------------------+-------------------+------------------+-------------------+----------------+
-        |                                                                                     *        |
+        +------------------+------------------+------------------+-------------------+-----------------+
+        |                                                                                    *         |
         |                                                                                              |
     800 +                                                                                              +
         |                                                                                              |
-        |                                                                                  *           |
-        |                                                                                    *  *      |
-        |                                                                           *                  |
-    600 +                                              *                           *     *             +
-        |                                                                      *        *         *    |
-        |                                                           *         *  *    *                |
-        |                                      *    **  *   **   *     *    *                          |
-        |                          *                           *         * *                           |
-    400 +                       *    *     *              *       *   *                                +
-        |                        *      *    *  *                                                      |
-        |                                 *                                                            |
-        |               **            *           *                                                    |
-    200 +     *  *         * **                                                                        +
-        |       *    **                                                                                |
+        |                                                                                *             |
+        |                                                                                  *  *   *    |
+        |                                                                          *                   |
+    600 +                                             *                          *      *              +
+        |                                                                     *       *         *      |
+        |                                                          *         *  *    *                 |
+        |                                     *    **   *  **   *     *    *                           |
+        |                          *                          *         **                             |
+    400 +                       *   *      *             *       *  *                                  +
+        |                        *      *   *   *                                                      |
+        |                                *                                                             |
+        |               **            *          *                                                     |
+    200 +     *  *         ** *                                                                        +
+        |      *    * *                                                                                |
         |          *                                                                                   |
         |                                                                                              |
         |                                                                                              |
       0 +   *                                                                                          +
-        +------------------+-------------------+------------------+-------------------+----------------+
-                         2013                2014               2015                2016
+        +------------------+------------------+------------------+-------------------+-----------------+
+                         2013               2014               2015                2016

@@ -18,11 +18,11 @@ Guangchuang Yu, School of Public Health, The University of Hong Kong.
 
 ## <i class="fa fa-book"></i> Citation
 
+Please cite the following article when using `ReactomePA`:
+
 <!-- doi:=10.1039/c5mb00663e -->
 <!-- citation:=8d8msizDQcsC:=3311691878690959578 -->
 <!-- altmetric:=4796667 -->
-
-Please cite the following article when using `ReactomePA`:
 
 __Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9. 
 
@@ -64,18 +64,12 @@ biocLite("ReactomePA")
 
 <i class="fa fa-hand-o-right"></i> Find out details and examples on <i class="fa fa-book"></i> [Documentation](https://guangchuangyu.github.io/ReactomePA/documentation/).
 
-## <i class="fa fa-code-fork"></i> Projects that depend on ReactomePA
+## <i class="fa fa-code-fork"></i> Projects that depend on _ReactomePA_
 
-#### <i class="fa fa-angle-double-right"></i> Bioconductor packages
+<!-- package_depend:=clusterProfiler:=CRAN -->
 
-+ [bioCancer](https://www.bioconductor.org/packages/bioCancer/): Interactive Multi-Omics Cancers Data Visualization and Analysis
-+ [debrowser](https://www.bioconductor.org/packages/debrowser/): Interactive Differential Expresion Analysis Browser
-+ [CINdex](https://www.bioconductor.org/packages/CINdex): Chromosome Instability Index
+<!-- package_depend:=clusterProfiler:=BioC -->
 
-
-<!--
-<i class="fa fa-hand-o-right"></i> Find out more on <i class="fa fa-github-alt"></i> [github](http://scisoft-net-map.isri.cmu.edu/application/ReactomePA/gitprojects).
--->
 
 ## <i class="fa fa-comment"></i> Feedback
 <ul class="fa-ul">

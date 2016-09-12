@@ -17,7 +17,7 @@
 
 [![releaseVersion](https://img.shields.io/badge/release%20version-1.16.2-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
 [![develVersion](https://img.shields.io/badge/devel%20version-1.17.4-blue.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
-[![total](https://img.shields.io/badge/downloads-22434/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![total](https://img.shields.io/badge/downloads-22499/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 [![month](https://img.shields.io/badge/downloads-696/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
@@ -31,11 +31,11 @@ Guangchuang Yu, School of Public Health, The University of Hong Kong.
 
 ## <i class="fa fa-book"></i> Citation
 
+Please cite the following article when using `ReactomePA`:
+
 [![doi](https://img.shields.io/badge/doi-10.1039/c5mb00663e-blue.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e)
 [![citation](https://img.shields.io/badge/cited%20by-8-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 [![Altmetric](https://img.shields.io/badge/Altmetric-15-blue.svg?style=flat)](https://www.altmetric.com/details/4796667)
-
-Please cite the following article when using `ReactomePA`:
 
 __Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9. 
 
@@ -77,18 +77,12 @@ biocLite("ReactomePA")
 
 <i class="fa fa-hand-o-right"></i> Find out details and examples on <i class="fa fa-book"></i> [Documentation](https://guangchuangyu.github.io/ReactomePA/documentation/).
 
-## <i class="fa fa-code-fork"></i> Projects that depend on ReactomePA
+## <i class="fa fa-code-fork"></i> Projects that depend on _ReactomePA_
+
 
 #### <i class="fa fa-angle-double-right"></i> Bioconductor packages
++ [debrowser](https://www.bioconductor.org/packages/debrowser): debrowser: Interactive Differential Expresion Analysis Browser
 
-+ [bioCancer](https://www.bioconductor.org/packages/bioCancer/): Interactive Multi-Omics Cancers Data Visualization and Analysis
-+ [debrowser](https://www.bioconductor.org/packages/debrowser/): Interactive Differential Expresion Analysis Browser
-+ [CINdex](https://www.bioconductor.org/packages/CINdex): Chromosome Instability Index
-
-
-<!--
-<i class="fa fa-hand-o-right"></i> Find out more on <i class="fa fa-github-alt"></i> [github](http://scisoft-net-map.isri.cmu.edu/application/ReactomePA/gitprojects).
--->
 
 ## <i class="fa fa-comment"></i> Feedback
 <ul class="fa-ul">
