@@ -24,7 +24,7 @@ Please cite the following article when using `ReactomePA`:
 <!-- citation:=8d8msizDQcsC:=3311691878690959578 -->
 <!-- altmetric:=4796667 -->
 
-__Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9. 
+__Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9.
 
 ## <i class="fa fa-pencil"></i> Featured Articles
 
@@ -66,9 +66,9 @@ biocLite("ReactomePA")
 
 ## <i class="fa fa-code-fork"></i> Projects that depend on _ReactomePA_
 
-<!-- package_depend:=clusterProfiler:=CRAN -->
+<!-- package_depend:=ReactomePA:=CRAN -->
 
-<!-- package_depend:=clusterProfiler:=BioC -->
+<!-- package_depend:=ReactomePA:=BioC -->
 
 
 ## <i class="fa fa-comment"></i> Feedback

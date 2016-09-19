@@ -37,7 +37,7 @@ Please cite the following article when using `ReactomePA`:
 [![citation](https://img.shields.io/badge/cited%20by-8-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 [![Altmetric](https://img.shields.io/badge/Altmetric-15-blue.svg?style=flat)](https://www.altmetric.com/details/4796667)
 
-__Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9. 
+__Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9.
 
 ## <i class="fa fa-pencil"></i> Featured Articles
 
@@ -83,7 +83,6 @@ biocLite("ReactomePA")
 #### <i class="fa fa-angle-double-right"></i> Bioconductor packages
 + [bioCancer](https://www.bioconductor.org/packages/bioCancer): Interactive Multi-Omics Cancers Data Visualization and Analysis
 + [debrowser](https://www.bioconductor.org/packages/debrowser): Interactive Differential Expresion Analysis Browser
-+ [eegc](https://www.bioconductor.org/packages/eegc): Engineering Evaluation by Gene Categorization (eegc)
 
 
 ## <i class="fa fa-comment"></i> Feedback

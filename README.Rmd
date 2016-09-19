@@ -7,35 +7,32 @@ html_preview: false
 
 
 ```{r echo=FALSE, results="hide", message=FALSE}
-library("ggtree") 
+library("ggtree")
 library("txtplot")
-library("scholar")
-library("dlstats")
-library("rvcheck") 
-get_devel_version <- rvcheck:::get_devel_version
+library("ypages")
 ```
 
 # ReactomePA: Reactome Pathway Analysis
+
+`r badge_release("ReactomePA", "green")`
+`r badge_devel("ReactomePA", "green")`
+[![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
+`r badge_download("ReactomePA", "total", "blue")`
+`r badge_download("ReactomePA", "month", "blue")`
+
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
+[![commit](http://www.bioconductor.org/shields/commits/bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#svn_source)
+[![GitHub forks](https://img.shields.io/github/forks/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/network)
+[![GitHub stars](https://img.shields.io/github/stars/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/stargazers)
+
 
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
 [![Build Status](http://www.bioconductor.org/shields/build/devel/bioc/ReactomePA.svg)](https://bioconductor.org/checkResults/devel/bioc-LATEST/ReactomePA/)
 [![Linux/Mac Travis Build Status](https://img.shields.io/travis/GuangchuangYu/ReactomePA/master.svg?label=Mac%20OSX%20%26%20Linux)](https://travis-ci.org/GuangchuangYu/ReactomePA)
 [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/Guangchuangyu/ReactomePA/master.svg?label=Windows)](https://ci.appveyor.com/project/GuangchuangYu/ReactomePA)
 [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-green.svg?style=flat)](http://bioconda.github.io/recipes/bioconductor-reactomepa/README.html)
-
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
-[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
-[![commit](http://www.bioconductor.org/shields/commits/bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#svn_source)
-[![GitHub forks](https://img.shields.io/github/forks/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/network) 
-[![GitHub stars](https://img.shields.io/github/stars/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/stargazers) 
-
-
-[![releaseVersion](https://img.shields.io/badge/release%20version-`r check_bioc("ReactomePA")$latest_version`-green.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
-[![develVersion](https://img.shields.io/badge/devel%20version-`r get_devel_version("GuangchuangYu/ReactomePA")`-green.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
-[![Bioc](http://www.bioconductor.org/shields/years-in-bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#since)
-[![post](http://www.bioconductor.org/shields/posts/ReactomePA.svg)](https://support.bioconductor.org/t/ReactomePA/)
-[![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
 
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
@@ -44,12 +41,14 @@ This package provides functions for pathway analysis based on REACTOME pathway d
 
 ------------------------------------------------------------------------
 
-Please cite the following article when using `ReactomePA`: 
+Please cite the following article when using `ReactomePA`:
 
 __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__ 2016, 12(2):477-479.
 
-[![doi](https://img.shields.io/badge/doi-10.1039/c5mb00663e-green.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e)
-[![citation](https://img.shields.io/badge/cited%20by-`r sum(get_article_cite_history('DO5oG40AAAAJ', '8d8msizDQcsC')$cites)`-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+
+`r badge_doi("10.1039/c5mb00663e", "green")`
+`r badge_citation("8d8msizDQcsC", "3311691878690959578", "green")`
+`r badge_altmetric("4796667", "green")`
 
 ------------------------------------------------------------------------
 
@@ -59,9 +58,9 @@ For details, please visit our project website, <https://guangchuangyu.github.io/
 + [Featured Articles](https://guangchuangyu.github.io/ReactomePA/featuredArticles/)
 + [Feedback](https://guangchuangyu.github.io/ReactomePA/#feedback)
 
-### Citation 
+### Citation
 
-[![citation](https://img.shields.io/badge/cited%20by-`r sum(get_article_cite_history('DO5oG40AAAAJ', '8d8msizDQcsC')$cites)`-green.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+`r badge_citation("8d8msizDQcsC", "3311691878690959578", "green")`
 
 
 ```{r echo=F, comment=NA}
@@ -72,11 +71,11 @@ txtplot(d$year, d$cites)
 ### Download stats
 
 [![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
-[![total](https://img.shields.io/badge/downloads-`r sum(bioc_stats("ReactomePA")$Nb_of_downloads)`/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
-[![month](https://img.shields.io/badge/downloads-`r x <- bioc_stats("ReactomePA"); x$Nb_of_downloads[nrow(x)-1]`/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
+`r badge_download("ReactomePA", "total", "blue")`
+`r badge_download("ReactomePA", "month", "blue")`
 
 ```{r echo=F, comment=NA}
-x <- bioc_stats("ReactomePA")
+x <- dlstats::bioc_stats("ReactomePA")
 x <- x[-nrow(x), ] # last month data is not complete
 txtplot(Date2decimal(x$end), x$Nb_of_downloads, width=100, height=25)
 ```
