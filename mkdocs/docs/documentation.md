@@ -48,4 +48,4 @@
 ## <i class="fa fa-gift"></i> Workflow
 
 + [An end to end workflow for differential gene expression using Affymetrix microarrays](http://f1000research.com/articles/5-1384/v1)
-
++ [RNAseq workflow](https://github.com/twbattaglia/RNAseq-workflow)

@@ -37,10 +37,10 @@ Let us know if you have published using `ReactomePA` and your publication will b
   }  
   </style>
 
-<div id = 'chart3ce11ca9efa' class = 'rChart morris'></div>
+<div id = 'chartd15299ce2cd' class = 'rChart morris'></div>
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart3ce11ca9efa",
+ "element": "chartd15299ce2cd",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -59,7 +59,7 @@ Let us know if you have published using `ReactomePA` and your publication will b
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart3ce11ca9efa",
+"id": "chartd15299ce2cd",
 "labels": "cites" 
 },
       chartType = "Bar"
