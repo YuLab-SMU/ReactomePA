@@ -8,7 +8,7 @@ author: "\\
 date: "`r Sys.Date()`"
 bibliography: ReactomePA.bib
 csl: nature.csl
-output: 
+output:
   BiocStyle::html_document:
     toc: true
   BiocStyle::pdf_document:
@@ -58,7 +58,7 @@ Currently `r Biocpkg("ReactomePA")` supports several model organisms, including 
 Enrichment analysis is a widely used approach to identify biological
 themes. Here, we implement hypergeometric model to assess whether the
 number of selected genes associated with reactome pathway is larger
-than expected. The _p_ values were calculated based the hypergeometric model[@boyle2004]. 
+than expected. The _p_ values were calculated based the hypergeometric model[@boyle2004].
 
 
 ```{r}
@@ -67,7 +67,7 @@ data(geneList)
 de <- names(geneList)[abs(geneList) > 1.5]
 head(de)
 x <- enrichPathway(gene=de,pvalueCutoff=0.05, readable=T)
-head(summary(x))
+head(as.data.frame(x))
 ```
 
 For calculation/parameter details, please refer to the vignette of `r Biocpkg("DOSE")`[@yu_dose_2015]..
@@ -119,10 +119,10 @@ plot(res)
 A common approach in analyzing gene expression profiles was identifying differential expressed genes that are deemed interesting. The __*enrichPathway*__ function we demonstrated previously were based on these differential expressed genes. This approach will find genes where the difference is large, but it will not detect a situation where the difference is small, but evidenced in coordinated way in a set of related genes. Gene Set Enrichment Analysis (GSEA)[@subramanian_gene_2005] directly addressed this limitation. All genes can be used in GSEA; GSEA aggregates the per gene statistics across genes within a gene set, therefore making it possible to detect situations where all genes in a predefined set change in a small but coordinated way. For algorithm details, please refer to the vignette of `r Biocpkg("DOSE")`[@yu_dose_2015].
 
 ```{r}
-y <- gsePathway(geneList, nPerm=1000, 
-                minGSSize=120, pvalueCutoff=0.2, 
+y <- gsePathway(geneList, nPerm=1000,
+                minGSSize=120, pvalueCutoff=0.2,
                 pAdjustMethod="BH", verbose=FALSE)
-res <- summary(y)
+res <- as.data.frame(y)
 head(res)
 ```
 

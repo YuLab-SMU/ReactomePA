@@ -16,7 +16,7 @@ Description: This package provides functions for pathway analysis based on
     enrichment analysis and several functions for visualization.
 Depends:
     R (>= 3.3.0),
-    DOSE (>= 2.11.4)
+    DOSE (>= 2.11.12)
 Imports:
     AnnotationDbi,
     reactome.db,
