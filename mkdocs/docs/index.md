@@ -17,7 +17,7 @@
 
 [![releaseVersion](https://img.shields.io/badge/release%20version-1.16.2-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
 [![develVersion](https://img.shields.io/badge/devel%20version-1.17.4-blue.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
-[![total](https://img.shields.io/badge/downloads-22935/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![total](https://img.shields.io/badge/downloads-23001/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 [![month](https://img.shields.io/badge/downloads-696/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
@@ -83,7 +83,7 @@ biocLite("ReactomePA")
 #### <i class="fa fa-angle-double-right"></i> Bioconductor packages
 + [bioCancer](https://www.bioconductor.org/packages/bioCancer): Interactive Multi-Omics Cancers Data Visualization and Analysis
 + [debrowser](https://www.bioconductor.org/packages/debrowser): Interactive Differential Expresion Analysis Browser
-+ [LINC](https://www.bioconductor.org/packages/LINC): annotation of noncoding RNAs and coexpressed genes
++ [LINC](https://www.bioconductor.org/packages/LINC): co-expression of lincRNAs and protein-coding genes
 
 
 ## <i class="fa fa-comment"></i> Feedback
