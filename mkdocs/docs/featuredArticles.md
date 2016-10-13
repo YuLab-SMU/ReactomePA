@@ -37,10 +37,10 @@ Let us know if you have published using `ReactomePA` and your publication will b
   }  
   </style>
 
-<div id = 'chart449368444b7' class = 'rChart morris'></div>
+<div id = 'chart59e23c50124' class = 'rChart morris'></div>
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart449368444b7",
+ "element": "chart59e23c50124",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -59,7 +59,7 @@ Let us know if you have published using `ReactomePA` and your publication will b
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart449368444b7",
+"id": "chart59e23c50124",
 "labels": "cites" 
 },
       chartType = "Bar"
@@ -72,8 +72,7 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 ## 2016
 
-[Mining kidney toxicogenomic data by using gene co-expression modules](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3143-y). ***BMC
-Genomics***. 2016, 17:790.
+[Mining kidney toxicogenomic data by using gene co-expression modules](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3143-y). ***BMC Genomics***. 2016, 17:790.
 
 [Determining breast cancer histological grade from RNA-sequencing data](http://dx.doi.org/10.1186/s13058-016-0710-8). **Breast Cancer Research**. 2016, 18:48.
 
