@@ -22,6 +22,10 @@ install:
 
 check: build
 	cd ..;\
+	Rscript -e 'rcmdcheck::rcmdcheck("$(PKGNAME)_$(PKGVERS).tar.gz")'
+
+check2: build
+	cd ..;\
 	R CMD check $(PKGNAME)_$(PKGVERS).tar.gz
 
 bioccheck:
@@ -32,8 +36,12 @@ clean:
 	cd ..;\
 	$(RM) -r $(PKGNAME).Rcheck/
 
+site: mkdocs
+
 mkdocs: mdfiles
-	cd mkdocs;\
+	cd docs;\
+	ln -f -s ../mkdocs/featured_img ./;\
+	cd ../mkdocs;\
 	mkdocs build;\
 	cd ../docs;\
 	rm -rf fonts;\

@@ -16,6 +16,9 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 ## 2016
 
+[Mining kidney toxicogenomic data by using gene co-expression modules](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3143-y). ***BMC
+Genomics***. 2016, 17:790.
+
 [Determining breast cancer histological grade from RNA-sequencing data](http://dx.doi.org/10.1186/s13058-016-0710-8). **Breast Cancer Research**. 2016, 18:48.
 
 [Human glioblastoma-associated microglia/monocytes express a distinct RNA profile compared to human control and murine samples](http://dx.doi.org/10.1002/glia.23014). __*GLIA*__. 2016, 64:1416-1437.
