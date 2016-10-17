@@ -24,5 +24,5 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 [Elucidation of tonic and activated B-cell receptor signaling in Burkitt’s lymphoma provides insights into regulation of cell survival](http://dx.doi.org/10.1073/pnas.1601053113). **PNAS**. 2016, 113(20):5688-5693.
 
-![](featured_img/pnas_F4.large.jpg)
+![](https://guangchuangyu.github.io/featured_img/ReactomePA/pnas_F4.large.jpg)
 

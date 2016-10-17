@@ -19,7 +19,7 @@
 
 Let us know if you have published using `ReactomePA` and your publication will be featured here.
 
-[![citation](https://img.shields.io/badge/cited%20by-8-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-10-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 <link rel='stylesheet' href=https://guangchuangyu.github.io/resume/css/morris.css>
 <script src='https://guangchuangyu.github.io/resume/css/jquery.min.js' type='text/javascript'></script>
@@ -37,10 +37,10 @@ Let us know if you have published using `ReactomePA` and your publication will b
   }  
   </style>
 
-<div id = 'chartf89123d462b' class = 'rChart morris'></div>
+<div id = 'chart195221a794c6' class = 'rChart morris'></div>
 <script type='text/javascript'>
     var chartParams = {
- "element": "chartf89123d462b",
+ "element": "chart195221a794c6",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -55,11 +55,11 @@ Let us know if you have published using `ReactomePA` and your publication will b
 },
 {
  "year": 2016,
-"cites":              7,
+"cites":              9,
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chartf89123d462b",
+"id": "chart195221a794c6",
 "labels": "cites" 
 },
       chartType = "Bar"
@@ -80,5 +80,5 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 [Elucidation of tonic and activated B-cell receptor signaling in Burkitt’s lymphoma provides insights into regulation of cell survival](http://dx.doi.org/10.1073/pnas.1601053113). **PNAS**. 2016, 113(20):5688-5693.
 
-![](featured_img/pnas_F4.large.jpg)
+![](https://guangchuangyu.github.io/featured_img/ReactomePA/pnas_F4.large.jpg)
 

@@ -28,7 +28,7 @@ __Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reacto
 
 ## <i class="fa fa-pencil"></i> Featured Articles
 
-<img src="featured_img/pnas_F4.large.jpg" width="500">
+<img src="https://guangchuangyu.github.io/featured_img/ReactomePA/pnas_F4.large.jpg" width="500">
 
 <i class="fa fa-hand-o-right"></i> Find out more on <i class="fa fa-pencil"></i> [Featured Articles](https://guangchuangyu.github.io/ReactomePA/featuredArticles/).
 
