@@ -58,6 +58,12 @@
     </url>
         
     <url>
+     <loc>https://guangchuangyu.github.io/ReactomePA/meshes/</loc>
+     <lastmod>2016-10-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://guangchuangyu.github.io/ReactomePA/ReactomePA/</loc>
      <lastmod>2016-10-17</lastmod>
      <changefreq>daily</changefreq>
