@@ -15,9 +15,9 @@
 
 <link rel="stylesheet" href="https://guangchuangyu.github.io/css/font-awesome.min.css">
 
-[![releaseVersion](https://img.shields.io/badge/release%20version-1.16.2-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
+[![releaseVersion](https://img.shields.io/badge/release%20version-1.18.0-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
 [![develVersion](https://img.shields.io/badge/devel%20version-1.19.0-blue.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
-[![total](https://img.shields.io/badge/downloads-23365/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![total](https://img.shields.io/badge/downloads-23462/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 [![month](https://img.shields.io/badge/downloads-683/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
