@@ -19,7 +19,7 @@
 
 Let us know if you have published using `ReactomePA` and your publication will be featured here.
 
-[![citation](https://img.shields.io/badge/cited%20by-10-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-11-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 <link rel='stylesheet' href=https://guangchuangyu.github.io/resume/css/morris.css>
 <script src='https://guangchuangyu.github.io/resume/css/jquery.min.js' type='text/javascript'></script>
@@ -37,10 +37,10 @@ Let us know if you have published using `ReactomePA` and your publication will b
   }  
   </style>
 
-<div id = 'chart78b74f44469' class = 'rChart morris'></div>
+<div id = 'chart2a744ee7b3cc' class = 'rChart morris'></div>
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart78b74f44469",
+ "element": "chart2a744ee7b3cc",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -55,11 +55,11 @@ Let us know if you have published using `ReactomePA` and your publication will b
 },
 {
  "year": 2016,
-"cites":              9,
+"cites":             10,
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart78b74f44469",
+"id": "chart2a744ee7b3cc",
 "labels": "cites" 
 },
       chartType = "Bar"
