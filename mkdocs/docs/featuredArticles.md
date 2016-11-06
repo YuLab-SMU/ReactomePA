@@ -19,7 +19,7 @@
 
 Let us know if you have published using `ReactomePA` and your publication will be featured here.
 
-[![citation](https://img.shields.io/badge/cited%20by-11-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-12-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 <link rel='stylesheet' href=https://guangchuangyu.github.io/resume/css/morris.css>
 <script src='https://guangchuangyu.github.io/resume/css/jquery.min.js' type='text/javascript'></script>
@@ -37,10 +37,10 @@ Let us know if you have published using `ReactomePA` and your publication will b
   }  
   </style>
 
-<div id = 'chart2a744ee7b3cc' class = 'rChart morris'></div>
+<div id = 'chart26665aa70ee3' class = 'rChart morris'></div>
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart2a744ee7b3cc",
+ "element": "chart26665aa70ee3",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -55,11 +55,11 @@ Let us know if you have published using `ReactomePA` and your publication will b
 },
 {
  "year": 2016,
-"cites":             10,
+"cites":             11,
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart2a744ee7b3cc",
+"id": "chart26665aa70ee3",
 "labels": "cites" 
 },
       chartType = "Bar"
@@ -72,13 +72,16 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 ## 2016
 
+[Transcriptional Dynamics During Human Adipogenesis and its Link to Adipose Morphology and Distribution](http://dx.doi.org/10.2337/db16-0631). ***Diabetes***. 2016.
+
+
 [Mining kidney toxicogenomic data by using gene co-expression modules](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3143-y). ***BMC Genomics***. 2016, 17:790.
 
-[Determining breast cancer histological grade from RNA-sequencing data](http://dx.doi.org/10.1186/s13058-016-0710-8). **Breast Cancer Research**. 2016, 18:48.
+[Determining breast cancer histological grade from RNA-sequencing data](http://dx.doi.org/10.1186/s13058-016-0710-8). ***Breast Cancer Research***. 2016, 18:48.
 
 [Human glioblastoma-associated microglia/monocytes express a distinct RNA profile compared to human control and murine samples](http://dx.doi.org/10.1002/glia.23014). __*GLIA*__. 2016, 64:1416-1437.
 
-[Elucidation of tonic and activated B-cell receptor signaling in Burkitt’s lymphoma provides insights into regulation of cell survival](http://dx.doi.org/10.1073/pnas.1601053113). **PNAS**. 2016, 113(20):5688-5693.
+[Elucidation of tonic and activated B-cell receptor signaling in Burkitt’s lymphoma provides insights into regulation of cell survival](http://dx.doi.org/10.1073/pnas.1601053113). ***PNAS***. 2016, 113(20):5688-5693.
 
 ![](https://guangchuangyu.github.io/featured_img/ReactomePA/pnas_F4.large.jpg)
 

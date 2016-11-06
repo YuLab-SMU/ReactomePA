@@ -17,8 +17,8 @@
 
 [![releaseVersion](https://img.shields.io/badge/release%20version-1.18.0-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
 [![develVersion](https://img.shields.io/badge/devel%20version-1.19.0-blue.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
-[![total](https://img.shields.io/badge/downloads-23835/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
-[![month](https://img.shields.io/badge/downloads-683/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![total](https://img.shields.io/badge/downloads-24141/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![month](https://img.shields.io/badge/downloads-999/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
 
@@ -34,7 +34,7 @@ Guangchuang Yu, School of Public Health, The University of Hong Kong.
 Please cite the following article when using `ReactomePA`:
 
 [![doi](https://img.shields.io/badge/doi-10.1039/c5mb00663e-blue.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e)
-[![citation](https://img.shields.io/badge/cited%20by-11-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-12-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 [![Altmetric](https://img.shields.io/badge/Altmetric-15-blue.svg?style=flat)](https://www.altmetric.com/details/4796667)
 
 __Yu G__ and He QY<sup>*</sup>. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__, 2016,12(2):477-9.
