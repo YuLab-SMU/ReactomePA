@@ -8,8 +8,6 @@ Authors@R: c(person(given = "Guangchuang", family = "Yu",
 	     person(given = "Vladislav", family = "Petyuk",
 	     	    email = "petyuk@gmail.com",
 		    role  = "ctb"))
-Author: Guangchuang Yu <guangchuangyu@gmail.com> with contributions from
-    Vladislav Petyuk
 Maintainer: Guangchuang Yu <guangchuangyu@gmail.com>
 Description: This package provides functions for pathway analysis based on
     REACTOME pathway database. It implements enrichment analysis, gene set
