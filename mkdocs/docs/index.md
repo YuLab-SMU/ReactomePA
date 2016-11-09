@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="https://guangchuangyu.github.io/css/font-awesome.min.css">
 
 [![releaseVersion](https://img.shields.io/badge/release%20version-1.18.0-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
-[![develVersion](https://img.shields.io/badge/devel%20version-1.19.0-blue.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
+[![develVersion](https://img.shields.io/badge/devel%20version-1.19.1-blue.svg?style=flat)](https://github.com/GuangchuangYu/ReactomePA)
 [![total](https://img.shields.io/badge/downloads-24252/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 [![month](https://img.shields.io/badge/downloads-999/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 
