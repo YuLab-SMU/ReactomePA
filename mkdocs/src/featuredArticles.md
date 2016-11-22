@@ -16,8 +16,10 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 ## 2016
 
+
 [Transcriptional Dynamics During Human Adipogenesis and its Link to Adipose Morphology and Distribution](http://dx.doi.org/10.2337/db16-0631). ***Diabetes***. 2016.
 
+[Lineage-Specific Genome Architecture Links Enhancers and Non-coding Disease Variants to Target Gene Promoters](http://www.sciencedirect.com/science/article/pii/S0092867416313228). ***Cell***. 2016, 167(5):1369-1384.
 
 [Mining kidney toxicogenomic data by using gene co-expression modules](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3143-y). ***BMC Genomics***. 2016, 17:790.
 

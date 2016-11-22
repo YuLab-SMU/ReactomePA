@@ -19,7 +19,7 @@
 
 Let us know if you have published using `ReactomePA` and your publication will be featured here.
 
-[![citation](https://img.shields.io/badge/cited%20by-12-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-13-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 <link rel='stylesheet' href=https://guangchuangyu.github.io/resume/css/morris.css>
 <script src='https://guangchuangyu.github.io/resume/css/jquery.min.js' type='text/javascript'></script>
@@ -37,10 +37,10 @@ Let us know if you have published using `ReactomePA` and your publication will b
   }  
   </style>
 
-<div id = 'chart1afc18f9a06e' class = 'rChart morris'></div>
+<div id = 'chart47967b515f6' class = 'rChart morris'></div>
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart1afc18f9a06e",
+ "element": "chart47967b515f6",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -55,11 +55,11 @@ Let us know if you have published using `ReactomePA` and your publication will b
 },
 {
  "year": 2016,
-"cites":             11,
+"cites":             12,
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart1afc18f9a06e",
+"id": "chart47967b515f6",
 "labels": "cites" 
 },
       chartType = "Bar"
@@ -72,8 +72,10 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 ## 2016
 
+
 [Transcriptional Dynamics During Human Adipogenesis and its Link to Adipose Morphology and Distribution](http://dx.doi.org/10.2337/db16-0631). ***Diabetes***. 2016.
 
+[Lineage-Specific Genome Architecture Links Enhancers and Non-coding Disease Variants to Target Gene Promoters](http://www.sciencedirect.com/science/article/pii/S0092867416313228). ***Cell***. 2016, 167(5):1369-1384.
 
 [Mining kidney toxicogenomic data by using gene co-expression modules](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3143-y). ***BMC Genomics***. 2016, 17:790.
 
