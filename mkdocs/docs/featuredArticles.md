@@ -19,7 +19,7 @@
 
 Let us know if you have published using `ReactomePA` and your publication will be featured here.
 
-[![citation](https://img.shields.io/badge/cited%20by-13-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-15-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 <link rel='stylesheet' href=https://guangchuangyu.github.io/resume/css/morris.css>
 <script src='https://guangchuangyu.github.io/resume/css/jquery.min.js' type='text/javascript'></script>
@@ -37,10 +37,10 @@ Let us know if you have published using `ReactomePA` and your publication will b
   }  
   </style>
 
-<div id = 'chart47967b515f6' class = 'rChart morris'></div>
+<div id = 'chart7e864d666b78' class = 'rChart morris'></div>
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart47967b515f6",
+ "element": "chart7e864d666b78",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -55,11 +55,11 @@ Let us know if you have published using `ReactomePA` and your publication will b
 },
 {
  "year": 2016,
-"cites":             12,
+"cites":             14,
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart47967b515f6",
+"id": "chart7e864d666b78",
 "labels": "cites" 
 },
       chartType = "Bar"
@@ -72,6 +72,8 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 ## 2016
 
+[Increased DNA methylation variability in type 1 diabetes across three immune effector cell types](http://www.nature.com/articles/ncomms13555). ***Nature
+Communications***. 2016, 13555.
 
 [Transcriptional Dynamics During Human Adipogenesis and its Link to Adipose Morphology and Distribution](http://dx.doi.org/10.2337/db16-0631). ***Diabetes***. 2016.
 
