@@ -16,8 +16,9 @@ Find out more on [<i class="ai ai-google-scholar"></i> google scholar](https://s
 
 ## 2016
 
-[Increased DNA methylation variability in type 1 diabetes across three immune effector cell types](http://www.nature.com/articles/ncomms13555). ***Nature
-Communications***. 2016, 13555.
+[Evolution of multiple cell clones over a 29-year period of a CLL patient](http://dx.doi.org/10.1038/ncomms13765). ***Nature Communications***. 2016, 7:13765.
+
+[Increased DNA methylation variability in type 1 diabetes across three immune effector cell types](http://www.nature.com/articles/ncomms13555). ***Nature Communications***. 2016, 7:13555.
 
 [Transcriptional Dynamics During Human Adipogenesis and its Link to Adipose Morphology and Distribution](http://dx.doi.org/10.2337/db16-0631). ***Diabetes***. 2016.
 
