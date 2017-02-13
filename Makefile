@@ -2,7 +2,7 @@ PKGNAME := $(shell sed -n "s/Package: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGVERS := $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGSRC  := $(shell basename `pwd`)
 
-all: alldocs check clean
+all: rd readme check clean
 
 alldocs: rd readme mkdocs
 
@@ -43,7 +43,9 @@ mkdocs: mdfiles
 	mkdocs build;\
 	cd ../docs;\
 	rm -rf fonts;\
-	rm -rf css/font-awesome*
+	rm -rf css/font-awesome*;\
+	Rscript -e 'library(ypages); add_biobabble("index.html")'
+
 
 mdfiles:
 	cd mkdocs;\
