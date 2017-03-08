@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.\n\n\nReactomePA\n is released within the \nBioconductor\n project and the source code is hosted in \n GitHub\n.\n\n\n Author\n\n\nGuangchuang Yu, School of Public Health, The University of Hong Kong.\n\n\n Citation\n\n\nPlease cite the following article when using \nReactomePA\n:\n\n\n\n\n\n\n\n\nYu G\n and He QY\n*\n. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. \nMolecular BioSystems\n, 2016,12(2):477-9.\n\n\n Featured Articles\n\n\n\n\n Find out more on \n \nFeatured Articles\n.\n\n\n Installation\n\n\nInstall \nReactomePA\n is easy, follow the guide in the \nBioconductor page\n:\n\n\n## try http:// if https:// URLs are not supported\nsource(\nhttps://bioconductor.org/biocLite.R\n)\n## biocLite(\nBiocUpgrade\n) ## you may need this\nbiocLite(\nReactomePA\n)\n\n\n\n\n Overview\n\n\n Enrichment Analysis\n\n\n\n\nOver-representation analysis\n\n\nGene set enrichment analysis\n\n\n\n\n Visualization\n\n\n\n\nbarplot\n\n\ncnetplot\n\n\ndotplot\n\n\nenrichMap\n\n\ngseaplot\n\n\nupsetplot\n\n\nviewPathway\n\n\n\n\n Find out details and examples on \n \nDocumentation\n.\n\n\n Related Tools\n\n\n\n    \nclusterProfiler\n for Ontologies/pathways enrichment analyses\n\n    \nDOSE\n for Disease Ontology Semantic and Enrichment analyses\n\n    \nmeshes\n for MeSH Enrichment and Semantic analysis\n\n\n\n\n\n Find out more on \nprojects\n.\n\n\n Projects that depend on \nReactomePA\n\n\n Bioconductor packages\n\n\n\n\nbioCancer\n: Interactive Multi-Omics Cancers Data Visualization and Analysis\n\n\ndebrowser\n: Interactive Differential Expresion Analysis Browser\n\n\nLINC\n: co-expression of lincRNAs and protein-coding genes\n\n\n\n\n Feedback\n\n\n\n    \n Please make sure you \nfollow the guide\n before posting any issue/question\n\n    \n For bugs or feature requests, please post to \n \ngithub issue\n\n    \n  For user questions, please post to \nBioconductor support site\n and \nBiostars\n. We are following every post tagged with \nReactomePA\n\n    \n Join the group chat on \n and", 
+            "text": "This package provides functions for pathway analysis based on REACTOME\npathway database. It implements enrichment analysis, gene set enrichment\nanalysis and several functions for visualization.\n\n\nReactomePA\n is released within the\n\nBioconductor\n project and\nthe source code is hosted in\n\n\nGitHub\n.\n\n\n Author\n\n\nGuangchuang Yu, School of Public Health, The University of Hong Kong.\n\n\n Citation\n\n\nPlease cite the following article when using \nReactomePA\n:\n\n\n\n\n\n\n\n\nYu G\n and He QY\n*\n. ReactomePA: an R/Bioconductor package\nfor reactome pathway analysis and visualization. \nMolecular\nBioSystems\n, 2016,12(2):477-9.\n\n\n Featured Articles\n\n\n\n\n Find out more on\n\n \nFeatured\nArticles\n.\n\n\n Installation\n\n\nInstall \nReactomePA\n is easy, follow the guide in the \nBioconductor\npage\n:\n\n\n## try http:// if https:// URLs are not supported\nsource(\nhttps://bioconductor.org/biocLite.R\n)\n## biocLite(\nBiocUpgrade\n) ## you may need this\nbiocLite(\nReactomePA\n)\n\n\n\n\n Overview\n\n\n Enrichment Analysis\n\n\n\n\nOver-representation analysis\n\n\nGene set enrichment analysis\n\n\n\n\n Visualization\n\n\n\n\nbarplot\n\n\ncnetplot\n\n\ndotplot\n\n\nenrichMap\n\n\ngseaplot\n\n\nupsetplot\n\n\nviewPathway\n\n\n\n\n Find out details and examples on\n\n\n\nDocumentation\n.\n\n\n Related Tools\n\n\n\n    \nclusterProfiler\n for Ontologies/pathways enrichment analyses\n\n    \nDOSE\n for Disease Ontology Semantic and Enrichment analyses\n\n    \nmeshes\n for MeSH Enrichment and Semantic analysis\n\n\n\n\n\n\n Find out more on\n\nprojects\n.\n\n\n Projects that depend on \nReactomePA\n\n\n Bioconductor packages\n\n\n\n\nbioCancer\n:\n    Interactive Multi-Omics Cancers Data Visualization and Analysis\n\n\nLINC\n: co-expression of\n    lincRNAs and protein-coding genes\n\n\n\n\n Feedback\n\n\n\n    \n Please make sure you have followed \nthe important guide\n before posting any issue/question\n\n    \n For bugs or feature requests, please post to \n [github issue](https://github.com/GuangchuangYu/ReactomePA/issues)\n\n    \n  For user questions, please post to [Bioconductor support site](https://support.bioconductor.org/) and [Biostars](https://www.biostars.org/). We are following every post tagged with **ReactomePA**\n\n    \n Join the group chat on \n and", 
             "title": "Home"
         }, 
         {
@@ -12,17 +12,17 @@
         }, 
         {
             "location": "/#citation", 
-            "text": "Please cite the following article when using  ReactomePA :     Yu G  and He QY * . ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization.  Molecular BioSystems , 2016,12(2):477-9.", 
+            "text": "Please cite the following article when using  ReactomePA :     Yu G  and He QY * . ReactomePA: an R/Bioconductor package\nfor reactome pathway analysis and visualization.  Molecular\nBioSystems , 2016,12(2):477-9.", 
             "title": " Citation"
         }, 
         {
             "location": "/#featured-articles", 
-            "text": "Find out more on    Featured Articles .", 
+            "text": "Find out more on   Featured\nArticles .", 
             "title": " Featured Articles"
         }, 
         {
             "location": "/#installation", 
-            "text": "Install  ReactomePA  is easy, follow the guide in the  Bioconductor page :  ## try http:// if https:// URLs are not supported\nsource( https://bioconductor.org/biocLite.R )\n## biocLite( BiocUpgrade ) ## you may need this\nbiocLite( ReactomePA )", 
+            "text": "Install  ReactomePA  is easy, follow the guide in the  Bioconductor\npage :  ## try http:// if https:// URLs are not supported\nsource( https://bioconductor.org/biocLite.R )\n## biocLite( BiocUpgrade ) ## you may need this\nbiocLite( ReactomePA )", 
             "title": " Installation"
         }, 
         {
@@ -37,12 +37,12 @@
         }, 
         {
             "location": "/#visualization", 
-            "text": "barplot  cnetplot  dotplot  enrichMap  gseaplot  upsetplot  viewPathway    Find out details and examples on    Documentation .", 
+            "text": "barplot  cnetplot  dotplot  enrichMap  gseaplot  upsetplot  viewPathway    Find out details and examples on  Documentation .", 
             "title": " Visualization"
         }, 
         {
             "location": "/#related-tools", 
-            "text": "clusterProfiler  for Ontologies/pathways enrichment analyses \n     DOSE  for Disease Ontology Semantic and Enrichment analyses \n     meshes  for MeSH Enrichment and Semantic analysis    Find out more on  projects .", 
+            "text": "clusterProfiler  for Ontologies/pathways enrichment analyses \n     DOSE  for Disease Ontology Semantic and Enrichment analyses \n     meshes  for MeSH Enrichment and Semantic analysis    Find out more on projects .", 
             "title": " Related Tools"
         }, 
         {
@@ -52,17 +52,17 @@
         }, 
         {
             "location": "/#bioconductor-packages", 
-            "text": "bioCancer : Interactive Multi-Omics Cancers Data Visualization and Analysis  debrowser : Interactive Differential Expresion Analysis Browser  LINC : co-expression of lincRNAs and protein-coding genes", 
+            "text": "bioCancer :\n    Interactive Multi-Omics Cancers Data Visualization and Analysis  LINC : co-expression of\n    lincRNAs and protein-coding genes", 
             "title": " Bioconductor packages"
         }, 
         {
             "location": "/#feedback", 
-            "text": "Please make sure you  follow the guide  before posting any issue/question \n      For bugs or feature requests, please post to    github issue \n       For user questions, please post to  Bioconductor support site  and  Biostars . We are following every post tagged with  ReactomePA \n      Join the group chat on   and", 
+            "text": "Please make sure you have followed  the important guide  before posting any issue/question \n      For bugs or feature requests, please post to   [github issue](https://github.com/GuangchuangYu/ReactomePA/issues) \n       For user questions, please post to [Bioconductor support site](https://support.bioconductor.org/) and [Biostars](https://www.biostars.org/). We are following every post tagged with **ReactomePA** \n      Join the group chat on   and", 
             "title": " Feedback"
         }, 
         {
             "location": "/documentation/", 
-            "text": "Vignettes\n\n\n\n\nhttps://bioconductor.org/packages/devel/bioc/vignettes/ReactomePA/inst/doc/ReactomePA.html\n\n\n\n\n Blog posts\n\n\n News and updates\n\n\n\n\nReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization\n\n\nBioC 3.1: NEWS of my BioC packages\n\n\nBioC 3.2: NEWS of my BioC packages\n\n\nBioC 3.3: NEWS of my BioC packages\n\n\nBioC 3.4: NEWS of my BioC packages\n\n\n\n\n Enrichment analysis\n\n\n\n\nfunctional enrichment for GTEx paper\n\n\nfunctional enrichment analysis with NGS data\n\n\nleading edge analysis\n\n\nwhy clusterProfiler fails\n\n\nComparison of clusterProfiler and GSEA-P\n\n\n\n\n Visualization\n\n\n\n\ndotplot for enrichment result\n\n\ndotplot for GSEA result\n\n\nenrichment map\n\n\nshowCategory parameter for visualizing compareCluster output\n\n\n\n\n Find out more on \nhttps://guangchuangyu.github.io/tags/reactomepa\n.\n\n\n Workflow\n\n\n\n\nAn end to end workflow for differential gene expression using Affymetrix microarrays\n\n\nRNAseq workflow", 
+            "text": "Vignettes\n\n\n\n\nhttps://bioconductor.org/packages/devel/bioc/vignettes/ReactomePA/inst/doc/ReactomePA.html\n\n\n\n\n Blog posts\n\n\n News and updates\n\n\n\n\nReactomePA: an R/Bioconductor package for reactome pathway analysis\n    and\n    visualization\n\n\nBioC 3.1: NEWS of my BioC\n    packages\n\n\nBioC 3.2: NEWS of my BioC\n    packages\n\n\nBioC 3.3: NEWS of my BioC\n    packages\n\n\nBioC 3.4: NEWS of my BioC\n    packages\n\n\n\n\n Enrichment analysis\n\n\n\n\nfunctional enrichment for GTEx\n    paper\n\n\nfunctional enrichment analysis with NGS\n    data\n\n\nleading edge\n    analysis\n\n\nwhy clusterProfiler\n    fails\n\n\nComparison of clusterProfiler and\n    GSEA-P\n\n\n\n\n Visualization\n\n\n\n\ndotplot for enrichment\n    result\n\n\ndotplot for GSEA\n    result\n\n\nenrichment\n    map\n\n\nshowCategory parameter for visualizing compareCluster\n    output\n\n\n\n\n Find out more on\n\nhttps://guangchuangyu.github.io/tags/reactomepa\n.\n\n\n Workflow\n\n\n\n\nAn end to end workflow for differential gene expression using\n    Affymetrix microarrays\n\n\nRNAseq workflow", 
             "title": "Documentation"
         }, 
         {
@@ -77,32 +77,32 @@
         }, 
         {
             "location": "/documentation/#news-and-updates", 
-            "text": "ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization  BioC 3.1: NEWS of my BioC packages  BioC 3.2: NEWS of my BioC packages  BioC 3.3: NEWS of my BioC packages  BioC 3.4: NEWS of my BioC packages", 
+            "text": "ReactomePA: an R/Bioconductor package for reactome pathway analysis\n    and\n    visualization  BioC 3.1: NEWS of my BioC\n    packages  BioC 3.2: NEWS of my BioC\n    packages  BioC 3.3: NEWS of my BioC\n    packages  BioC 3.4: NEWS of my BioC\n    packages", 
             "title": " News and updates"
         }, 
         {
             "location": "/documentation/#enrichment-analysis", 
-            "text": "functional enrichment for GTEx paper  functional enrichment analysis with NGS data  leading edge analysis  why clusterProfiler fails  Comparison of clusterProfiler and GSEA-P", 
+            "text": "functional enrichment for GTEx\n    paper  functional enrichment analysis with NGS\n    data  leading edge\n    analysis  why clusterProfiler\n    fails  Comparison of clusterProfiler and\n    GSEA-P", 
             "title": " Enrichment analysis"
         }, 
         {
             "location": "/documentation/#visualization", 
-            "text": "dotplot for enrichment result  dotplot for GSEA result  enrichment map  showCategory parameter for visualizing compareCluster output    Find out more on  https://guangchuangyu.github.io/tags/reactomepa .", 
+            "text": "dotplot for enrichment\n    result  dotplot for GSEA\n    result  enrichment\n    map  showCategory parameter for visualizing compareCluster\n    output    Find out more on https://guangchuangyu.github.io/tags/reactomepa .", 
             "title": " Visualization"
         }, 
         {
             "location": "/documentation/#workflow", 
-            "text": "An end to end workflow for differential gene expression using Affymetrix microarrays  RNAseq workflow", 
+            "text": "An end to end workflow for differential gene expression using\n    Affymetrix microarrays  RNAseq workflow", 
             "title": " Workflow"
         }, 
         {
             "location": "/featuredArticles/", 
-            "text": "Let us know if you have published using \nReactomePA\n and your publication will be featured here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n  .rChart {\n    display: block;\n    margin-left: auto; \n    margin-right: auto;\n    width: 800px;\n    height: 300px;\n  }  \n  \n\n\n\n\n\n\n\n    var chartParams = {\n \"element\": \"chart4d6129190e2f\",\n\"width\":            800,\n\"height\":            400,\n\"xkey\": \"year\",\n\"ykeys\": [\n \"cites\" \n],\n\"data\": [\n {\n \"year\": 2015,\n\"cites\":              1,\n\"pubid\": \"8d8msizDQcsC\" \n},\n{\n \"year\": 2016,\n\"cites\":             14,\n\"pubid\": \"8d8msizDQcsC\" \n},\n{\n \"year\": 2017,\n\"cites\":              1,\n\"pubid\": \"8d8msizDQcsC\" \n} \n],\n\"id\": \"chart4d6129190e2f\",\n\"labels\": \"cites\" \n},\n      chartType = \"Bar\"\n    new Morris[chartType](chartParams)\n\n\n\n\nFind out more on \n google scholar\n.\n\n\n2016\n\n\nEvolution of multiple cell clones over a 29-year period of a CLL patient\n. \nNature Communications\n. 2016, 7:13765.\n\n\nIncreased DNA methylation variability in type 1 diabetes across three immune effector cell types\n. \nNature Communications\n. 2016, 7:13555.\n\n\nTranscriptional Dynamics During Human Adipogenesis and its Link to Adipose Morphology and Distribution\n. \nDiabetes\n. 2016.\n\n\nLineage-Specific Genome Architecture Links Enhancers and Non-coding Disease Variants to Target Gene Promoters\n. \nCell\n. 2016, 167(5):1369-1384.\n\n\nMining kidney toxicogenomic data by using gene co-expression modules\n. \nBMC Genomics\n. 2016, 17:790.\n\n\nDetermining breast cancer histological grade from RNA-sequencing data\n. \nBreast Cancer Research\n. 2016, 18:48.\n\n\nHuman glioblastoma-associated microglia/monocytes express a distinct RNA profile compared to human control and murine samples\n. \nGLIA\n. 2016, 64:1416-1437.\n\n\nElucidation of tonic and activated B-cell receptor signaling in Burkitt\u2019s lymphoma provides insights into regulation of cell survival\n. \nPNAS\n. 2016, 113(20):5688-5693.", 
+            "text": "Let us know if you have published using \nReactomePA\n and your\npublication will be featured here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n  .rChart {\n    display: block;\n    margin-left: auto; \n    margin-right: auto;\n    width: 800px;\n    height: 300px;\n  }<br />\n  \n\n\n\n\n\n\n\n\n    var chartParams = {\n \"element\": \"chart55a9a1d54b3\",\n\"width\":            800,\n\"height\":            400,\n\"xkey\": \"year\",\n\"ykeys\": [\n \"cites\" \n],\n\"data\": [\n {\n \"year\": 2015,\n\"cites\":              1,\n\"pubid\": \"8d8msizDQcsC\" \n},\n{\n \"year\": 2016,\n\"cites\":             15,\n\"pubid\": \"8d8msizDQcsC\" \n},\n{\n \"year\": 2017,\n\"cites\":              4,\n\"pubid\": \"8d8msizDQcsC\" \n} \n],\n\"id\": \"chart55a9a1d54b3\",\n\"labels\": \"cites\" \n},\n      chartType = \"Bar\"\n    new Morris[chartType](chartParams)\n\n\n\n\nFind out more on \n google\nscholar\n.\n\n\n2016\n\n\nEvolution of multiple cell clones over a 29-year period of a CLL\npatient\n. \nNature\nCommunications\n. 2016, 7:13765.\n\n\nIncreased DNA methylation variability in type 1 diabetes across three\nimmune effector cell types\n.\n\nNature Communications\n. 2016, 7:13555.\n\n\nTranscriptional Dynamics During Human Adipogenesis and its Link to\nAdipose Morphology and\nDistribution\n. \nDiabetes\n.\n2016.\n\n\nLineage-Specific Genome Architecture Links Enhancers and Non-coding\nDisease Variants to Target Gene\nPromoters\n.\n\nCell\n. 2016, 167(5):1369-1384.\n\n\nMining kidney toxicogenomic data by using gene co-expression\nmodules\n.\n\nBMC Genomics\n. 2016, 17:790.\n\n\nDetermining breast cancer histological grade from RNA-sequencing\ndata\n. \nBreast Cancer\nResearch\n. 2016, 18:48.\n\n\nHuman glioblastoma-associated microglia/monocytes express a distinct\nRNA profile compared to human control and murine\nsamples\n. \nGLIA\n. 2016,\n64:1416-1437.\n\n\nElucidation of tonic and activated B-cell receptor signaling in\nBurkitt\u2019s lymphoma provides insights into regulation of cell\nsurvival\n. \nPNAS\n. 2016,\n113(20):5688-5693.", 
             "title": "Featured Articles"
         }, 
         {
             "location": "/featuredArticles/#2016", 
-            "text": "Evolution of multiple cell clones over a 29-year period of a CLL patient .  Nature Communications . 2016, 7:13765.  Increased DNA methylation variability in type 1 diabetes across three immune effector cell types .  Nature Communications . 2016, 7:13555.  Transcriptional Dynamics During Human Adipogenesis and its Link to Adipose Morphology and Distribution .  Diabetes . 2016.  Lineage-Specific Genome Architecture Links Enhancers and Non-coding Disease Variants to Target Gene Promoters .  Cell . 2016, 167(5):1369-1384.  Mining kidney toxicogenomic data by using gene co-expression modules .  BMC Genomics . 2016, 17:790.  Determining breast cancer histological grade from RNA-sequencing data .  Breast Cancer Research . 2016, 18:48.  Human glioblastoma-associated microglia/monocytes express a distinct RNA profile compared to human control and murine samples .  GLIA . 2016, 64:1416-1437.  Elucidation of tonic and activated B-cell receptor signaling in Burkitt\u2019s lymphoma provides insights into regulation of cell survival .  PNAS . 2016, 113(20):5688-5693.", 
+            "text": "Evolution of multiple cell clones over a 29-year period of a CLL\npatient .  Nature\nCommunications . 2016, 7:13765.  Increased DNA methylation variability in type 1 diabetes across three\nimmune effector cell types . Nature Communications . 2016, 7:13555.  Transcriptional Dynamics During Human Adipogenesis and its Link to\nAdipose Morphology and\nDistribution .  Diabetes .\n2016.  Lineage-Specific Genome Architecture Links Enhancers and Non-coding\nDisease Variants to Target Gene\nPromoters . Cell . 2016, 167(5):1369-1384.  Mining kidney toxicogenomic data by using gene co-expression\nmodules . BMC Genomics . 2016, 17:790.  Determining breast cancer histological grade from RNA-sequencing\ndata .  Breast Cancer\nResearch . 2016, 18:48.  Human glioblastoma-associated microglia/monocytes express a distinct\nRNA profile compared to human control and murine\nsamples .  GLIA . 2016,\n64:1416-1437.  Elucidation of tonic and activated B-cell receptor signaling in\nBurkitt\u2019s lymphoma provides insights into regulation of cell\nsurvival .  PNAS . 2016,\n113(20):5688-5693.", 
             "title": "2016"
         }, 
         {
