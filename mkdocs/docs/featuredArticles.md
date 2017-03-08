@@ -40,13 +40,13 @@ publication will be featured here.
     height: 300px;
   }  
   </style>
-<div id="chart89ab40d0befc" class="rChart morris">
+<div id="chart90ff382bf49b" class="rChart morris">
 
 </div>
 
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart89ab40d0befc",
+ "element": "chart90ff382bf49b",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -70,7 +70,7 @@ publication will be featured here.
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart89ab40d0befc",
+"id": "chart90ff382bf49b",
 "labels": "cites" 
 },
       chartType = "Bar"
