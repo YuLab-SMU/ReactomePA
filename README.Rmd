@@ -14,11 +14,11 @@ library("ypages")
 
 # ReactomePA: Reactome Pathway Analysis
 
-`r badge_release("ReactomePA", "green")`
+`r badge_bioc_release("ReactomePA", "green")`
 `r badge_devel("ReactomePA", "green")`
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
-`r badge_download("ReactomePA", "total", "blue")`
-`r badge_download("ReactomePA", "month", "blue")`
+`r badge_bioc_download("ReactomePA", "total", "blue")`
+`r badge_bioc_download("ReactomePA", "month", "blue")`
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
@@ -71,8 +71,8 @@ txtplot(d$year, d$cites)
 ### Download stats
 
 [![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
-`r badge_download("ReactomePA", "total", "blue")`
-`r badge_download("ReactomePA", "month", "blue")`
+`r badge_bioc_download("ReactomePA", "total", "blue")`
+`r badge_bioc_download("ReactomePA", "month", "blue")`
 
 ```{r echo=F, comment=NA}
 x <- dlstats::bioc_stats("ReactomePA")
