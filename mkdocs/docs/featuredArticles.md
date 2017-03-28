@@ -25,7 +25,7 @@ output:
 Let us know if you have published using `ReactomePA` and your
 publication will be featured here.
 
-[![citation](https://img.shields.io/badge/cited%20by-20-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-22-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 
 <link rel='stylesheet' href=https://guangchuangyu.github.io/resume/css/morris.css>
 <script src='https://guangchuangyu.github.io/resume/css/jquery.min.js' type='text/javascript'></script>
@@ -40,13 +40,13 @@ publication will be featured here.
     height: 300px;
   }  
   </style>
-<div id="chart90ff382bf49b" class="rChart morris">
+<div id="chart1f3023d81d45" class="rChart morris">
 
 </div>
 
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart90ff382bf49b",
+ "element": "chart1f3023d81d45",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -66,11 +66,11 @@ publication will be featured here.
 },
 {
  "year": 2017,
-"cites":              4,
+"cites":              6,
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart90ff382bf49b",
+"id": "chart1f3023d81d45",
 "labels": "cites" 
 },
       chartType = "Bar"

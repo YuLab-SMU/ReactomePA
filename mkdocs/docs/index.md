@@ -25,10 +25,10 @@ ReactomePA: Reactome Pathway Analysis
 <link rel="stylesheet" href="https://guangchuangyu.github.io/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://guangchuangyu.github.io/css/academicons.min.css">
 
-[![releaseVersion](https://img.shields.io/badge/release%20version-1.18.1-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
-[![develVersion](https://img.shields.io/badge/devel%20version-1.19.1-blue.svg?style=flat)](https://github.com/guangchuangyu/ReactomePA)
-[![total](https://img.shields.io/badge/downloads-17403/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
-[![month](https://img.shields.io/badge/downloads-513/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![](https://img.shields.io/badge/release%20version-1.18.1-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
+[![](https://img.shields.io/badge/devel%20version-1.19.1-blue.svg?style=flat)](https://github.com/guangchuangyu/ReactomePA)
+[![](https://img.shields.io/badge/download-17756/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
+[![](https://img.shields.io/badge/download-516/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 
 This package provides functions for pathway analysis based on REACTOME
 pathway database. It implements enrichment analysis, gene set enrichment
@@ -57,9 +57,9 @@ Guangchuang Yu, School of Public Health, The University of Hong Kong.
 
 Please cite the following article when using `ReactomePA`:
 
-[![doi](https://img.shields.io/badge/doi-10.1039/c5mb00663e-blue.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e)
-[![citation](https://img.shields.io/badge/cited%20by-20-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
-[![Altmetric](https://img.shields.io/badge/Altmetric-15-blue.svg?style=flat)](https://www.altmetric.com/details/4796667)
+[![](https://img.shields.io/badge/doi-10.1039/c5mb00663e-blue.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e)
+[![citation](https://img.shields.io/badge/cited%20by-22-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![](https://img.shields.io/badge/Altmetric-15-blue.svg?style=flat)](https://www.altmetric.com/details/4796667)
 
 **Yu G** and He QY<sup>\*</sup>. ReactomePA: an R/Bioconductor package
 for reactome pathway analysis and visualization. ***Molecular
@@ -136,8 +136,8 @@ biocLite("ReactomePA")
 
 <ul class="fa-ul">
     <li><i class="fa-li fa fa-hand-o-right"></i> Please make sure you have followed <a href="https://guangchuangyu.github.io/2016/07/how-to-bug-author/"><strong>the important guide</strong></a> before posting any issue/question</li>
-    <li><i class="fa-li fa fa-bug"></i> For bugs or feature requests, please post to <i class="fa fa-github-alt"></i> [github issue](https://github.com/GuangchuangYu/ReactomePA/issues)</li>
-    <li><i class="fa-li fa fa-question"></i>  For user questions, please post to [Bioconductor support site](https://support.bioconductor.org/) and [Biostars](https://www.biostars.org/). We are following every post tagged with **ReactomePA**</li>
+    <li><i class="fa-li fa fa-bug"></i> For bugs or feature requests, please post to <i class="fa fa-github-alt"></i> <a href="https://github.com/GuangchuangYu/ReactomePA/issues">github issue</a></li>
+    <li><i class="fa-li fa fa-question"></i>  For user questions, please post to <a href="https://support.bioconductor.org/">Bioconductor support site</a> and <a href="https://www.biostars.org/">Biostars</a>. We are following every post tagged with <strong>ReactomePA</strong></li>
     <li><i class="fa-li fa fa-commenting"></i> Join the group chat on <a href="https://twitter.com/hashtag/ReactomePA"><i class="fa fa-twitter fa-lg"></i></a> and <a href="http://huati.weibo.com/k/ReactomePA"><i class="fa fa-weibo fa-lg"></i></a></li>
 
 </ul>
