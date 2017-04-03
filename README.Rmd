@@ -15,7 +15,7 @@ library("ypages")
 # ReactomePA: Reactome Pathway Analysis
 
 `r badge_bioc_release("ReactomePA", "green")`
-`r badge_devel("ReactomePA", "green")`
+`r badge_devel("guangchuangyu/ReactomePA", "green")`
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
 `r badge_bioc_download("ReactomePA", "total", "blue")`
 `r badge_bioc_download("ReactomePA", "month", "blue")`
