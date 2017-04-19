@@ -32,7 +32,7 @@ library("ypages")
 [![Build Status](http://www.bioconductor.org/shields/build/devel/bioc/ReactomePA.svg)](https://bioconductor.org/checkResults/devel/bioc-LATEST/ReactomePA/)
 [![Linux/Mac Travis Build Status](https://img.shields.io/travis/GuangchuangYu/ReactomePA/master.svg?label=Mac%20OSX%20%26%20Linux)](https://travis-ci.org/GuangchuangYu/ReactomePA)
 [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/Guangchuangyu/ReactomePA/master.svg?label=Windows)](https://ci.appveyor.com/project/GuangchuangYu/ReactomePA)
-[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-green.svg?style=flat)](http://bioconda.github.io/recipes/bioconductor-reactomepa/README.html)
+
 
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
@@ -47,8 +47,10 @@ __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathwa
 
 
 `r badge_doi("10.1039/c5mb00663e", "green")`
-`r badge_citation("8d8msizDQcsC", "3311691878690959578", "green")`
 `r badge_altmetric("4796667", "green")`
+`r badge_citation("8d8msizDQcsC", "3311691878690959578", "green")`
+`r badge_custom("ESI", "Highly Cited Paper", "green", "http://apps.webofknowledge.com/InboundService.do?mode=FullRecord&customersID=RID&IsProductCode=Yes&product=WOS&Init=Yes&Func=Frame&DestFail=http%3A%2F%2Fwww.webofknowledge.com&action=retrieve&SrcApp=RID&SrcAuth=RID&SID=Y2CXu6nry8nDQZcUy1w&UT=WOS%3A000368858900017")`
+
 
 ------------------------------------------------------------------------
 
