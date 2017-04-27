@@ -26,7 +26,7 @@ ReactomePA: Reactome Pathway Analysis
 <link rel="stylesheet" href="https://guangchuangyu.github.io/css/academicons.min.css">
 
 [![](https://img.shields.io/badge/release%20version-1.20.0-blue.svg?style=flat)](https://bioconductor.org/packages/ReactomePA)
-[![](https://img.shields.io/badge/devel%20version-1.19.1-blue.svg?style=flat)](https://github.com/guangchuangyu/ReactomePA)
+[![](https://img.shields.io/badge/devel%20version-1.21.0-blue.svg?style=flat)](https://github.com/guangchuangyu/ReactomePA)
 [![](https://img.shields.io/badge/download-18314/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 [![](https://img.shields.io/badge/download-517/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/ReactomePA)
 
@@ -60,7 +60,7 @@ Please cite the following article when using `ReactomePA`:
 [![](https://img.shields.io/badge/doi-10.1039/c5mb00663e-blue.svg?style=flat)](http://dx.doi.org/10.1039/c5mb00663e)
 [![](https://img.shields.io/badge/Altmetric-15-blue.svg?style=flat)](https://www.altmetric.com/details/4796667)
 [![citation](https://img.shields.io/badge/cited%20by-24-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
-[![](https://img.shields.io/badge/cited%20in%20Web%20of%20Science%20Core%20Collection--blue.svg?style=flat)](http://apps.webofknowledge.com/InboundService.do?mode=FullRecord&customersID=RID&IsProductCode=Yes&product=WOS&Init=Yes&Func=Frame&DestFail=http%3A%2F%2Fwww.webofknowledge.com&action=retrieve&SrcApp=RID&SrcAuth=RID&SID=Y2CXu6nry8nDQZcUy1w&UT=WOS%3A000368858900017)
+[![](https://img.shields.io/badge/cited%20in%20Web%20of%20Science%20Core%20Collection-15-blue.svg?style=flat)](http://apps.webofknowledge.com/InboundService.do?mode=FullRecord&customersID=RID&IsProductCode=Yes&product=WOS&Init=Yes&Func=Frame&DestFail=http%3A%2F%2Fwww.webofknowledge.com&action=retrieve&SrcApp=RID&SrcAuth=RID&SID=Z2cl2xWVGY88QJNnHcQ&UT=WOS%3A000368858900017)
 [![](https://img.shields.io/badge/ESI-Highly%20Cited%20Paper-blue.svg?style=flat)](http://apps.webofknowledge.com/InboundService.do?mode=FullRecord&customersID=RID&IsProductCode=Yes&product=WOS&Init=Yes&Func=Frame&DestFail=http%3A%2F%2Fwww.webofknowledge.com&action=retrieve&SrcApp=RID&SrcAuth=RID&SID=Y2CXu6nry8nDQZcUy1w&UT=WOS%3A000368858900017)
 
 **Yu G** and He QY<sup>\*</sup>. ReactomePA: an R/Bioconductor package

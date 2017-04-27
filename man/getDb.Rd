@@ -18,4 +18,3 @@ mapping organism name to annotationDb package name
 \author{
 Yu Guangchuang
 }
-
