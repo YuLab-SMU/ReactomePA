@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.20.1
+------------------------
+ o update vignette according to the change of reactome.db (pathway ID was changed) <2017-04-28, Fri>
+
 CHANGES IN VERSION 1.20.0
 ------------------------
  o BioC 3.5 release <2017-04-26, Wed>
