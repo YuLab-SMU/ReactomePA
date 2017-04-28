@@ -135,7 +135,7 @@ enrichMap(y)
 
 
 ```{r fig.height=7, fig.width=10}
-gseaplot(y, geneSetID = "1280215")
+gseaplot(y, geneSetID = "R-HSA-69242")
 ```
 
 # Pathway Visualization
