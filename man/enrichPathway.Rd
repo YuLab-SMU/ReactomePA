@@ -48,11 +48,10 @@ with FDR control.
 	#plot(yy)
 
 }
-\author{
-Guangchuang Yu \url{http://ygc.name}
-}
 \seealso{
 \code{\link{enrichResult-class}}
 }
+\author{
+Guangchuang Yu \url{http://ygc.name}
+}
 \keyword{manip}
-

@@ -25,7 +25,7 @@ output:
 Let us know if you have published using `ReactomePA` and your
 publication will be featured here.
 
-[![citation](https://img.shields.io/badge/cited%20by-24-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
+[![citation](https://img.shields.io/badge/cited%20by-27-blue.svg?style=flat)](https://scholar.google.com.hk/scholar?oi=bibs&hl=en&cites=3311691878690959578)
 [![](https://img.shields.io/badge/ESI-Highly%20Cited%20Paper-blue.svg?style=flat)](http://apps.webofknowledge.com/InboundService.do?mode=FullRecord&customersID=RID&IsProductCode=Yes&product=WOS&Init=Yes&Func=Frame&DestFail=http%3A%2F%2Fwww.webofknowledge.com&action=retrieve&SrcApp=RID&SrcAuth=RID&SID=Y2CXu6nry8nDQZcUy1w&UT=WOS%3A000368858900017)
 
 <link rel='stylesheet' href=https://guangchuangyu.github.io/resume/css/morris.css>
@@ -41,13 +41,13 @@ publication will be featured here.
     height: 300px;
   }  
   </style>
-<div id="chart3884cd4f7f4" class="rChart morris">
+<div id="chart5e736f4471d" class="rChart morris">
 
 </div>
 
 <script type='text/javascript'>
     var chartParams = {
- "element": "chart3884cd4f7f4",
+ "element": "chart5e736f4471d",
 "width":            800,
 "height":            400,
 "xkey": "year",
@@ -67,11 +67,11 @@ publication will be featured here.
 },
 {
  "year": 2017,
-"cites":              8,
+"cites":             11,
 "pubid": "8d8msizDQcsC" 
 } 
 ],
-"id": "chart3884cd4f7f4",
+"id": "chart5e736f4471d",
 "labels": "cites" 
 },
       chartType = "Bar"
