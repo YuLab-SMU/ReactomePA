@@ -43,7 +43,7 @@ pathway database.
 
 # Citation
 
-If you use `r Biocpkg("Reactome")`[@yu_reactomepa_2016] in published research, please cite:
+If you use `r Biocpkg("ReactomePA")`[@yu_reactomepa_2016] in published research, please cite:
 
 __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__ 2016, 12(2):477-479. doi:[10.1039/C5MB00663E](http://dx.doi.org/10.1039/C5MB00663E)
 

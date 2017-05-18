@@ -2,8 +2,8 @@
 % Please edit documentation in R/ReactomePA-package.R
 \docType{package}
 \name{ReactomePA-package}
-\alias{ReactomePA}
 \alias{ReactomePA-package}
+\alias{ReactomePA}
 \title{Reactome Pathway Analysis}
 \description{
 This package is designed for reactome pathway analysis.
@@ -15,13 +15,12 @@ Bioinformatics, Pathway, Visulization\cr Depends:\tab AnnotationDbi, org.Hs.eg.d
 igraph, plyr, methods, stats, qvalue, reactome.db\cr Suggests:\tab GOSemSim, DOSE,
 clusterProfiler\cr License: \tab GPL-2\cr }
 }
+\seealso{
+\linkS4class{enrichResult}
+}
 \author{
 Guangchuang Yu \email{guangchuangyu@gmail.com}
 
 Maintainer: Guangchuang Yu \email{guangchuangyu@gmail.com}
 }
-\seealso{
-\linkS4class{enrichResult}
-}
 \keyword{package}
-
