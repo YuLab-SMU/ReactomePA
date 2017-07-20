@@ -55,3 +55,17 @@ mdfiles:
 
 svnignore:
 	svn propset svn:ignore -F .svnignore .
+
+
+gitmaintain:
+	git gc --auto;\
+	git prune -v;\
+	git fsck --full
+
+push:
+	git push -u origin master;\
+	git checkout bioc;\
+	git merge master;\
+	git push upstream master;\
+	git checkout master
+
