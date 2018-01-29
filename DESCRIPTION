@@ -1,7 +1,7 @@
 Package: ReactomePA
 Type: Package
 Title: Reactome Pathway Analysis
-Version: 1.23.0
+Version: 1.23.1
 Authors@R: c(person(given = "Guangchuang", family = "Yu",
 	   	    email = "guangchuangyu@gmail.com",
 		    role  = c("aut", "cre")),
@@ -13,10 +13,13 @@ Description: This package provides functions for pathway analysis based on
     REACTOME pathway database. It implements enrichment analysis, gene set
     enrichment analysis and several functions for visualization.
 Depends:
-    R (>= 3.3.1),
-    DOSE (>= 3.0.0)
+    R (>= 3.3.1)
 Imports:
     AnnotationDbi,
+    DOSE (>= 3.5.1),
+    enrichplot,
+    ggplot2,
+    ggraph,
     reactome.db,
     igraph,
     graphite
@@ -25,6 +28,7 @@ Suggests:
     clusterProfiler,
     knitr,
     org.Hs.eg.db,
+    prettydoc,
     testthat
 VignetteBuilder: knitr
 ByteCompile: true

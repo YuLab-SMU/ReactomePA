@@ -16,7 +16,6 @@
 ##' @importClassesFrom DOSE gseaResult
 ##' @importMethodsFrom DOSE show
 ##' @importMethodsFrom DOSE summary
-##' @importMethodsFrom DOSE plot
 ##' @export
 ##' @return gseaResult object
 ##' @author Yu Guangchuang
@@ -33,7 +32,7 @@ gsePathway <- function(geneList,
                        by = 'fgsea') {
 
     Reactome_DATA <- get_Reactome_DATA(organism)
-    
+
     res <- GSEA_internal(geneList      = geneList,
                          exponent      = exponent,
                          nPerm         = nPerm,
@@ -48,11 +47,11 @@ gsePathway <- function(geneList,
 
     if (is.null(res))
         return(res)
-    
+
     res@organism <- organism
     res@setType <- "Reactome"
     res@keytype <- "ENTREZID"
-    
+
     return(res)
 }
 
@@ -60,7 +59,7 @@ gsePathway <- function(geneList,
 get_Reactome_Env <- function() {
     if (!exists(".ReactomePA_Env", envir = .GlobalEnv)) {
         assign(".ReactomePA_Env", new.env(), .GlobalEnv)
-    }    
+    }
     get(".ReactomePA_Env", envir= .GlobalEnv)
 }
 
@@ -70,42 +69,42 @@ get_Reactome_Env <- function() {
 ##' @importFrom reactome.db reactomePATHID2NAME
 get_Reactome_DATA <- function(organism = "human") {
     ReactomePA_Env <- get_Reactome_Env()
-    
+
     if (exists("organism", envir=ReactomePA_Env, inherits = FALSE)) {
         org <- get("organism", envir=ReactomePA_Env)
         if (org == organism &&
             exists("PATHID2EXTID", envir = ReactomePA_Env) &&
             exists("EXTID2PATHID", envir = ReactomePA_Env) &&
             exists("PATHID2NAME",  envir = ReactomePA_Env)) {
-            
+
             ## use_cached
             return(ReactomePA_Env)
         }
     }
 
     ALLEG <- getALLEG(organism)
-    
+
     EXTID2PATHID <- as.list(reactomeEXTID2PATHID)
     EXTID2PATHID <- EXTID2PATHID[names(EXTID2PATHID) %in% ALLEG]
-    
+
     PATHID2EXTID <- as.list(reactomePATHID2EXTID) ## also contains reactions
-    
+
     PATHID2NAME <- as.list(reactomePATHID2NAME)
     PI <- names(PATHID2NAME)
     ## > PATHID2NAME[['68877']]
     ## [1] "Homo sapiens: Mitotic Prometaphase" "Homo sapiens: Mitotic Prometaphase"
     PATHID2NAME <- lapply(PATHID2NAME, function(x) x[1])
     names(PATHID2NAME) <- PI
-    
+
     PATHID2EXTID <- PATHID2EXTID[names(PATHID2EXTID) %in% names(PATHID2NAME)]
     PATHID2EXTID <- PATHID2EXTID[names(PATHID2EXTID) %in% unique(unlist(EXTID2PATHID))]
     PATHID2EXTID <- lapply(PATHID2EXTID, function(x) intersect(x, ALLEG))
-    
+
     PATHID2NAME <- PATHID2NAME[names(PATHID2NAME) %in% names(PATHID2EXTID)]
 
     PATHID2NAME <- unlist(PATHID2NAME)
     PATHID2NAME <- gsub("^\\w+\\s\\w+:\\s+", "", PATHID2NAME) # remove leading spaces
-    
+
     assign("PATHID2EXTID", PATHID2EXTID, envir=ReactomePA_Env)
     assign("EXTID2PATHID", EXTID2PATHID, envir=ReactomePA_Env)
     assign("PATHID2NAME", PATHID2NAME, envir=ReactomePA_Env)

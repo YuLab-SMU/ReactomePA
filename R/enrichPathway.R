@@ -17,7 +17,6 @@
 ##' @importClassesFrom DOSE enrichResult
 ##' @importMethodsFrom DOSE show
 ##' @importMethodsFrom DOSE summary
-##' @importMethodsFrom DOSE plot
 ##' @importFrom DOSE EXTID2NAME
 ##' @export
 ##' @author Guangchuang Yu \url{http://ygc.name}
@@ -44,7 +43,7 @@ enrichPathway <- function(gene,
                           readable=FALSE) {
 
     Reactome_DATA <- get_Reactome_DATA(organism)
-    
+
     res <- enricher_internal(gene,
                            pvalueCutoff=pvalueCutoff,
                            pAdjustMethod=pAdjustMethod,
@@ -81,12 +80,12 @@ enrichPathway <- function(gene,
 ##     ## pathName <- mget(pathID, reactomePATHID2NAME)
 ##     pathName <- mapIds(reactome.db, pathID, 'PATHNAME', 'PATHID')
 ##     pathName <- pathName[!is.na(pathName)]
-    
+
 ##     ##
 ##     ## this issue had been solve since reactome 52
 ##     ##
 ##     ## multiple mapping exists.
-##     ## 
+##     ##
 ##     ##
 
 ##     ##     > term
@@ -111,7 +110,7 @@ enrichPathway <- function(gene,
 ##     ##                                                     1629063
 ##     ##             "Human immunodeficiency virus 2: HIV Infection"
 
-##     ## The following description contain "Homo sapiens", and report a bug. 
+##     ## The following description contain "Homo sapiens", and report a bug.
 ##     ## "Mycobacterium tuberculosis: Latent infection of Homo sapiens with Mycobacterium tuberculosis"
 ##     ## To fix it, the ":" should presented in grep.
 ##     org <- switch(organism,
@@ -135,7 +134,7 @@ enrichPathway <- function(gene,
 ##     ## > get("174495", reactomePATHID2NAME)
 ##     ## [1] "Human immunodeficiency virus 1: Synthesis And Processing Of GAG, GAGPOL Polyproteins"
 ##     ## human genes involves, but pathway name was not labelled by "Homo sapiens".
-    
+
 ##     ## get first term of missing ID
 ##     missID <- pathID[ ! pathID %in% names(pathName) ]
 ##     if (length(missID) > 0 ) {

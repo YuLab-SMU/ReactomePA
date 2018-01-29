@@ -5,7 +5,7 @@
 \title{viewPathway}
 \usage{
 viewPathway(pathName, organism = "human", readable = TRUE,
-  foldChange = NULL, ...)
+  foldChange = NULL, layout = "kk", ...)
 }
 \arguments{
 \item{pathName}{pathway Name}
@@ -16,7 +16,9 @@ viewPathway(pathName, organism = "human", readable = TRUE,
 
 \item{foldChange}{fold change}
 
-\item{...}{additional parameters passed to \code{\link[DOSE]{netplot}}}
+\item{layout}{graph layout}
+
+\item{...}{additional parameters}
 }
 \value{
 plot
