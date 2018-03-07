@@ -18,7 +18,7 @@
 ##' @importFrom ggraph geom_edge_link
 ##' @importFrom ggraph geom_node_point
 ##' @importFrom ggplot2 aes_
-##' @importFrom ggplot2 scale_color_gradientn
+##' @importFrom ggplot2 scale_color_continuous
 ##' @importFrom ggplot2 scale_size
 ##' @importFrom ggplot2 theme_void
 ##' @return plot
@@ -92,7 +92,8 @@ viewPathway <- function(pathName,
     ggraph(gg, layout=layout) +
         geom_edge_link(alpha=.8, colour='darkgrey') +
         geom_node_point(aes_(color=~as.numeric(as.character(color)), size=~size)) +
-        scale_color_gradientn(name = "fold change", colors=palette, na.value = "#E5C494") +
+        scale_color_continuous(low="red", high="blue", name = "fold change", na.value = "#E5C494") + 
+        ## scale_color_gradientn(name = "fold change", colors=palette, na.value = "#E5C494") +
         scale_size(guide = FALSE) + theme_void()
 }
 
