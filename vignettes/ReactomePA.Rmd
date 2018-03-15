@@ -20,6 +20,7 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteDepends{org.Hs.eg.db}
   %\usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r style, echo=FALSE, results="asis", message=FALSE}
@@ -157,17 +158,23 @@ viewPathway("E2F mediated regulation of DNA replication", readable=TRUE, foldCha
 ```
 
 
+# Need helps?
 
 
-More documents can be found on the project website, <https://guangchuangyu.github.io/ReactomePA>.
+If you have questions/issues, please visit
+[ReactomePA homepage](https://guangchuangyu.github.io/software/ReactomePA/) first.
+Your problems are mostly documented. If you think you found a bug, please follow
+[the guide](https://guangchuangyu.github.io/2016/07/how-to-bug-author/) and
+provide a reproducible example to be posted
+on
+[github issue tracker](https://github.com/GuangchuangYu/ReactomePA/issues).
+For questions, please post
+to [Bioconductor support site](https://support.bioconductor.org/) and tag your
+post with *ReactomePA*.
 
 
-# Session Information
+For Chinese user, you can follow me on [WeChat (微信)](https://guangchuangyu.github.io/blog_images/biobabble.jpg).
 
-Here is the output of `sessionInfo()` on the system on which this document was compiled:
 
-```{r echo=FALSE}
-sessionInfo()
-```
 
 # References

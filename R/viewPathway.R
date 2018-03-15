@@ -13,10 +13,12 @@
 ##' @importFrom graphite pathwayGraph
 ##' @importFrom igraph igraph.from.graphNEL
 ##' @importFrom igraph as.undirected
+##' @importFrom igraph "V<-"
 ##' @importFrom DOSE EXTID2NAME
 ##' @importFrom ggraph ggraph
 ##' @importFrom ggraph geom_edge_link
 ##' @importFrom ggraph geom_node_point
+##' @importFrom ggraph geom_node_text
 ##' @importFrom ggplot2 aes_
 ##' @importFrom ggplot2 scale_color_continuous
 ##' @importFrom ggplot2 scale_size
@@ -81,18 +83,21 @@ viewPathway <- function(pathName,
     gg <- igraph.from.graphNEL(g)
     gg <- as.undirected(gg)
     gg <- setting.graph.attributes(gg)
+    V(gg)$name <- sub("[^:]+:", "", V(gg)$name)
+
     if (!is.null(foldChange)) {
         ## gg <- scaleNodeColor(gg, foldChange)
-        fc <- foldChange[sub("[^:]+:", "", V(gg)$name)]
+        fc <- foldChange[V(gg)$name]
         V(gg)$color <- fc
-        palette <- enrichplot:::fc_palette(fc)
+        ## palette <- enrichplot:::fc_palette(fc)
 
     }
     ## netplot(gg, foldChange=foldChange, ...)
     ggraph(gg, layout=layout) +
         geom_edge_link(alpha=.8, colour='darkgrey') +
         geom_node_point(aes_(color=~as.numeric(as.character(color)), size=~size)) +
-        scale_color_continuous(low="red", high="blue", name = "fold change", na.value = "#E5C494") + 
+        scale_color_continuous(low="red", high="blue", name = "fold change", na.value = "#E5C494") +
+        geom_node_text(aes_(label=~name), repel=TRUE) +
         ## scale_color_gradientn(name = "fold change", colors=palette, na.value = "#E5C494") +
         scale_size(guide = FALSE) + theme_void()
 }

@@ -1,3 +1,12 @@
+CHANGES IN VERSION 1.23.2
+------------------------
+ o re-implement viewPathway <2018-03-15, Thu>
+ o mv site to https://guangchuangyu.github.io/software/ReactomePA
+
+CHANGES IN VERSION 1.23.1
+------------------------
+ o import enrichplot
+
 CHANGES IN VERSION 1.21.3
 ------------------------
  o new project site using blogdown <2017-09-30, Fri>

@@ -18,13 +18,12 @@ library("yyplot")
 `r badge_bioc_release("ReactomePA", "green")`
 `r badge_devel("guangchuangyu/ReactomePA", "green")`
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
-`r badge_bioc_download("ReactomePA", "total", "blue")`
-`r badge_bioc_download("ReactomePA", "month", "blue")`
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/GuangchuangYu)
+
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
 [![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
-[![commit](http://www.bioconductor.org/shields/commits/bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#svn_source)
 [![GitHub forks](https://img.shields.io/github/forks/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/network)
 [![GitHub stars](https://img.shields.io/github/stars/GuangchuangYu/ReactomePA.svg)](https://github.com/GuangchuangYu/ReactomePA/stargazers)
 
@@ -45,7 +44,10 @@ For details, please visit our project website, <https://guangchuangyu.github.io/
 + [Feedback](https://guangchuangyu.github.io/ReactomePA/#feedback)
 
 
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/GuangchuangYu/ReactomePA.svg?style=social)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract)
+[![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract)
+`r badger::badge_custom("follow me on", "微信", "green", "https://guangchuangyu.github.io/blog_images/biobabble.jpg")`
+`r badger::badge_custom("打赏", "支付宝/微信", "green", "https://guangchuangyu.github.io/blog_images/pay_qrcode.png")`
+
 
 ------------------------------------------------------------------------
 
@@ -63,16 +65,8 @@ __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathwa
 
 ### Citation
 
-`r badge_citation("8d8msizDQcsC", "3311691878690959578", "green")`
 
-
-```{r echo=F, comment=NA}
-p <- plot_citation_trend('DO5oG40AAAAJ', '8d8msizDQcsC')
-ggsave(p, file="docs/images/citation.png", width=8, height=4)
-```
-
-
-<img src="docs/images/citation.png" width="890"/>
+<img src="https://guangchuangyu.github.io/software/ReactomePA/featured-articles/index_files/figure-html/citation-1.png" width="890"/>
 
 
 ### Download stats
@@ -82,15 +76,5 @@ ggsave(p, file="docs/images/citation.png", width=8, height=4)
 `r badge_bioc_download("ReactomePA", "month", "blue")`
 
 
-
-```{r echo=F, message=F, comment=NA}
-x <- dlstats::bioc_stats("ReactomePA")
-x <- x[-nrow(x), ] # last month data is not complete
-p <- ggplot(x, aes(end, Nb_of_distinct_IPs)) + geom_point() + geom_line() +
-    theme_minimal() +xlab(NULL) + ylab(NULL) +
-    labs(title="ReactomePA", subtitle="Monthly download stats (distinct IPs)", caption="data from Bioconductor")
-ggsave(p, file="docs/images/dlstats.png", width=8, height=4)
-```
-
-<img src="docs/images/dlstats.png" width="890"/>
+<img src="https://guangchuangyu.github.io/software/ReactomePA/index_files/figure-html/unnamed-chunk-2-1.png" width="890"/>
 
