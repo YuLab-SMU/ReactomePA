@@ -9,11 +9,11 @@ ReactomePA: Reactome Pathway Analysis
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
 
-For details, please visit our project website, <https://guangchuangyu.github.io/ReactomePA>.
+For details, please visit our project website, <https://guangchuangyu.github.io/software/ReactomePA>.
 
--   [Documentation](https://guangchuangyu.github.io/ReactomePA/documentation/)
--   [Featured Articles](https://guangchuangyu.github.io/ReactomePA/featuredArticles/)
--   [Feedback](https://guangchuangyu.github.io/ReactomePA/#feedback)
+-   [Documentation](https://guangchuangyu.github.io/software/ReactomePA/documentation/)
+-   [Featured Articles](https://guangchuangyu.github.io/software/ReactomePA/featuredArticles/)
+-   [Feedback](https://guangchuangyu.github.io/software/ReactomePA/#feedback)
 
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract) [![](https://img.shields.io/badge/follow%20me%20on-微信-green.svg?style=flat)](https://guangchuangyu.github.io/blog_images/biobabble.jpg) [![](https://img.shields.io/badge/打赏-支付宝/微信-green.svg?style=flat)](https://guangchuangyu.github.io/blog_images/pay_qrcode.png)
 

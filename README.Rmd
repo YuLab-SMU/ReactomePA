@@ -37,11 +37,11 @@ library("yyplot")
 
 This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
 
-For details, please visit our project website, <https://guangchuangyu.github.io/ReactomePA>.
+For details, please visit our project website, <https://guangchuangyu.github.io/software/ReactomePA>.
 
-+ [Documentation](https://guangchuangyu.github.io/ReactomePA/documentation/)
-+ [Featured Articles](https://guangchuangyu.github.io/ReactomePA/featuredArticles/)
-+ [Feedback](https://guangchuangyu.github.io/ReactomePA/#feedback)
++ [Documentation](https://guangchuangyu.github.io/software/ReactomePA/documentation/)
++ [Featured Articles](https://guangchuangyu.github.io/software/ReactomePA/featuredArticles/)
++ [Feedback](https://guangchuangyu.github.io/software/ReactomePA/#feedback)
 
 
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract)
