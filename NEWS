@@ -1,3 +1,7 @@
+CHANGES IN VERSION 1.25.1
+------------------------
+ o add keyType parameter in viewPathway (2018-09-04, Tue)
+ 
 CHANGES IN VERSION 1.23.2
 ------------------------
  o re-implement viewPathway <2018-03-15, Thu>

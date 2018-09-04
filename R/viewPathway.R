@@ -6,6 +6,7 @@
 ##' @param organism supported organism
 ##' @param readable logical
 ##' @param foldChange fold change
+##' @param keyType keyType of gene ID (i.e. names of foldChange, if available)
 ##' @param layout graph layout
 ##' @param ... additional parameters
 ## @importFrom graphite pathways
@@ -30,6 +31,7 @@ viewPathway <- function(pathName,
                         organism="human",
                         readable=TRUE,
                         foldChange=NULL,
+                        keyType = "ENTREZID",
                         layout = "kk", ...){
 
     ## call pathways via imported from graphite has the following issue:
@@ -70,7 +72,7 @@ viewPathway <- function(pathName,
         if (!is.null(foldChange)) {
             stopifnot(!any(duplicated(names(foldChange)))) # can't have two value for one gene
             OrgDb <- getDb(organism)
-            names(foldChange) <- EXTID2NAME(OrgDb, names(foldChange), "ENTREZID")
+            names(foldChange) <- EXTID2NAME(OrgDb, names(foldChange), keyType)
 
         }
     } else {

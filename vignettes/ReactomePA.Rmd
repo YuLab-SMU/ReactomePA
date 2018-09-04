@@ -4,7 +4,7 @@ author: "\\
 
 	Guangchuang Yu\\
 
-        School of Public Health, The University of Hong Kong"
+        School of Basic Medical Science, Southern Medical University"
 date: "`r Sys.Date()`"
 bibliography: ReactomePA.bib
 biblio-style: apalike
@@ -166,15 +166,9 @@ If you have questions/issues, please visit
 Your problems are mostly documented. If you think you found a bug, please follow
 [the guide](https://guangchuangyu.github.io/2016/07/how-to-bug-author/) and
 provide a reproducible example to be posted
-on
-[github issue tracker](https://github.com/GuangchuangYu/ReactomePA/issues).
-For questions, please post
-to [Bioconductor support site](https://support.bioconductor.org/) and tag your
+on [github issue tracker](https://github.com/GuangchuangYu/ReactomePA/issues).
+For questions, please post to [Bioconductor support site](https://support.bioconductor.org/) and tag your
 post with *ReactomePA*.
-
-
-For Chinese user, you can follow me on [WeChat (微信)](https://guangchuangyu.github.io/blog_images/biobabble.jpg).
-
 
 
 # References

@@ -5,7 +5,7 @@
 \title{viewPathway}
 \usage{
 viewPathway(pathName, organism = "human", readable = TRUE,
-  foldChange = NULL, layout = "kk", ...)
+  foldChange = NULL, keyType = "ENTREZID", layout = "kk", ...)
 }
 \arguments{
 \item{pathName}{pathway Name}
@@ -15,6 +15,8 @@ viewPathway(pathName, organism = "human", readable = TRUE,
 \item{readable}{logical}
 
 \item{foldChange}{fold change}
+
+\item{keyType}{keyType of gene ID (i.e. names of foldChange, if available)}
 
 \item{layout}{graph layout}
 
