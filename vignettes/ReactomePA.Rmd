@@ -1,8 +1,6 @@
 ---
 title: "An R package for Reactome Pathway Analysis"
-author: "\\
-
-	Guangchuang Yu\\
+author: "Guangchuang Yu\\
 
         School of Basic Medical Science, Southern Medical University"
 date: "`r Sys.Date()`"
