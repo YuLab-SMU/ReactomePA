@@ -62,7 +62,7 @@ __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathwa
 
 
 
-<img src="https://guangchuangyu.github.io/software/ReactomePA/featured-articles/index_files/figure-html/citation-1.png" width="890"/>
+<img src="https://guangchuangyu.github.io/software/citation_trend/ReactomePA.png" width="890"/>
 
 
 ### Download stats
@@ -72,5 +72,5 @@ __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathwa
 `r badge_bioc_download("ReactomePA", "month", "blue")`
 
 
-<img src="https://guangchuangyu.github.io/software/ReactomePA/index_files/figure-html/unnamed-chunk-2-1.png" width="890"/>
+<img src="https://guangchuangyu.github.io/software/dlstats/ReactomePA.png" width="890"/>
 
