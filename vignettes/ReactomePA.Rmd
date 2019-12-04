@@ -1,8 +1,9 @@
 ---
 title: "An R package for Reactome Pathway Analysis"
-author: "Guangchuang Yu\\
-
-        School of Basic Medical Science, Southern Medical University"
+author: 
+- name: Guangchuang Yu
+  email: guangchuangyu@gmail.com
+  affiliation: Department of Bioinformatics, School of Basic Medical Sciences, Southern Medical University
 date: "`r Sys.Date()`"
 bibliography: ReactomePA.bib
 biblio-style: apalike

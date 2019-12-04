@@ -9,8 +9,6 @@ html_preview: false
 ```{r echo=FALSE, results="hide", message=FALSE}
 library("badger")
 library("ypages")
-library("ggplot2")
-library("yyplot")
 ```
 
 # ReactomePA: Reactome Pathway Analysis
@@ -31,20 +29,27 @@ library("yyplot")
 
 
 
+```{r comment="", echo=FALSE, results='asis'}
+cat(packageDescription('ReactomePA')$Description)
+```
 
-This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization.
 
-For details, please visit our project website, <https://guangchuangyu.github.io/software/ReactomePA>.
+For details, please visit <https://yulab-smu.github.io/clusterProfiler-book/>.
 
-+ [Documentation](https://guangchuangyu.github.io/software/ReactomePA/documentation/)
-+ [Featured Articles](https://guangchuangyu.github.io/software/ReactomePA/featuredArticles/)
-+ [Feedback](https://guangchuangyu.github.io/software/ReactomePA/#feedback)
+
+## :writing_hand: Authors
+
+Guangchuang YU
+
+School of Basic Medical Sciences, Southern Medical University
+
+<https://guangchuangyu.github.io>
 
 
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract)
 [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/GuangchuangYu)
-`r badger::badge_custom("follow me on", "微信", "green", "https://guangchuangyu.github.io/blog_images/biobabble.jpg")`
-`r badger::badge_custom("打赏", "支付宝/微信", "green", "https://guangchuangyu.github.io/blog_images/pay_qrcode.png")`
+`r badger::badge_custom('follow me on', 'WeChat', 'green', 'https://guangchuangyu.github.io/blog_images/biobabble.jpg')`
+
 
 
 ------------------------------------------------------------------------
@@ -55,7 +60,10 @@ __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathwa
 
 
 `r badge_doi("10.1039/c5mb00663e", "green")`
-`r badge_altmetric("4796667", "green")`
+
+<!--
+
+r badge_altmetric("4796667", "green")
 
 
 ------------------------------------------------------------------------
@@ -68,9 +76,10 @@ __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathwa
 ### Download stats
 
 [![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
-`r badge_bioc_download("ReactomePA", "total", "blue")`
-`r badge_bioc_download("ReactomePA", "month", "blue")`
+r badge_bioc_download("ReactomePA", "total", "blue")
+r badge_bioc_download("ReactomePA", "month", "blue")
 
 
 <img src="https://guangchuangyu.github.io/software/dlstats/ReactomePA.png" width="890"/>
 
+-->
