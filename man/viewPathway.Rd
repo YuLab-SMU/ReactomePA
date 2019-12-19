@@ -4,8 +4,15 @@
 \alias{viewPathway}
 \title{viewPathway}
 \usage{
-viewPathway(pathName, organism = "human", readable = TRUE,
-  foldChange = NULL, keyType = "ENTREZID", layout = "kk", ...)
+viewPathway(
+  pathName,
+  organism = "human",
+  readable = TRUE,
+  foldChange = NULL,
+  keyType = "ENTREZID",
+  layout = "kk",
+  ...
+)
 }
 \arguments{
 \item{pathName}{pathway Name}
