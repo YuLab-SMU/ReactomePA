@@ -8,14 +8,15 @@ gsePathway(
   geneList,
   organism = "human",
   exponent = 1,
-  nPerm = 1000,
   minGSSize = 10,
   maxGSSize = 500,
+  eps = 1e-10,
   pvalueCutoff = 0.05,
   pAdjustMethod = "BH",
   verbose = TRUE,
   seed = FALSE,
-  by = "fgsea"
+  by = "fgsea",
+  ...
 )
 }
 \arguments{
@@ -25,11 +26,11 @@ gsePathway(
 
 \item{exponent}{weight of each step}
 
-\item{nPerm}{permutation numbers}
-
 \item{minGSSize}{minimal size of each geneSet for analyzing}
 
 \item{maxGSSize}{maximal size of each geneSet for analyzing}
+
+\item{eps}{This parameter sets the boundary for calculating the p value.}
 
 \item{pvalueCutoff}{pvalue Cutoff}
 
@@ -40,6 +41,8 @@ gsePathway(
 \item{seed}{logical}
 
 \item{by}{one of 'fgsea' or 'DOSE'}
+
+\item{...}{other parameter}
 }
 \value{
 gseaResult object
