@@ -5,14 +5,15 @@
 ##' @param geneList order ranked geneList
 ##' @param organism organism
 ##' @param exponent weight of each step
-##' @param nPerm permutation numbers
 ##' @param minGSSize minimal size of each geneSet for analyzing
 ##' @param maxGSSize maximal size of each geneSet for analyzing
+##' @param eps This parameter sets the boundary for calculating the p value.
 ##' @param pvalueCutoff pvalue Cutoff
 ##' @param pAdjustMethod pvalue adjustment method
 ##' @param verbose print message or not
 ##' @param seed logical
 ##' @param by one of 'fgsea' or 'DOSE'
+##' @param ... other parameter
 ##' @importClassesFrom DOSE gseaResult
 ##' @importMethodsFrom DOSE show
 ##' @importMethodsFrom DOSE summary
@@ -22,28 +23,30 @@
 gsePathway <- function(geneList,
                        organism      = "human",
                        exponent      = 1,
-                       nPerm         = 1000,
                        minGSSize     = 10,
                        maxGSSize     = 500,
+                       eps           = 1e-10,
                        pvalueCutoff  = 0.05,
                        pAdjustMethod = "BH",
                        verbose       = TRUE,
                        seed          = FALSE,
-                       by = 'fgsea') {
+                       by            = 'fgsea',
+                       ...) {
 
     Reactome_DATA <- get_Reactome_DATA(organism)
 
     res <- GSEA_internal(geneList      = geneList,
                          exponent      = exponent,
-                         nPerm         = nPerm,
                          minGSSize     = minGSSize,
                          maxGSSize     = maxGSSize,
+                         eps           = eps,
                          pvalueCutoff  = pvalueCutoff,
                          pAdjustMethod = pAdjustMethod,
                          verbose       = verbose,
                          USER_DATA     = Reactome_DATA,
                          seed          = seed,
-                         by = by)
+                         by            = by,
+                         ...)
 
     if (is.null(res))
         return(res)
