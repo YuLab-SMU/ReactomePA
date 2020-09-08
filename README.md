@@ -4,12 +4,12 @@
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
-[![](https://img.shields.io/badge/release%20version-1.30.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
-[![](https://img.shields.io/badge/devel%20version-1.31.0-green.svg)](https://github.com/guangchuangyu/ReactomePA)
+[![](https://img.shields.io/badge/release%20version-1.32.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
+[![](https://img.shields.io/badge/devel%20version-1.33.1-green.svg)](https://github.com/guangchuangyu/ReactomePA)
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
 
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--12--04-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2020--09--08-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
 [![Build
 Status](http://www.bioconductor.org/shields/build/devel/bioc/ReactomePA.svg)](https://bioconductor.org/checkResults/devel/bioc-LATEST/ReactomePA/)
 [![Linux/Mac Travis Build
@@ -22,7 +22,7 @@ pathway database. It implements enrichment analysis, gene set enrichment
 analysis and several functions for visualization.
 
 For details, please visit
-<https://yulab-smu.github.io/clusterProfiler-book/>.
+<https://yulab-smu.top/biomedical-knowledge-mining-book/>.
 
 ## :writing\_hand: Authors
 
