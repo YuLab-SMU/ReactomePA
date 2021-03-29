@@ -1,16 +1,15 @@
-ReactomePA: Reactome Pathway Analysis
-=====================================
+# ReactomePA: Reactome Pathway Analysis
 
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
-[![](https://img.shields.io/badge/release%20version-1.32.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
+[![](https://img.shields.io/badge/release%20version-1.34.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
 [![](https://img.shields.io/badge/devel%20version-1.35.0-green.svg)](https://github.com/guangchuangyu/ReactomePA)
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
 
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2020--10--28-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2021--03--25-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
 [![Build
 Status](http://www.bioconductor.org/shields/build/devel/bioc/ReactomePA.svg)](https://bioconductor.org/checkResults/devel/bioc-LATEST/ReactomePA/)
 [![Linux/Mac Travis Build
@@ -23,16 +22,15 @@ pathway database. It implements enrichment analysis, gene set enrichment
 analysis and several functions for visualization.
 
 For details, please visit
-<a href="https://yulab-smu.top/biomedical-knowledge-mining-book/" class="uri">https://yulab-smu.top/biomedical-knowledge-mining-book/</a>.
+<https://yulab-smu.top/biomedical-knowledge-mining-book/>.
 
-:writing\_hand: Authors
------------------------
+## :writing\_hand: Authors
 
 Guangchuang YU
 
 School of Basic Medical Sciences, Southern Medical University
 
-<a href="https://guangchuangyu.github.io" class="uri">https://guangchuangyu.github.io</a>
+<https://yulab-smu.top>
 
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract)
 [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/GuangchuangYu)
