@@ -1,7 +1,7 @@
 Package: ReactomePA
 Type: Package
 Title: Reactome Pathway Analysis
-Version: 1.35.0
+Version: 1.35.1
 Authors@R: c(person(given = "Guangchuang", family = "Yu",
 	   	    email = "guangchuangyu@gmail.com",
 		    role  = c("aut", "cre")),
@@ -27,6 +27,7 @@ Suggests:
     BiocStyle,
     clusterProfiler,
     knitr,
+    rmarkdown,
     org.Hs.eg.db,
     prettydoc,
     testthat

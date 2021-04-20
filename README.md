@@ -5,11 +5,11 @@ state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
 [![](https://img.shields.io/badge/release%20version-1.34.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
-[![](https://img.shields.io/badge/devel%20version-1.35.0-green.svg)](https://github.com/guangchuangyu/ReactomePA)
+[![](https://img.shields.io/badge/devel%20version-1.35.1-green.svg)](https://github.com/guangchuangyu/ReactomePA)
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
 
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2021--03--25-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2021--04--20-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
 [![Build
 Status](http://www.bioconductor.org/shields/build/devel/bioc/ReactomePA.svg)](https://bioconductor.org/checkResults/devel/bioc-LATEST/ReactomePA/)
 [![Linux/Mac Travis Build
