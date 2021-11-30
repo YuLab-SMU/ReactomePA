@@ -8,7 +8,6 @@
 ##' @param foldChange fold change
 ##' @param keyType keyType of gene ID (i.e. names of foldChange, if available)
 ##' @param layout graph layout
-##' @param ... additional parameters
 ## @importFrom graphite pathways
 ##' @importFrom graphite convertIdentifiers
 ##' @importFrom graphite pathwayGraph
@@ -32,7 +31,7 @@ viewPathway <- function(pathName,
                         readable=TRUE,
                         foldChange=NULL,
                         keyType = "ENTREZID",
-                        layout = "kk", ...){
+                        layout = "kk"){
 
     ## call pathways via imported from graphite has the following issue:
     ##
