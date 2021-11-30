@@ -60,10 +60,13 @@ gsePathway <- function(geneList,
 
 
 get_Reactome_Env <- function() {
+  # Create a new environment to avoid assignments to 
+  # a user's global environment
+  reactome_env <- new.env()
     if (!exists(".ReactomePA_Env", envir = .GlobalEnv)) {
-        assign(".ReactomePA_Env", new.env(), .GlobalEnv)
+        assign(".ReactomePA_Env", new.env(), reactome_env)
     }
-    get(".ReactomePA_Env", envir= .GlobalEnv)
+    get(".ReactomePA_Env", envir= reactome_env)
 }
 
 ##' @importMethodsFrom AnnotationDbi as.list

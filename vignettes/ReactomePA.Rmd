@@ -59,7 +59,7 @@ __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathwa
 
 
 
-# Need helps?
+# Need help?
 
 
 If you have questions/issues, please post to [Bioconductor support site](https://support.bioconductor.org/) and tag your post with *ReactomePA*.
