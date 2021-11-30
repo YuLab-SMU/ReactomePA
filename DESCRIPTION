@@ -18,7 +18,7 @@ Imports:
     AnnotationDbi,
     DOSE (>= 3.5.1),
     enrichplot,
-    ggplot2,
+    ggplot2 (>= 3.3.5),
     ggraph,
     reactome.db,
     igraph,

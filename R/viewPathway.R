@@ -101,7 +101,7 @@ viewPathway <- function(pathName,
         scale_color_continuous(low="red", high="blue", name = "fold change", na.value = "#E5C494") +
         geom_node_text(aes_(label=~name), repel=TRUE) +
         ## scale_color_gradientn(name = "fold change", colors=palette, na.value = "#E5C494") +
-        scale_size(guide = FALSE) + theme_void()
+        scale_size(guide = "none") + theme_void()
 }
 
 
