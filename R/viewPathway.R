@@ -8,7 +8,6 @@
 ##' @param foldChange fold change
 ##' @param keyType keyType of gene ID (i.e. names of foldChange, if available)
 ##' @param layout graph layout
-##' @param ... additional parameters
 ## @importFrom graphite pathways
 ##' @importFrom graphite convertIdentifiers
 ##' @importFrom graphite pathwayGraph
@@ -32,7 +31,7 @@ viewPathway <- function(pathName,
                         readable=TRUE,
                         foldChange=NULL,
                         keyType = "ENTREZID",
-                        layout = "kk", ...){
+                        layout = "kk"){
 
     ## call pathways via imported from graphite has the following issue:
     ##
@@ -101,7 +100,7 @@ viewPathway <- function(pathName,
         scale_color_continuous(low="red", high="blue", name = "fold change", na.value = "#E5C494") +
         geom_node_text(aes_(label=~name), repel=TRUE) +
         ## scale_color_gradientn(name = "fold change", colors=palette, na.value = "#E5C494") +
-        scale_size(guide = FALSE) + theme_void()
+        scale_size(guide = "none") + theme_void()
 }
 
 

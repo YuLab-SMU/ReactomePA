@@ -10,8 +10,7 @@ viewPathway(
   readable = TRUE,
   foldChange = NULL,
   keyType = "ENTREZID",
-  layout = "kk",
-  ...
+  layout = "kk"
 )
 }
 \arguments{
@@ -26,8 +25,6 @@ viewPathway(
 \item{keyType}{keyType of gene ID (i.e. names of foldChange, if available)}
 
 \item{layout}{graph layout}
-
-\item{...}{additional parameters}
 }
 \value{
 plot
