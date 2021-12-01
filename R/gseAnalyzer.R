@@ -58,12 +58,12 @@ gsePathway <- function(geneList,
     return(res)
 }
 
-
+# Create a new environment to avoid assignments to 
+# a user's global environment
+reactome_env <- new.env(parent = emptyenv())
 get_Reactome_Env <- function() {
-  # Create a new environment to avoid assignments to 
-  # a user's global environment
-  reactome_env <- new.env()
-    if (!exists(".ReactomePA_Env", envir = .GlobalEnv)) {
+
+    if (!exists(".ReactomePA_Env", envir = reactome_env)) {
         assign(".ReactomePA_Env", new.env(), reactome_env)
     }
     get(".ReactomePA_Env", envir= reactome_env)
