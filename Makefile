@@ -1,6 +1,7 @@
 PKGNAME := $(shell sed -n "s/Package: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGVERS := $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGSRC  := $(shell basename `pwd`)
+BIOCVER := RELEASE_3_15
 
 all: rd readme check clean
 
@@ -51,11 +52,12 @@ biocinit:
 	git remote add upstream git@git.bioconductor.org:packages/$(PKGNAME).git;\
 	git fetch --all
 
-rmoldrelease:
-	git branch -D RELEASE_3_9
+
+rmrelease:
+	git branch -D $(BIOCVER)
 
 release:
-	git checkout RELEASE_3_10;\
+	git checkout $(BIOCVER);\
 	git fetch --all
 
 update:

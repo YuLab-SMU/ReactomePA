@@ -4,12 +4,12 @@
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
-[![](https://img.shields.io/badge/release%20version-1.30.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
-[![](https://img.shields.io/badge/devel%20version-1.31.0-green.svg)](https://github.com/guangchuangyu/ReactomePA)
+[![](https://img.shields.io/badge/release%20version-1.34.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
+[![](https://img.shields.io/badge/devel%20version-1.35.1-green.svg)](https://github.com/guangchuangyu/ReactomePA)
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
 
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--12--04-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2021--04--20-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
 [![Build
 Status](http://www.bioconductor.org/shields/build/devel/bioc/ReactomePA.svg)](https://bioconductor.org/checkResults/devel/bioc-LATEST/ReactomePA/)
 [![Linux/Mac Travis Build
@@ -22,7 +22,7 @@ pathway database. It implements enrichment analysis, gene set enrichment
 analysis and several functions for visualization.
 
 For details, please visit
-<https://yulab-smu.github.io/clusterProfiler-book/>.
+<https://yulab-smu.top/biomedical-knowledge-mining-book/>.
 
 ## :writing\_hand: Authors
 
@@ -30,13 +30,13 @@ Guangchuang YU
 
 School of Basic Medical Sciences, Southern Medical University
 
-<https://guangchuangyu.github.io>
+<https://yulab-smu.top>
 
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract)
 [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/GuangchuangYu)
 [![](https://img.shields.io/badge/follow%20me%20on-WeChat-green.svg)](https://guangchuangyu.github.io/blog_images/biobabble.jpg)
 
------
+------------------------------------------------------------------------
 
 Please cite the following article when using `ReactomePA`:
 

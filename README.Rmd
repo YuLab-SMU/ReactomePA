@@ -34,7 +34,7 @@ cat(packageDescription('ReactomePA')$Description)
 ```
 
 
-For details, please visit <https://yulab-smu.github.io/clusterProfiler-book/>.
+For details, please visit <https://yulab-smu.top/biomedical-knowledge-mining-book/>.
 
 
 ## :writing_hand: Authors
@@ -43,7 +43,7 @@ Guangchuang YU
 
 School of Basic Medical Sciences, Southern Medical University
 
-<https://guangchuangyu.github.io>
+<https://yulab-smu.top>
 
 
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?hashtags=ReactomePA&url=http://pubs.rsc.org/en/Content/ArticleLanding/2016/MB/C5MB00663E#!divAbstract)
