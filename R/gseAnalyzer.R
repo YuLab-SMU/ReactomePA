@@ -20,6 +20,23 @@
 ##' @export
 ##' @return gseaResult object
 ##' @author Yu Guangchuang
+##' @examples
+##' \dontrun{
+##' library(ReactomePA)
+##' data(geneList, package="DOSE")
+##' y <- gsePathway(geneList, 
+##'                 organism = "human",
+##'                 pvalueCutoff = 0.2,
+##'                 pAdjustMethod = "BH", 
+##'                 verbose = FALSE)
+##' head(y)
+##' y2 <- gsePathway(geneList, 
+##'                  organism = rec_gson,
+##'                  pvalueCutoff = 0.2,
+##'                  pAdjustMethod = "BH", 
+##'                  verbose = FALSE)
+##' head(y2)
+##' }
 gsePathway <- function(geneList,
                        organism      = "human",
                        exponent      = 1,
@@ -33,7 +50,16 @@ gsePathway <- function(geneList,
                        by            = 'fgsea',
                        ...) {
 
-    Reactome_DATA <- get_Reactome_DATA(organism)
+   
+    if (inherits(organism, "character")) {                       
+        Reactome_DATA <- get_Reactome_DATA(organism)  
+        species <- organism
+    } else if (inherits(organism, "GSON")) {
+        Reactome_DATA <- organism
+        species <- Reactome_DATA@species
+    } else {
+        stop("organism should be a species name or a GSON object")
+    }
 
     res <- GSEA_internal(geneList      = geneList,
                          exponent      = exponent,
@@ -51,7 +77,7 @@ gsePathway <- function(geneList,
     if (is.null(res))
         return(res)
 
-    res@organism <- organism
+    res@organism <- species
     res@setType <- "Reactome"
     res@keytype <- "ENTREZID"
 
