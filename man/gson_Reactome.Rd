@@ -15,3 +15,9 @@ a 'GSON' object
 \description{
 download the latest version of Reactome and stored in a 'GSON' object
 }
+\examples{
+\dontrun{
+rec_gson <- gson_Reactome("human")
+}
+
+}

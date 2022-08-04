@@ -50,24 +50,6 @@ gseaResult object
 \description{
 Gene Set Enrichment Analysis of Reactome Pathway
 }
-\examples{
-\dontrun{
-library(ReactomePA)
-data(geneList, package="DOSE")
-y <- gsePathway(geneList, 
-                organism = "human",
-                pvalueCutoff = 0.2,
-                pAdjustMethod = "BH", 
-                verbose = FALSE)
-head(y)
-y2 <- gsePathway(geneList, 
-                 organism = rec_gson,
-                 pvalueCutoff = 0.2,
-                 pAdjustMethod = "BH", 
-                 verbose = FALSE)
-head(y2)
-}
-}
 \author{
 Yu Guangchuang
 }

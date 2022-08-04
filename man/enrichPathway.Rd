@@ -21,8 +21,7 @@ enrichPathway(
 \arguments{
 \item{gene}{a vector of entrez gene id.}
 
-\item{organism}{a character of species(one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly")
-or a GSON object.}
+\item{organism}{one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".}
 
 \item{pvalueCutoff}{Cutoff value of pvalue.}
 
@@ -47,18 +46,14 @@ Given a vector of genes, this function will return the enriched pathways
 with FDR control.
 }
 \examples{
-\dontrun{
-library(ReactomePA)
-data(geneList, package="DOSE")
-de <- names(geneList)[abs(geneList) > 1.5]
-x <- enrichPathway(gene=de, organism = "human", pvalueCutoff = 0.05, readable=TRUE)
-head(x)
 
-
-rec_gson <- gson_Reactome("human")
-x2 <- enrichPathway(gene=de, organism = rec_gson, pvalueCutoff = 0.05, readable=TRUE)
-head(x2)
-}
+	gene <- c("11171", "8243", "112464", "2194",
+			"9318", "79026", "1654", "65003",
+			"6240", "3476", "6238", "3836",
+			"4176", "1017", "249")
+	yy = enrichPathway(gene, pvalueCutoff=0.05)
+	head(summary(yy))
+	#plot(yy)
 
 }
 \seealso{

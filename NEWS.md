@@ -1,6 +1,5 @@
 # ReactomePA 1.41.0.991
 
-+ support passing a GSON object to `enrichPathway(organism)` and `gsePathway(organism)`(2022-7-13, Wed)
 + add function `gson_Reactome` (2022-7-13, Wed)
 
 

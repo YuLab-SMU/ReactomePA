@@ -7,6 +7,11 @@
 ##' @importFrom gson gson
 ##' @importFrom utils stack
 ##' @export
+##' @examples
+##' \dontrun{
+##' rec_gson <- gson_Reactome("human")
+##' }
+##'
 gson_Reactome <- function(organism = "human") {
 
     Reactome_DATA <- get_Reactome_DATA(organism)

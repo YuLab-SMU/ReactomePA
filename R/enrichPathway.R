@@ -4,8 +4,7 @@
 ##'
 ##'
 ##' @param gene a vector of entrez gene id.
-##' @param organism a character of species(one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly")
-##' or a GSON object.
+##' @param organism one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".
 ##' @param pvalueCutoff Cutoff value of pvalue.
 ##' @param pAdjustMethod one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"
 ##' @param qvalueCutoff Cutoff value of qvalue
@@ -24,18 +23,14 @@
 ##' @seealso \code{\link{enrichResult-class}}
 ##' @keywords manip
 ##' @examples
-##' \dontrun{
-##' library(ReactomePA)
-##' data(geneList, package="DOSE")
-##' de <- names(geneList)[abs(geneList) > 1.5]
-##' x <- enrichPathway(gene=de, organism = "human", pvalueCutoff = 0.05, readable=TRUE)
-##' head(x)
-##' 
-##' 
-##' rec_gson <- gson_Reactome("human")
-##' x2 <- enrichPathway(gene=de, organism = rec_gson, pvalueCutoff = 0.05, readable=TRUE)
-##' head(x2)
-##' }
+##'
+##' 	gene <- c("11171", "8243", "112464", "2194",
+##'				"9318", "79026", "1654", "65003",
+##'				"6240", "3476", "6238", "3836",
+##'				"4176", "1017", "249")
+##' 	yy = enrichPathway(gene, pvalueCutoff=0.05)
+##' 	head(summary(yy))
+##' 	#plot(yy)
 ##'
 enrichPathway <- function(gene,
                           organism="human",
@@ -47,16 +42,7 @@ enrichPathway <- function(gene,
                           maxGSSize=500,
                           readable=FALSE) {
 
-    if (inherits(organism, "character")) {                       
-        Reactome_DATA <- get_Reactome_DATA(organism)  
-        species <- organism
-    } else if (inherits(organism, "GSON")) {
-        Reactome_DATA <- organism
-        species <- Reactome_DATA@species
-    } else {
-        stop("organism should be a species name or a GSON object")
-    }
-
+    Reactome_DATA <- get_Reactome_DATA(organism)
 
     res <- enricher_internal(gene,
                            pvalueCutoff=pvalueCutoff,
@@ -71,10 +57,10 @@ enrichPathway <- function(gene,
         return(res)
 
     res@keytype <- "ENTREZID"
-    res@organism <- species
-    OrgDb <- getDb(species)
+    res@organism <- organism
+    OrgDb <- getDb(organism)
     if (readable) {
-        res <- setReadable(res, OrgDb)   
+        res <- setReadable(res, OrgDb)
     }
     res@ontology <- "Reactome"
     return(res)
