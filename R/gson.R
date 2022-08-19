@@ -30,13 +30,20 @@ gson_Reactome <- function(organism = "human") {
     gsid2name <- data.frame(gsid = names(termname),
                             name = termname)
     species <- organism
-
+    m <- AnnotationDbi::metadata(reactome.db::reactome.db)
+    version <- paste("Version: ", 
+                     m$value[m$name == "DBSCHEMAVERSION"], 
+                     "; Source date: ", 
+                     m$value[m$name == "SOURCEDATE"], 
+                     sep = "")
+    info = paste("Source url: ", m$value[m$name == "SOURCEURL"], sep = "")
     gson(gsid2gene = gsid2gene, 
         gsid2name = gsid2name,
         species = species,
         gsname = "reactome pathway",
-        # version = version,
-        accessed_date = as.character(Sys.Date())
-        # keytype = keytype
+        version = version,
+        accessed_date = as.character(Sys.Date()),
+        keytype = "ENTREZID",
+        info = info
     )
 }
