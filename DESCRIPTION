@@ -1,7 +1,7 @@
 Package: ReactomePA
 Type: Package
 Title: Reactome Pathway Analysis
-Version: 1.41.0.991
+Version: 1.41.1
 Authors@R: c(person(given = "Guangchuang", family = "Yu",
 	   	    email = "guangchuangyu@gmail.com",
 		    role  = c("aut", "cre")),

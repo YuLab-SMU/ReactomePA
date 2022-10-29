@@ -1,4 +1,4 @@
-# ReactomePA 1.41.0.991
+# ReactomePA 1.41.1
 
 + add function `gson_Reactome` (2022-7-13, Wed)
 
