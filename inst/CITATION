@@ -2,9 +2,9 @@ citHeader("Please cite G. Yu (2015) for using ReactomePA. In addition, please ci
 
 citEntry(entry  = "ARTICLE",
          title  = "ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization",
-         author = personList(
-             as.person("Guangchuang Yu"),
-             as.person("Qing-Yu He")
+         author = c(
+             person("Guangchuang", "Yu"),
+             person("Qing-Yu", "He")
              ),
          journal = "Molecular BioSystems",
          year    = "2016",
