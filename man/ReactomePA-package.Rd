@@ -2,25 +2,27 @@
 % Please edit documentation in R/ReactomePA-package.R
 \docType{package}
 \name{ReactomePA-package}
-\alias{ReactomePA-package}
 \alias{ReactomePA}
-\title{Reactome Pathway Analysis}
+\alias{ReactomePA-package}
+\title{ReactomePA: Reactome Pathway Analysis}
 \description{
-This package is designed for reactome pathway analysis.
-}
-\details{
-\tabular{ll}{ Package: \tab ReactomePA\cr Type: \tab Package\cr
-Version: \tab 1.9.4\cr Date: \tab 02-09-2012\cr biocViews:\tab
-Bioinformatics, Pathway, Visulization\cr Depends:\tab AnnotationDbi, org.Hs.eg.db,
-igraph, plyr, methods, stats, qvalue, reactome.db\cr Suggests:\tab GOSemSim, DOSE,
-clusterProfiler\cr License: \tab GPL-2\cr }
+This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization. This package is not affiliated with the Reactome team.
 }
 \seealso{
-\linkS4class{enrichResult}
+Useful links:
+\itemize{
+  \item \url{https://yulab-smu.top/biomedical-knowledge-mining-book/}
+  \item Report bugs at \url{https://github.com/GuangchuangYu/ReactomePA/issues}
+}
+
 }
 \author{
-Guangchuang Yu \email{guangchuangyu@gmail.com}
+\strong{Maintainer}: Guangchuang Yu \email{guangchuangyu@gmail.com}
 
-Maintainer: Guangchuang Yu \email{guangchuangyu@gmail.com}
+Other contributors:
+\itemize{
+  \item Vladislav Petyuk \email{petyuk@gmail.com} [contributor]
 }
-\keyword{package}
+
+}
+\keyword{internal}

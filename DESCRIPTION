@@ -41,5 +41,5 @@ BugReports: https://github.com/GuangchuangYu/ReactomePA/issues
 Packaged: 2012-03-05 18:26:53 UTC; mcarlson
 biocViews: Pathways, Visualization, Annotation, MultipleComparison,
     GeneSetEnrichment, Reactome
-RoxygenNote: 7.2.1
+RoxygenNote: 7.3.0
 Encoding: UTF-8
