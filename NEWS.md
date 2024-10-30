@@ -1,3 +1,7 @@
+#  ReactomePA 1.50.0
+
++ Bioconductor  (2024-10-30, Wed)
+
 # ReactomePA 1.49.1
 
 + use `yulab.utils::yulab_msg()` for startup message (2024-07-26, Fri)
