@@ -1,5 +1,9 @@
 # ReactomePA 1.52.0
 
++ Bioconductor RELEASE_3_22 (2025-11-01, Sat)
+
+# ReactomePA 1.52.0
+
 + Bioconductor RELEASE_3_21 (2025-04-17, Thu)
 
 #  ReactomePA 1.50.0
