@@ -1,8 +1,8 @@
 
-##' @importFrom DOSE geneID
-##' @export
-DOSE::geneID
+#' @importFrom enrichit geneID
+#' @export
+enrichit::geneID
 
-##' @importFrom DOSE geneInCategory
-##' @export
-DOSE::geneInCategory
+#' @importFrom enrichit geneInCategory
+#' @export
+enrichit::geneInCategory

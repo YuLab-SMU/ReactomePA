@@ -1,10 +1,10 @@
-##' mapping organism name to annotationDb package name
-##'
-##'
-##' @title getDb
-##' @param organism one of supported organism
-##' @return annotationDb name
-##' @author Yu Guangchuang
+#' mapping organism name to annotationDb package name
+#'
+#'
+#' @title getDb
+#' @param organism one of supported organism
+#' @return annotationDb name
+#' @author Yu Guangchuang
 getDb <- function(organism) {
     if (organism == "worm") {
         organism = "celegans"
@@ -36,6 +36,3 @@ getDb <- function(organism) {
                      )
     return(annoDb)
 }
-
-enricher_internal <- DOSE:::enricher_internal
-GSEA_internal <- DOSE:::GSEA_internal

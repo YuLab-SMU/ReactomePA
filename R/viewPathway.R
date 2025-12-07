@@ -1,31 +1,31 @@
-##' view reactome pathway
-##'
-##' plotting reactome pathway
-##' @title viewPathway
-##' @param pathName pathway Name
-##' @param organism supported organism
-##' @param readable logical
-##' @param foldChange fold change
-##' @param keyType keyType of gene ID (i.e. names of foldChange, if available)
-##' @param layout graph layout
+#' view reactome pathway
+#'
+#' plotting reactome pathway
+#' @title viewPathway
+#' @param pathName pathway Name
+#' @param organism supported organism
+#' @param readable logical
+#' @param foldChange fold change
+#' @param keyType keyType of gene ID (i.e. names of foldChange, if available)
+#' @param layout graph layout
 ## @importFrom graphite pathways
-##' @importFrom graphite convertIdentifiers
-##' @importFrom graphite pathwayGraph
-##' @importFrom igraph igraph.from.graphNEL
-##' @importFrom igraph as.undirected
-##' @importFrom igraph V<-
-##' @importFrom DOSE EXTID2NAME
-##' @importFrom ggraph ggraph
-##' @importFrom ggraph geom_edge_link
-##' @importFrom ggraph geom_node_point
-##' @importFrom ggraph geom_node_text
-##' @importFrom ggplot2 aes_
-##' @importFrom ggplot2 scale_color_continuous
-##' @importFrom ggplot2 scale_size
-##' @importFrom ggplot2 theme_void
-##' @return plot
-##' @export
-##' @author Yu Guangchuang
+#' @importFrom graphite convertIdentifiers
+#' @importFrom graphite pathwayGraph
+#' @importFrom igraph igraph.from.graphNEL
+#' @importFrom igraph as.undirected
+#' @importFrom igraph V<-
+#' @importFrom enrichit EXTID2NAME
+#' @importFrom ggraph ggraph
+#' @importFrom ggraph geom_edge_link
+#' @importFrom ggraph geom_node_point
+#' @importFrom ggraph geom_node_text
+#' @importFrom ggplot2 aes_
+#' @importFrom ggplot2 scale_color_continuous
+#' @importFrom ggplot2 scale_size
+#' @importFrom ggplot2 theme_void
+#' @return plot
+#' @export
+#' @author Yu Guangchuang
 viewPathway <- function(pathName,
                         organism="human",
                         readable=TRUE,
@@ -104,10 +104,10 @@ viewPathway <- function(pathName,
 }
 
 
-##' @importFrom igraph V
-##' @importFrom igraph V<-
-##' @importFrom igraph E
-##' @importFrom igraph E<-
+#' @importFrom igraph V
+#' @importFrom igraph V<-
+#' @importFrom igraph E
+#' @importFrom igraph E<-
 setting.graph.attributes <- function(g, node.size=8,
                                      node.color="#B3B3B3",
                                      edege.width=2,

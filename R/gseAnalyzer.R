@@ -1,52 +1,58 @@
-##' Gene Set Enrichment Analysis of Reactome Pathway
-##'
-##'
-##' @title gsePathway
-##' @param geneList order ranked geneList
-##' @param organism organism
-##' @param exponent weight of each step
-##' @param minGSSize minimal size of each geneSet for analyzing
-##' @param maxGSSize maximal size of each geneSet for analyzing
-##' @param eps This parameter sets the boundary for calculating the p value.
-##' @param pvalueCutoff pvalue Cutoff
-##' @param pAdjustMethod pvalue adjustment method
-##' @param verbose print message or not
-##' @param seed logical
-##' @param by one of 'fgsea' or 'DOSE'
-##' @param ... other parameter
-##' @importClassesFrom DOSE gseaResult
-##' @importMethodsFrom DOSE show
-##' @importMethodsFrom DOSE summary
-##' @export
-##' @return gseaResult object
-##' @author Yu Guangchuang
+#' Gene Set Enrichment Analysis of Reactome Pathway
+#'
+#'
+#' @title gsePathway
+#' @param geneList order ranked geneList
+#' @param organism organism
+#' @param exponent weight of each step
+#' @param minGSSize minimal size of each geneSet for analyzing
+#' @param maxGSSize maximal size of each geneSet for analyzing
+#' @param pvalueCutoff pvalue Cutoff
+#' @param pAdjustMethod pvalue adjustment method
+#' @param verbose print message or not
+#' @param nPerm The number of permutations for the "permute" method
+#' @param method one of "sample", "permute", "multilevel"
+#' @param adaptive logical
+#' @param minPerm minimal number of permutations for the "multilevel" method
+#' @param maxPerm maximal number of permutations for the "multilevel" method
+#' @param pvalThreshold The p-value threshold for the "multilevel" method
+#' @importClassesFrom enrichit gseaResult
+#' @importMethodsFrom enrichit show
+#' @importMethodsFrom enrichit summary
+#' @export
+#' @return gseaResult object
+#' @author Yu Guangchuang
 gsePathway <- function(geneList,
                        organism      = "human",
                        exponent      = 1,
                        minGSSize     = 10,
                        maxGSSize     = 500,
-                       eps           = 1e-10,
                        pvalueCutoff  = 0.05,
                        pAdjustMethod = "BH",
                        verbose       = TRUE,
-                       seed          = FALSE,
-                       by            = 'fgsea',
-                       ...) {
+                       nPerm         = 1000,
+                       method        = "multilevel",
+                       adaptive      = FALSE,
+                       minPerm       = 101,
+                       maxPerm       = 1e5,
+                       pvalThreshold = 0.1) {
 
-    Reactome_DATA <- get_Reactome_DATA(organism)
+    gson <- gson_Reactome(organism)
 
-    res <- GSEA_internal(geneList      = geneList,
-                         exponent      = exponent,
-                         minGSSize     = minGSSize,
-                         maxGSSize     = maxGSSize,
-                         eps           = eps,
-                         pvalueCutoff  = pvalueCutoff,
-                         pAdjustMethod = pAdjustMethod,
-                         verbose       = verbose,
-                         USER_DATA     = Reactome_DATA,
-                         seed          = seed,
-                         by            = by,
-                         ...)
+    res <- enrichit::gsea_gson(geneList      = geneList,
+                               gson          = gson,
+                               exponent      = exponent,
+                               minGSSize     = minGSSize,
+                               maxGSSize     = maxGSSize,
+                               pvalueCutoff  = pvalueCutoff,
+                               pAdjustMethod = pAdjustMethod,
+                               verbose       = verbose,
+                               nPerm         = nPerm,
+                               method        = method,
+                               adaptive      = adaptive,
+                               minPerm       = minPerm,
+                               maxPerm       = maxPerm,
+                               pvalThreshold = pvalThreshold)
 
     if (is.null(res))
         return(res)
@@ -69,10 +75,10 @@ get_Reactome_Env <- function() {
     get(".ReactomePA_Env", envir= reactome_env)
 }
 
-##' @importMethodsFrom AnnotationDbi as.list
-##' @importFrom reactome.db reactomeEXTID2PATHID
-##' @importFrom reactome.db reactomePATHID2EXTID
-##' @importFrom reactome.db reactomePATHID2NAME
+#' @importMethodsFrom AnnotationDbi as.list
+#' @importFrom reactome.db reactomeEXTID2PATHID
+#' @importFrom reactome.db reactomePATHID2EXTID
+#' @importFrom reactome.db reactomePATHID2NAME
 get_Reactome_DATA <- function(organism = "human") {
     ReactomePA_Env <- get_Reactome_Env()
 
@@ -118,14 +124,14 @@ get_Reactome_DATA <- function(organism = "human") {
 }
 
 
-##' get all entrezgene ID of a specific organism
-##'
-##'
-##' @title getALLEG
-##' @param organism species
-##' @return entrez gene ID vector
-##' @importMethodsFrom AnnotationDbi keys
-##' @author Yu Guangchuang
+#' get all entrezgene ID of a specific organism
+#'
+#'
+#' @title getALLEG
+#' @param organism species
+#' @return entrez gene ID vector
+#' @importMethodsFrom AnnotationDbi keys
+#' @author Yu Guangchuang
 getALLEG <- function(organism) {
     annoDb <- getDb(organism)
     require(annoDb, character.only = TRUE)

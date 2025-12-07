@@ -10,13 +10,15 @@ gsePathway(
   exponent = 1,
   minGSSize = 10,
   maxGSSize = 500,
-  eps = 1e-10,
   pvalueCutoff = 0.05,
   pAdjustMethod = "BH",
   verbose = TRUE,
-  seed = FALSE,
-  by = "fgsea",
-  ...
+  nPerm = 1000,
+  method = "multilevel",
+  adaptive = FALSE,
+  minPerm = 101,
+  maxPerm = 1e+05,
+  pvalThreshold = 0.1
 )
 }
 \arguments{
@@ -30,19 +32,23 @@ gsePathway(
 
 \item{maxGSSize}{maximal size of each geneSet for analyzing}
 
-\item{eps}{This parameter sets the boundary for calculating the p value.}
-
 \item{pvalueCutoff}{pvalue Cutoff}
 
 \item{pAdjustMethod}{pvalue adjustment method}
 
 \item{verbose}{print message or not}
 
-\item{seed}{logical}
+\item{nPerm}{The number of permutations for the "permute" method}
 
-\item{by}{one of 'fgsea' or 'DOSE'}
+\item{method}{one of "sample", "permute", "multilevel"}
 
-\item{...}{other parameter}
+\item{adaptive}{logical}
+
+\item{minPerm}{minimal number of permutations for the "multilevel" method}
+
+\item{maxPerm}{maximal number of permutations for the "multilevel" method}
+
+\item{pvalThreshold}{The p-value threshold for the "multilevel" method}
 }
 \value{
 gseaResult object

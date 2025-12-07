@@ -18,8 +18,8 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{DOSE}{\code{\link[DOSE]{geneID}}, \code{\link[DOSE]{geneInCategory}}}
+  \item{enrichit}{\code{\link[enrichit]{geneID}}, \code{\link[enrichit]{geneInCategory}}}
 
-  \item{enrichplot}{\code{\link[enrichplot]{cnetplot}}, \code{\link[enrichplot]{dotplot}}, \code{\link[enrichplot]{emapplot}}, \code{\link[enrichplot]{gseaplot}}, \code{\link[enrichplot]{heatplot}}, \code{\link[enrichplot]{ridgeplot}}}
+  \item{enrichplot}{\code{\link[enrichplot:reexports]{cnetplot}}, \code{\link[enrichplot]{dotplot}}, \code{\link[enrichplot]{emapplot}}, \code{\link[enrichplot]{gseaplot}}, \code{\link[enrichplot]{heatplot}}, \code{\link[enrichplot]{ridgeplot}}}
 }}
 

@@ -8,32 +8,32 @@ with FDR control.}
 \usage{
 enrichPathway(
   gene,
-  organism = "human",
   pvalueCutoff = 0.05,
   pAdjustMethod = "BH",
-  qvalueCutoff = 0.2,
-  universe,
+  universe = NULL,
   minGSSize = 10,
   maxGSSize = 500,
+  qvalueCutoff = 0.2,
+  organism = "human",
   readable = FALSE
 )
 }
 \arguments{
 \item{gene}{a vector of entrez gene id.}
 
-\item{organism}{one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".}
-
 \item{pvalueCutoff}{Cutoff value of pvalue.}
 
 \item{pAdjustMethod}{one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"}
-
-\item{qvalueCutoff}{Cutoff value of qvalue}
 
 \item{universe}{background genes}
 
 \item{minGSSize}{minimal size of genes annotated by Ontology term for testing.}
 
 \item{maxGSSize}{maximal size of each geneSet for analyzing}
+
+\item{qvalueCutoff}{Cutoff value of qvalue}
+
+\item{organism}{one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".}
 
 \item{readable}{whether mapping gene ID to gene Name}
 }
@@ -57,7 +57,7 @@ with FDR control.
 
 }
 \seealso{
-\code{\link{enrichResult-class}}
+\code{\link[enrichit]{enrichResult-class}}
 }
 \author{
 Guangchuang Yu \url{http://ygc.name}

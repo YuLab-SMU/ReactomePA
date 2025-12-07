@@ -1,7 +1,7 @@
 Package: ReactomePA
 Type: Package
 Title: Reactome Pathway Analysis
-Version: 1.53.0
+Version: 1.53.0.001
 Authors@R: c(person(given = "Guangchuang", family = "Yu",
 	   	    email = "guangchuangyu@gmail.com",
 		    role  = c("aut", "cre")),
@@ -17,8 +17,8 @@ Depends:
     R (>= 3.4.0)
 Imports:
     AnnotationDbi,
-    DOSE (>= 3.5.1),
     enrichplot,
+    enrichit,
     ggplot2 (>= 3.3.5),
     ggraph,
     reactome.db,
@@ -27,7 +27,6 @@ Imports:
     gson,
     yulab.utils (>= 0.1.5)
 Suggests:
-    BiocStyle,
     clusterProfiler,
     knitr,
     rmarkdown,
@@ -42,5 +41,5 @@ BugReports: https://github.com/GuangchuangYu/ReactomePA/issues
 Packaged: 2012-03-05 18:26:53 UTC; mcarlson
 biocViews: Pathways, Visualization, Annotation, MultipleComparison,
     GeneSetEnrichment, Reactome
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Encoding: UTF-8

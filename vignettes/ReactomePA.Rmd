@@ -21,27 +21,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r style, echo=FALSE, results="asis", message=FALSE}
-knitr::opts_chunk$set(tidy = FALSE,
-                      warning = FALSE,
-                      message = FALSE)
-```
 
-```{r echo=FALSE, results='hide', message=FALSE}
-CRANpkg <- function (pkg) {
-    cran <- "https://CRAN.R-project.org/package"
-    fmt <- "[%s](%s=%s)"
-    sprintf(fmt, pkg, cran, pkg)
-}
-
-Biocpkg <- function (pkg) {
-    sprintf("[%s](http://bioconductor.org/packages/%s)", pkg, pkg)
-}
-
-library(org.Hs.eg.db)
-library(DOSE)
-library(ReactomePA)
-```
 
 
 
@@ -53,7 +33,7 @@ Please go to <https://yulab-smu.top/biomedical-knowledge-mining-book/> for the f
 
 # Citation
 
-If you use `r Biocpkg("ReactomePA")` [@yu_reactomepa_2016] in published research, please cite:
+If you use `r yulab.utils::Biocpkg("ReactomePA")` [@yu_reactomepa_2016] in published research, please cite:
 
 __*G Yu*__, QY He^\*^. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. __*Molecular BioSystems*__ 2016, 12(2):477-479. doi: [10.1039/C5MB00663E](http://dx.doi.org/10.1039/C5MB00663E)
 

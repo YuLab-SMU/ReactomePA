@@ -4,12 +4,12 @@
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/GuangchuangYu/ReactomePA/branch/master/graph/badge.svg)](https://codecov.io/gh/GuangchuangYu/ReactomePA/)
-[![](https://img.shields.io/badge/release%20version-1.40.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
-[![](https://img.shields.io/badge/devel%20version-1.41.1-green.svg)](https://github.com/guangchuangyu/ReactomePA)
+[![](https://img.shields.io/badge/release%20version-1.54.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
+[![](https://img.shields.io/badge/devel%20version-1.53.0-green.svg)](https://github.com/guangchuangyu/ReactomePA)
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
 
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--10--30-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2025--12--07-green.svg)](https://github.com/GuangchuangYu/ReactomePA/commits/master)
 [![Build
 Status](http://www.bioconductor.org/shields/build/devel/bioc/ReactomePA.svg)](https://bioconductor.org/checkResults/devel/bioc-LATEST/ReactomePA/)
 [![Linux/Mac Travis Build
@@ -19,7 +19,8 @@ Status](https://img.shields.io/appveyor/ci/Guangchuangyu/ReactomePA/master.svg?l
 
 This package provides functions for pathway analysis based on REACTOME
 pathway database. It implements enrichment analysis, gene set enrichment
-analysis and several functions for visualization.
+analysis and several functions for visualization. This package is not
+affiliated with the Reactome team.
 
 For details, please visit
 <https://yulab-smu.top/biomedical-knowledge-mining-book/>.
@@ -47,24 +48,16 @@ BioSystems*** 2016, 12(2):477-479.
 [![](https://img.shields.io/badge/doi-10.1039/c5mb00663e-green.svg)](https://doi.org/10.1039/c5mb00663e)
 
 <!--
-
-r badge_altmetric("4796667", "green")
-
-
+&#10;r badge_altmetric("4796667", "green")
+&#10;
 ------------------------------------------------------------------------
-
-
-
-<img src="https://guangchuangyu.github.io/software/citation_trend/ReactomePA.png" width="890"/>
-
-
+&#10;
+&#10;<img src="https://guangchuangyu.github.io/software/citation_trend/ReactomePA.png" width="890"/>
+&#10;
 ### Download stats
-
-[![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
+&#10;[![download](http://www.bioconductor.org/shields/downloads/ReactomePA.svg)](https://bioconductor.org/packages/stats/bioc/ReactomePA/)
 r badge_bioc_download("ReactomePA", "total", "blue")
 r badge_bioc_download("ReactomePA", "month", "blue")
-
-
+&#10;
 <img src="https://guangchuangyu.github.io/software/dlstats/ReactomePA.png" width="890"/>
-
--->
+&#10;-->

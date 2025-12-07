@@ -1,17 +1,17 @@
-##' download the latest version of Reactome and stored in a 'GSON' object
-##'
-##'
-##' @title gson_Reactome
-##' @param organism one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".
-##' @return a 'GSON' object
-##' @importFrom gson gson
-##' @importFrom utils stack
-##' @export
-##' @examples
-##' \dontrun{
-##' rec_gson <- gson_Reactome("human")
-##' }
-##'
+#' download the latest version of Reactome and stored in a 'GSON' object
+#'
+#'
+#' @title gson_Reactome
+#' @param organism one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".
+#' @return a 'GSON' object
+#' @importFrom gson gson
+#' @importFrom utils stack
+#' @export
+#' @examples
+#' \dontrun{
+#' rec_gson <- gson_Reactome("human")
+#' }
+#'
 gson_Reactome <- function(organism = "human") {
 
     Reactome_DATA <- get_Reactome_DATA(organism)

@@ -1,57 +1,57 @@
-##' Pathway Enrichment Analysis of a gene set.
-##' Given a vector of genes, this function will return the enriched pathways
-##' with FDR control.
-##'
-##'
-##' @param gene a vector of entrez gene id.
-##' @param organism one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".
-##' @param pvalueCutoff Cutoff value of pvalue.
-##' @param pAdjustMethod one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"
-##' @param qvalueCutoff Cutoff value of qvalue
-##' @param universe background genes
-##' @param minGSSize minimal size of genes annotated by Ontology term for testing.
-##' @param maxGSSize maximal size of each geneSet for analyzing
-##' @param readable whether mapping gene ID to gene Name
-##' @return A \code{enrichResult} instance.
-##' @importFrom DOSE setReadable
-##' @importClassesFrom DOSE enrichResult
-##' @importMethodsFrom DOSE show
-##' @importMethodsFrom DOSE summary
-##' @importFrom DOSE EXTID2NAME
-##' @export
-##' @author Guangchuang Yu \url{http://ygc.name}
-##' @seealso \code{\link{enrichResult-class}}
-##' @keywords manip
-##' @examples
-##'
-##' 	gene <- c("11171", "8243", "112464", "2194",
-##'				"9318", "79026", "1654", "65003",
-##'				"6240", "3476", "6238", "3836",
-##'				"4176", "1017", "249")
-##' 	yy = enrichPathway(gene, pvalueCutoff=0.05)
-##' 	head(summary(yy))
-##' 	#plot(yy)
-##'
+#' Pathway Enrichment Analysis of a gene set.
+#' Given a vector of genes, this function will return the enriched pathways
+#' with FDR control.
+#'
+#'
+#' @param gene a vector of entrez gene id.
+#' @param organism one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".
+#' @param pvalueCutoff Cutoff value of pvalue.
+#' @param pAdjustMethod one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"
+#' @param qvalueCutoff Cutoff value of qvalue
+#' @param universe background genes
+#' @param minGSSize minimal size of genes annotated by Ontology term for testing.
+#' @param maxGSSize maximal size of each geneSet for analyzing
+#' @param readable whether mapping gene ID to gene Name
+#' @return A \code{enrichResult} instance.
+#' @importFrom enrichit setReadable
+#' @importClassesFrom enrichit enrichResult
+#' @importMethodsFrom enrichit show
+#' @importMethodsFrom enrichit summary
+#' @importFrom enrichit EXTID2NAME
+#' @export
+#' @author Guangchuang Yu \url{http://ygc.name}
+#' @seealso \code{\link[enrichit]{enrichResult-class}}
+#' @keywords manip
+#' @examples
+#'
+#' 	gene <- c("11171", "8243", "112464", "2194",
+#'				"9318", "79026", "1654", "65003",
+#'				"6240", "3476", "6238", "3836",
+#'				"4176", "1017", "249")
+#' 	yy = enrichPathway(gene, pvalueCutoff=0.05)
+#' 	head(summary(yy))
+#' 	#plot(yy)
+#'
 enrichPathway <- function(gene,
-                          organism="human",
                           pvalueCutoff = 0.05,
                           pAdjustMethod="BH",
-                          qvalueCutoff = 0.2,
-                          universe,
+                          universe = NULL,
                           minGSSize=10,
                           maxGSSize=500,
+                          qvalueCutoff = 0.2,
+                          organism="human",
                           readable=FALSE) {
 
-    Reactome_DATA <- get_Reactome_DATA(organism)
+    gson <- gson_Reactome(organism)
 
-    res <- enricher_internal(gene,
+    res <- enrichit::ora_gson(gene,
                            pvalueCutoff=pvalueCutoff,
                            pAdjustMethod=pAdjustMethod,
-                           qvalueCutoff=qvalueCutoff,
                            universe = universe,
                            minGSSize = minGSSize,
                            maxGSSize = maxGSSize,
-                           USER_DATA = Reactome_DATA)
+                           qvalueCutoff=qvalueCutoff,
+                           gson = gson)
 
     if (is.null(res))
         return(res)
@@ -68,7 +68,7 @@ enrichPathway <- function(gene,
 
 
 
-## ' @importFrom DOSE TERM2NAME
+## ' @importFrom enrichit TERM2NAME
 ## ' @importFrom reactome.db reactomePATHID2NAME
 ## ' @importFrom reactome.db reactome.db
 ## ' @importMethodsFrom AnnotationDbi mget

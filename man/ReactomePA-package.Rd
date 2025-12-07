@@ -11,7 +11,7 @@ This package provides functions for pathway analysis based on REACTOME pathway d
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://yulab-smu.top/biomedical-knowledge-mining-book/}
+  \item \url{https://yulab-smu.top/contribution-knowledge-mining/}
   \item Report bugs at \url{https://github.com/GuangchuangYu/ReactomePA/issues}
 }
 
