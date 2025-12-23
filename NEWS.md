@@ -1,4 +1,4 @@
-# ReactomePA 1.52.0.001
+# ReactomePA 1.53.1
 
 + use 'enrichit' as engine for enrichment analysis (2025-12-07, Sun)
 
