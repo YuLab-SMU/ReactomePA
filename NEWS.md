@@ -1,3 +1,7 @@
+# ReactomePA 1.56.0
+
++ Bioconductor RELEASE_3_23 (2026-04-29, Wed)
+
 # ReactomePA 1.55.1
 
 + use 'enrichit' as engine for enrichment analysis (2025-12-07, Sun)
