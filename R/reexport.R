@@ -1,3 +1,12 @@
+
+#' @importFrom enrichit geneID
+#' @export
+enrichit::geneID
+
+#' @importFrom enrichit geneInCategory
+#' @export
+enrichit::geneInCategory
+
 #' @importFrom enrichplot cnetplot
 #' @export
 enrichplot::cnetplot

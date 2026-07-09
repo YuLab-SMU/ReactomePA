@@ -8,6 +8,7 @@ gsePathway(
   geneList,
   organism = "human",
   exponent = 1,
+  weight = NULL,
   minGSSize = 10,
   maxGSSize = 500,
   pvalueCutoff = 0.05,
@@ -27,6 +28,8 @@ gsePathway(
 \item{organism}{organism}
 
 \item{exponent}{weight of each step}
+
+\item{weight}{A named numeric vector of weights for genes. The names should match the names of geneList. If provided, the geneList will be multiplied by the weight and resorted before GSEA (default: NULL).}
 
 \item{minGSSize}{minimal size of each geneSet for analyzing}
 

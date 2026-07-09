@@ -36,3 +36,26 @@ getDb <- function(organism) {
                      )
     return(annoDb)
 }
+
+#' Reactome species name to graphite organism name mapping
+#'
+#' Maps common organism names (e.g. "human", "mouse") to the
+#' organism names expected by `graphite::pathways()`.
+#'
+#' @keywords internal
+REACTOME_ORG_MAP <- list(
+    arabidopsis = "athaliana",
+    bovine      = "btaurus",
+    canine      = "cfamiliaris",
+    chicken     = "ggallus",
+    ecolik12    = "ecoli",
+    fly         = "dmelanogaster",
+    human       = "hsapiens",
+    mouse       = "mmusculus",
+    pig         = "sscrofa",
+    rat         = "rnorvegicus",
+    celegans    = "celegans",
+    xenopus     = "xlaevis",
+    yeast       = "scerevisiae",
+    zebrafish   = "drerio"
+)

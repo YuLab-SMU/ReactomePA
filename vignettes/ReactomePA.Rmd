@@ -26,7 +26,37 @@ vignette: >
 
 
 
-# Vignette
+# Features
+
+`ReactomePA` provides the following analysis and visualization functions for Reactome pathway enrichment:
+
+## Enrichment Analysis
+
+- `enrichPathway()`: Over-Representation Analysis (ORA) for Reactome pathways
+- `gsePathway()`: Gene Set Enrichment Analysis (GSEA) for Reactome pathways
+- `nsePathway()`: Network-based Set Enrichment Analysis (NSEA) using the Reactome reaction graph with Random Walk with Restart
+
+## Post-hoc Analysis
+
+- `bayes_reactome()`: Bayesian term selection to compress redundant pathway output
+- `enrichPathway(weight = ...)` and `gsePathway(weight = ...)`: Weighted ORA/GSEA
+
+## Utilities
+
+- `gson_Reactome()`: Build a `GSON` gene-set annotation object from Reactome
+- `prepareReactomeNetwork()`: Build and cache the Reactome reaction graph for NSEA
+
+## Visualization
+
+- `dotplot()`: Dot plot of enrichment results
+- `cnetplot()`: Gene-concept network plot
+- `emapplot()`: Enrichment map
+- `heatplot()`: Gene-pathway heatmap
+- `ridgeplot()`: Ridge plot of GSEA results
+- `gseaplot()`: GSEA running score plot
+- `viewPathway()`: Topological view of a Reactome pathway
+
+# Full Vignette
 
 Please go to <https://yulab-smu.top/biomedical-knowledge-mining-book/> for the full vignette.
 

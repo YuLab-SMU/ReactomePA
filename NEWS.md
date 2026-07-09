@@ -1,3 +1,12 @@
+# ReactomePA 1.57.1
+
++ `nsePathway()`: network-based set enrichment analysis (NSEA) on the Reactome reaction graph using Random Walk with Restart (2026-07-08, Wed)
++ `bayes_reactome()`: Bayesian term selection for compressing redundant Reactome pathway output via `enrichit::bayes_enrich()` (2026-07-08, Wed)
++ `prepareReactomeNetwork()`: utility to build and cache the Reactome reaction graph for reuse in `nsePathway()` (2026-07-08, Wed)
++ `enrichPathway()` and `gsePathway()` now accept a `weight` parameter for weighted ORA/GSEA (2026-07-08, Wed)
++ migrate caching from custom environment (`reactome_env`) to `yulab.utils::with_cache()`; delete `get_Reactome_DATA()`, `getALLEG()` (2026-07-08, Wed)
++ `gson_Reactome()` now caches the final GSON object directly, with data cleaning inlined (2026-07-08, Wed)
+
 # ReactomePA 1.56.0
 
 + Bioconductor RELEASE_3_23 (2026-04-29, Wed)

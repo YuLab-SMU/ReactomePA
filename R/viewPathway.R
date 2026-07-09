@@ -11,7 +11,7 @@
 ## @importFrom graphite pathways
 #' @importFrom graphite convertIdentifiers
 #' @importFrom graphite pathwayGraph
-#' @importFrom igraph igraph.from.graphNEL
+#' @importFrom igraph graph_from_graphnel
 #' @importFrom igraph as.undirected
 #' @importFrom igraph V<-
 #' @importFrom enrichit EXTID2NAME
@@ -19,7 +19,8 @@
 #' @importFrom ggraph geom_edge_link
 #' @importFrom ggraph geom_node_point
 #' @importFrom ggraph geom_node_text
-#' @importFrom ggplot2 aes_
+#' @importFrom ggplot2 aes
+#' @importFrom utils getFromNamespace
 #' @importFrom ggplot2 scale_color_continuous
 #' @importFrom ggplot2 scale_size
 #' @importFrom ggplot2 theme_void
@@ -33,38 +34,13 @@ viewPathway <- function(pathName,
                         keyType = "ENTREZID",
                         layout = "kk"){
 
-    ## call pathways via imported from graphite has the following issue:
-    ##
-    ## Error: processing vignette 'ReactomePA.Rnw' failed with diagnostics:
-    ## no item called "package:graphite" on the search list
-    ## Execution halted
-    ##
-
-    pkg <- "graphite"
-    require(pkg, character.only=TRUE)
-
-    # convertion to the names that graphite::pathways understands
-    org2org <- list(arabidopsis="athaliana",
-                        bovine="btaurus",
-                        canine="cfamiliaris",
-                        chicken="ggallus",
-                        ecolik12="ecoli",
-                        fly="dmelanogaster",
-                        human="hsapiens",
-                        mouse="mmusculus",
-                        pig="sscrofa",
-                        rat="rnorvegicus",
-                        celegans="celegans",
-                        xenopus="xlaevis",
-                        yeast="scerevisiae",
-                    zebrafish="drerio")
-
-    if(!(organism %in% names(org2org))){
-        cat(paste(c("the list of supported organisms:",names(org2org)), collapse='\n'))
+    if (!organism %in% names(REACTOME_ORG_MAP)) {
+        cat(paste(c("the list of supported organisms:", names(REACTOME_ORG_MAP)), collapse = '\n'))
         stop(sprintf("organism %s is not supported", organism))
     }
-    pathways <- eval(parse(text="pathways"))
-    p <- pathways(org2org[[organism]], 'reactome')[[pathName]]
+
+    pathways <- getFromNamespace("pathways", "graphite")
+    p <- pathways(REACTOME_ORG_MAP[[organism]], 'reactome')[[pathName]]
 
     if (readable) {
         p <- convertIdentifiers(p, "symbol")
@@ -81,7 +57,7 @@ viewPathway <- function(pathName,
     }
 
     g <- pathwayGraph(p)
-    gg <- igraph.from.graphNEL(g)
+    gg <- graph_from_graphnel(g)
     gg <- as.undirected(gg)
     gg <- setting.graph.attributes(gg)
     V(gg)$name <- sub("[^:]+:", "", V(gg)$name)
@@ -96,9 +72,9 @@ viewPathway <- function(pathName,
     ## netplot(gg, foldChange=foldChange, ...)
     ggraph(gg, layout=layout) +
         geom_edge_link(alpha=.8, colour='darkgrey') +
-        geom_node_point(aes_(color=~as.numeric(as.character(color)), size=~size)) +
+        geom_node_point(aes(color = as.numeric(as.character(color)), size = size)) +
         scale_color_continuous(low="red", high="blue", name = "fold change", na.value = "#E5C494") +
-        geom_node_text(aes_(label=~name), repel=TRUE) +
+        geom_node_text(aes(label = name), repel=TRUE) +
         ## scale_color_gradientn(name = "fold change", colors=palette, na.value = "#E5C494") +
         scale_size(guide = "none") + theme_void()
 }
@@ -110,14 +86,14 @@ viewPathway <- function(pathName,
 #' @importFrom igraph E<-
 setting.graph.attributes <- function(g, node.size=8,
                                      node.color="#B3B3B3",
-                                     edege.width=2,
-                                     edege.color="#8DA0CB") {
+                                     edge.width=2,
+                                     edge.color="#8DA0CB") {
     V(g)$size <- node.size
     V(g)$color <- node.color
     V(g)$label <- V(g)$name
 
-    E(g)$width <- edege.width
-    E(g)$color <- edege.color
+    E(g)$width <- edge.width
+    E(g)$color <- edge.color
 
     return(g)
 }

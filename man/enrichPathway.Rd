@@ -11,6 +11,7 @@ enrichPathway(
   pvalueCutoff = 0.05,
   pAdjustMethod = "BH",
   universe = NULL,
+  weight = NULL,
   minGSSize = 10,
   maxGSSize = 500,
   qvalueCutoff = 0.2,
@@ -26,6 +27,8 @@ enrichPathway(
 \item{pAdjustMethod}{one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"}
 
 \item{universe}{background genes}
+
+\item{weight}{A named numeric vector of weights for background genes. If provided, Weighted ORA will be performed using Wallenius' noncentral hypergeometric distribution.}
 
 \item{minGSSize}{minimal size of genes annotated by Ontology term for testing.}
 
@@ -46,15 +49,14 @@ Given a vector of genes, this function will return the enriched pathways
 with FDR control.
 }
 \examples{
-
+\dontrun{
 	gene <- c("11171", "8243", "112464", "2194",
 			"9318", "79026", "1654", "65003",
 			"6240", "3476", "6238", "3836",
 			"4176", "1017", "249")
 	yy = enrichPathway(gene, pvalueCutoff=0.05)
 	head(summary(yy))
-	#plot(yy)
-
+}
 }
 \seealso{
 \code{\link[enrichit]{enrichResult-class}}

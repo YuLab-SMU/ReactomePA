@@ -11,7 +11,7 @@ rd:
 	Rscript -e 'roxygen2::roxygenise(".")'
 
 readme:
-	Rscript -e 'rmarkdown::render("README.Rmd", encoding="UTF-8")'
+	Rscript -e 'set_proxy(); rmarkdown::render("README.Rmd", encoding="UTF-8")'
 
 build:
 	#cd ..;\

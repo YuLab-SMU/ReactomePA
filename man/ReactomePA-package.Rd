@@ -6,7 +6,7 @@
 \alias{ReactomePA-package}
 \title{ReactomePA: Reactome Pathway Analysis}
 \description{
-This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis and several functions for visualization. This package is not affiliated with the Reactome team.
+This package provides functions for pathway analysis based on REACTOME pathway database. It implements enrichment analysis, gene set enrichment analysis, network-based enrichment analysis (NSEA) on the Reactome reaction graph, Bayesian term selection, weighted enrichment, and several functions for visualization. This package is not affiliated with the Reactome team.
 }
 \seealso{
 Useful links:
@@ -18,6 +18,11 @@ Useful links:
 }
 \author{
 \strong{Maintainer}: Guangchuang Yu \email{guangchuangyu@gmail.com}
+
+Authors:
+\itemize{
+  \item Guangchuang Yu \email{guangchuangyu@gmail.com}
+}
 
 Other contributors:
 \itemize{
