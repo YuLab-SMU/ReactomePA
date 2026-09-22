@@ -5,3 +5,4 @@
 __init__.py
 __pycache__
 __init__.pyc
+.reasonix/

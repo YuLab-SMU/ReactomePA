@@ -4,8 +4,11 @@
 \alias{prepareReactomeNetwork}
 \title{Prepare Reactome reaction network for NSEA}
 \usage{
-prepareReactomeNetwork(organism = "human", directed = FALSE,
-  cores = getOption("mc.cores", parallel::detectCores()))
+prepareReactomeNetwork(
+  organism = "human",
+  directed = FALSE,
+  cores = getOption("mc.cores", 1L)
+)
 }
 \arguments{
 \item{organism}{Supported organism: "human", "mouse", "rat", "yeast",
@@ -17,12 +20,13 @@ undirected (reciprocal edges added).}
 
 \item{cores}{Number of CPU cores used to convert Reactome pathways to
 reaction edges in parallel. Defaults to `getOption("mc.cores")`, or
-`parallel::detectCores()` if the option is unset. The per-pathway
-conversions are independent, so more cores always helps, but measured
-scaling saturates at roughly 4-5 effective cores on this step (the
-graphite identifier conversion is hash-lookup-bound), so values much
-beyond ~16 rarely reduce wall time further. On Windows, `mclapply()`
-falls back to serial execution.}
+`1` (serial) if the option is unset: the conversion is fast enough
+(~40 s for human) that parallelizing is optional, and serial leaves
+the rest of the machine untouched. The per-pathway conversions are
+independent and pure in-memory vectorized operations (the species
+identifier map is loaded once up front), so wall time scales close
+to linearly with `cores`. On Windows, `mclapply()` falls back to
+serial execution regardless.}
 }
 \value{
 A sparse matrix (dgCMatrix) of the Reactome reaction graph.

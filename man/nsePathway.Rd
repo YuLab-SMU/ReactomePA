@@ -15,6 +15,8 @@ nsePathway(
   maxGSSize = 500,
   threshold = 1e-09,
   maxIter = 100,
+  nPerm = 1000,
+  seed = NULL,
   verbose = TRUE,
   ...
 )
@@ -46,9 +48,19 @@ weighting (TF-IDF style). Default is FALSE.}
 
 \item{maxIter}{Maximal number of RWR iterations (default: 100).}
 
+\item{nPerm}{Number of whole-pipeline permutations used to estimate p-values
+and NES (default: 1000). Each permutation reshuffles the gene labels of the
+input scores, re-runs the RWR diffusion over the network, and recomputes
+the enrichment scores, giving a null distribution that accounts for the
+network diffusion. The smallest estimable p-value is 1/(nPerm + 1).}
+
+\item{seed}{Numeric random seed for the whole-pipeline permutation null
+(default: NULL uses the current R RNG state). Set a number for fully
+reproducible results.}
+
 \item{verbose}{Print progress messages (default: TRUE).}
 
-\item{...}{Other arguments passed to `enrichit::gsea_gson()`.}
+\item{...}{Other arguments passed to `enrichit::nsea_gson()`.}
 }
 \value{
 A `nseaResult` object (inherits from `gseaResult`).
@@ -57,7 +69,12 @@ A `nseaResult` object (inherits from `gseaResult`).
 `nsePathway()` performs network-based set enrichment analysis (NSEA)
 on Reactome pathways. Instead of using raw gene-level scores directly,
 scores are propagated across the Reactome reaction graph via Random
-Walk with Restart (RWR), then GSEA is run on the diffused scores.
+Walk with Restart (RWR), and enrichment scores are computed on the
+diffused ranking. Statistical significance is assessed with a
+whole-pipeline permutation null (gene labels of the input scores are
+reshuffled, the diffusion is re-run, and the enrichment scores are
+recomputed), so the reported p-values account for the correlation
+induced by network diffusion and control the false-positive rate.
 This captures pathway-level signals that may be diluted in individual
 gene-level statistics.
 }

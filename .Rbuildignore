@@ -9,3 +9,5 @@ docs
 .github
 site_src
 CONTEXT.md
+^\.reasonix$
+^nsea_demo$

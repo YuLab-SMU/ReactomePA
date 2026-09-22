@@ -1,4 +1,9 @@
-# ReactomePA 1.57.1
+# ReactomePA 1.99.2
+
++ `gsePathway()` and `nsePathway()` now expose an explicit `seed` parameter for reproducible GSEA results, aligned with `enrichit::gsea_gson()`: set it to a number (or `TRUE` for a fixed default seed) to get identical results across runs; `FALSE` (default) draws a fresh seed on each run (2026-08-15, Fri)
++ `prepareReactomeNetwork()` is ~40x faster: the per-pathway conversion no longer round-trips through `graphite::convertIdentifiers()`/`pathwayGraph()` (whose per-call `mapIds()` overhead was hash/SQLite-bound and capped parallel scaling at ~4-5 effective cores). It now builds a single UNIPROT->Entrez map up front and converts the protein edges with vectorized lookups, keeping `mclapply()` parallelization over pathways. The resulting network is identical to the previous output (same nodes and edge values; only node ordering may differ). The default `cores` is now `1` (serial, ~40 s for human; `options(mc.cores=...)` or an explicit `cores=` still enables parallel) instead of `detectCores()` (2026-08-16, Sat)
+
+# ReactomePA 1.99.1
 
 + `nsePathway()`: network-based set enrichment analysis (NSEA) on the Reactome reaction graph using Random Walk with Restart (2026-07-08, Wed)
 + `bayes_reactome()`: Bayesian term selection for compressing redundant Reactome pathway output via `enrichit::bayes_enrich()` (2026-07-08, Wed)
