@@ -8,6 +8,7 @@
 #' @param weight A named numeric vector of weights for genes. The names should match the names of geneList. If provided, the geneList will be multiplied by the weight and resorted before GSEA (default: NULL).
 #' @param minGSSize minimal size of each geneSet for analyzing
 #' @param maxGSSize maximal size of each geneSet for analyzing
+#' @param eps boundary for calculating the p value in multilevel mode
 #' @param pvalueCutoff pvalue Cutoff
 #' @param pAdjustMethod pvalue adjustment method
 #' @param verbose print message or not
@@ -22,6 +23,7 @@
 #'   a random seed on each run, so results may vary between runs. The underlying
 #'   permutation engine uses its own RNG seeded with this value; see
 #'   \code{enrichit::gsea()} for details.
+#' @param ... other parameters passed to \code{enrichit::gsea_gson()}
 #' @importClassesFrom enrichit gseaResult
 #' @importMethodsFrom enrichit show
 #' @importMethodsFrom enrichit summary
@@ -34,6 +36,7 @@ gsePathway <- function(geneList,
                        weight        = NULL,
                        minGSSize     = 10,
                        maxGSSize     = 500,
+                       eps           = 1e-10,
                        pvalueCutoff  = 0.05,
                        pAdjustMethod = "BH",
                        verbose       = TRUE,
@@ -43,7 +46,8 @@ gsePathway <- function(geneList,
                        minPerm       = 101,
                        maxPerm       = 1e5,
                        pvalThreshold = 0.1,
-                       seed          = FALSE) {
+                       seed          = FALSE,
+                       ...) {
 
     gson <- gson_Reactome(organism)
 
@@ -53,6 +57,7 @@ gsePathway <- function(geneList,
                                weight        = weight,
                                minGSSize     = minGSSize,
                                maxGSSize     = maxGSSize,
+                               eps           = eps,
                                pvalueCutoff  = pvalueCutoff,
                                pAdjustMethod = pAdjustMethod,
                                verbose       = verbose,
@@ -62,7 +67,8 @@ gsePathway <- function(geneList,
                                minPerm       = minPerm,
                                maxPerm       = maxPerm,
                                pvalThreshold = pvalThreshold,
-                               seed          = seed)
+                               seed          = seed,
+                               ...)
 
     if (is.null(res))
         return(res)

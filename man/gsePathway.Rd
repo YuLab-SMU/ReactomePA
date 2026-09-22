@@ -11,6 +11,7 @@ gsePathway(
   weight = NULL,
   minGSSize = 10,
   maxGSSize = 500,
+  eps = 1e-10,
   pvalueCutoff = 0.05,
   pAdjustMethod = "BH",
   verbose = TRUE,
@@ -20,7 +21,8 @@ gsePathway(
   minPerm = 101,
   maxPerm = 1e+05,
   pvalThreshold = 0.1,
-  seed = FALSE
+  seed = FALSE,
+  ...
 )
 }
 \arguments{
@@ -35,6 +37,8 @@ gsePathway(
 \item{minGSSize}{minimal size of each geneSet for analyzing}
 
 \item{maxGSSize}{maximal size of each geneSet for analyzing}
+
+\item{eps}{boundary for calculating the p value in multilevel mode}
 
 \item{pvalueCutoff}{pvalue Cutoff}
 
@@ -59,6 +63,8 @@ fixed default seed) to make the result reproducible, or FALSE (default) to draw
 a random seed on each run, so results may vary between runs. The underlying
 permutation engine uses its own RNG seeded with this value; see
 \code{enrichit::gsea()} for details.}
+
+\item{...}{other parameters passed to \code{enrichit::gsea_gson()}}
 }
 \value{
 gseaResult object
