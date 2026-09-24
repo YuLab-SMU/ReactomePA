@@ -1,14 +1,10 @@
-    ## Warning: 程序包'badger'是用R版本4.6.1 来建造的
-
-    ## Warning: 程序包'scales'是用R版本4.6.1 来建造的
-
 # ReactomePA: Reactome Pathway Analysis
 
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![](https://img.shields.io/badge/release%20version-1.56.0-green.svg)](https://www.bioconductor.org/packages/ReactomePA)
-[![](https://img.shields.io/badge/devel%20version-1.57.0-green.svg)](https://github.com/guangchuangyu/ReactomePA)
+[![](https://img.shields.io/badge/devel%20version-1.99.2-green.svg)](https://github.com/guangchuangyu/ReactomePA)
 [![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
 
