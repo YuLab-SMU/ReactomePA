@@ -15,8 +15,8 @@ library("badger")
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 `r badge_bioc_release("ReactomePA", "green")`
-`r badge_devel("guangchuangyu/ReactomePA", "green")`
-[![Bioc](http://www.bioconductor.org/shields/years-in-bioc/clusterProfiler.svg)](https://www.bioconductor.org/packages/devel/bioc/html/clusterProfiler.html#since)
+`r badge_devel("YuLab-SMU/ReactomePA", "green")`
+[![Bioc](http://www.bioconductor.org/shields/years-in-bioc/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#since)
 [![platform](http://www.bioconductor.org/shields/availability/devel/ReactomePA.svg)](https://www.bioconductor.org/packages/devel/bioc/html/ReactomePA.html#archives)
 
 
@@ -29,6 +29,24 @@ cat(packageDescription('ReactomePA')$Description)
 
 For details, please visit <https://yulab-smu.top/biomedical-knowledge-mining-book/>.
 
+## :arrow_double_down: Installation
+
+Get the released version from Bioconductor:
+
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("ReactomePA")
+```
+
+Or install the development version from GitHub:
+
+```r
+if (!requireNamespace("remotes", quietly = TRUE))
+    install.packages("remotes")
+remotes::install_github("YuLab-SMU/ReactomePA")
+```
+
 
 ## :writing_hand: Authors
 
@@ -37,6 +55,11 @@ Guangchuang YU
 School of Basic Medical Sciences, Southern Medical University
 
 <https://yulab-smu.top>
+
+## :sparkling_heart: Contributing
+
+We welcome any contributions! By participating in this project you agree to
+abide by the terms outlined in the [Contributor Code of Conduct](CONDUCT.md).
 
 
 ------------------------------------------------------------------------
