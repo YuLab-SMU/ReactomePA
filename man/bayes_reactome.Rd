@@ -11,7 +11,7 @@ bayes_reactome(
   by = "p.adjust",
   prior = 0.1,
   false_positive = 0.01,
-  false_negative = 0.1,
+  false_negative = 0.9,
   n_iter = 5000,
   burnin = 1000,
   thin = 1,
@@ -38,7 +38,9 @@ when more candidates are supplied than this value. Use `Inf` to disable.}
 \item{false_positive}{Probability of observing a gene not covered by active
 terms.}
 
-\item{false_negative}{Probability of missing a gene covered by active terms.}
+\item{false_negative}{Probability of missing a gene covered by active
+terms. ORA hit lists contain only a fraction of the genes of each active
+program, so a realistic scale is close to 1 (default 0.9).}
 
 \item{n_iter}{Total number of MCMC iterations.}
 

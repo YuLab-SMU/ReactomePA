@@ -20,7 +20,7 @@ Depends:
 Imports:
     AnnotationDbi,
     enrichplot,
-    enrichit (>= 0.2.2),
+    enrichit (>= 0.2.7),
     ggplot2 (>= 3.3.5),
     ggraph,
     reactome.db,
@@ -46,4 +46,4 @@ Packaged: 2012-03-05 18:26:53 UTC; mcarlson
 biocViews: Pathways, Visualization, Annotation, MultipleComparison,
     GeneSetEnrichment, Reactome
 Encoding: UTF-8
-Config/roxygen2/version: 8.1.0
+Config/roxygen2/version: 8.1.1

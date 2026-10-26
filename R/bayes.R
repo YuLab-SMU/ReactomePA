@@ -22,7 +22,9 @@
 #' @param prior Prior probability that a term is active.
 #' @param false_positive Probability of observing a gene not covered by active
 #'   terms.
-#' @param false_negative Probability of missing a gene covered by active terms.
+#' @param false_negative Probability of missing a gene covered by active
+#'   terms. ORA hit lists contain only a fraction of the genes of each active
+#'   program, so a realistic scale is close to 1 (default 0.9).
 #' @param n_iter Total number of MCMC iterations.
 #' @param burnin Number of initial iterations discarded.
 #' @param thin Keep one sample every `thin` iterations after burn-in.
@@ -52,7 +54,7 @@ bayes_reactome <- function(x,
                            by = "p.adjust",
                            prior = 0.1,
                            false_positive = 0.01,
-                           false_negative = 0.1,
+                           false_negative = 0.9,
                            n_iter = 5000,
                            burnin = 1000,
                            thin = 1,
