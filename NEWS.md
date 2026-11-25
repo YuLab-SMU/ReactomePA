@@ -1,3 +1,7 @@
+# ReactomePA 2.0.0
+
++ Bioconductor RELEASE_3_24 (2026-11-25, Wed)
+
 # ReactomePA 1.99.2
 
 + `bayes_reactome()` default `false_negative` follows the enrichit change (0.9, was 0.1): the old rate assumed hits carry 90% of every active program's genes, which pushed every posterior to ~0 on realistic Reactome data -- hierarchical pathway sets with 20-30 hits among hundreds of genes. With the realistic rate the wrapper returns a useful selection layer (see enrichit 0.2.7 NEWS for the measured size of the difference). Requires `enrichit >= 0.2.7` (2026-10-26, Mon)
